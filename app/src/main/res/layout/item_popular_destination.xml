@@ -19,11 +19,11 @@
             android:scaleType="centerCrop"
             android:src="@drawable/hawaii_image" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/card_bottom_overlay"
+            android:background="@drawable/photo_gradient"
             android:orientation="vertical"
             android:padding="12dp">
 
@@ -31,14 +31,17 @@
                 android:id="@+id/textPopularTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_above="@id/linear"
                 android:text="Shymbulak Resort"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -57,19 +60,36 @@
                     android:textColor="@android:color/white"
                     android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/textPopularRating"
+                <LinearLayout
+                    android:id="@+id/ratingBadge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:background="@drawable/onboarding_next_bg"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="4dp"
-                    android:text="4.9"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rating_badge_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/baseline_star_24"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textPopularRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.9"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

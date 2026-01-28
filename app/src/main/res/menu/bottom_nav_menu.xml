@@ -3,16 +3,26 @@
 
     <item
         android:id="@+id/nav_menu1"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/baseline_explore_24"
         android:title="@string/menu1" />
 
     <item
         android:id="@+id/nav_menu2"
-        android:icon="@drawable/baseline_favorite_24"
+        android:icon="@drawable/baseline_hotel_24"
         android:title="@string/menu2" />
 
     <item
         android:id="@+id/nav_menu3"
-        android:icon="@drawable/baseline_info_24"
+        android:icon="@drawable/baseline_trips_24"
         android:title="@string/menu3" />
+
+    <item
+        android:id="@+id/nav_menu4"
+        android:icon="@drawable/baseline_currency_exchange_24"
+        android:title="@string/menu4" />
+
+    <item
+        android:id="@+id/nav_menu5"
+        android:icon="@drawable/ic_account"
+        android:title="@string/menu5" />
 </menu>

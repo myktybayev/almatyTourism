@@ -160,7 +160,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCategoryCity"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginEnd="8dp"
@@ -175,7 +175,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/london" />
+                        android:src="@drawable/cat_citylife" />
 
                     <ImageView
                         android:layout_width="50dp"
@@ -209,7 +209,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCategoryNature"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginStart="8dp"
@@ -224,7 +224,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hawaii_image" />
+                        android:src="@drawable/cat_nature" />
 
                     <ImageView
                         android:layout_width="50dp"
@@ -257,7 +257,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCategoryParks"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginTop="12dp"
@@ -273,7 +273,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/dir5" />
+                        android:src="@drawable/cat_parks" />
 
                     <ImageView
                         android:layout_width="50dp"
@@ -308,7 +308,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCategorySpiritual"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginStart="8dp"
@@ -324,7 +324,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/spain" />
+                        android:src="@drawable/cat_spiritual" />
 
                     <ImageView
                         android:layout_width="50dp"

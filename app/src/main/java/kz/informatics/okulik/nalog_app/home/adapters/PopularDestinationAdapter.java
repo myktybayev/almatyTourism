@@ -1,4 +1,4 @@
-package kz.informatics.okulik.nalog_app.home;
+package kz.informatics.okulik.nalog_app.home.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,21 +14,23 @@ import java.util.List;
 import java.util.Locale;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.ExploreFragment;
+import kz.informatics.okulik.nalog_app.home.module.Destination;
 
 public class PopularDestinationAdapter extends RecyclerView.Adapter<PopularDestinationAdapter.VH> {
 
     public interface OnItemClickListener {
-        void onClick(ExploreFragment.Destination item);
+        void onClick(Destination item);
     }
 
-    private final List<ExploreFragment.Destination> items = new ArrayList<>();
+    private final List<Destination> items = new ArrayList<>();
     private final OnItemClickListener listener;
 
     public PopularDestinationAdapter(OnItemClickListener listener) {
         this.listener = listener;
     }
 
-    public void setItems(List<ExploreFragment.Destination> newItems) {
+    public void setItems(List<Destination> newItems) {
         items.clear();
         if (newItems != null) {
             items.addAll(newItems);
@@ -45,7 +47,7 @@ public class PopularDestinationAdapter extends RecyclerView.Adapter<PopularDesti
 
     @Override
     public void onBindViewHolder(@NonNull VH h, int position) {
-        ExploreFragment.Destination d = items.get(position);
+        Destination d = items.get(position);
 
         h.title.setText(d.title);
         h.subtitle.setText(d.distance);

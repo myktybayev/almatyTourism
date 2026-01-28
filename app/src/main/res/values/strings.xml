@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Турагентство</string>
 
-    <string name="menu1">Хостелы</string>
-    <string name="menu2">Избранное</string>
-    <string name="menu3">О проекте</string>
+    <string name="menu1">Explore</string>
+    <string name="menu2">Hotels</string>
+    <string name="menu3">Trips</string>
+    <string name="menu4">Exchange</string>
+    <string name="menu5">Profile</string>
 
     <!-- Onboarding -->
     <string name="onboarding_skip">Skip</string>
@@ -32,7 +34,7 @@
         Stay updated with real-time currency rates and easily calculate exchanges for your trip.
     </string>
 
-    <string name="onboarding_next_arrow">\u2192</string>
+    <string name="onboarding_next_arrow">-></string>
     <string name="onboarding_get_started">Get Started</string>
 
 </resources>

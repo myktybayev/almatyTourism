@@ -1,5 +1,6 @@
 package kz.informatics.okulik.nalog_app.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,23 +21,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.adapters.PopularDestinationAdapter;
+import kz.informatics.okulik.nalog_app.home.module.Destination;
 
 public class ExploreFragment extends Fragment {
 
     private View root;
 
     // Simple local data models
-    public static class Destination {
-        String title;
-        String distance;
-        float rating;
-
-        Destination(String title, String distance, float rating) {
-            this.title = title;
-            this.distance = distance;
-            this.rating = rating;
-        }
-    }
 
     private final List<Destination> allDestinations = new ArrayList<>();
     private final List<Destination> visibleDestinations = new ArrayList<>();
@@ -46,6 +38,7 @@ public class ExploreFragment extends Fragment {
 
     private RecyclerView recyclerPopular;
     private PopularDestinationAdapter popularAdapter;
+    private TextView seeAll;
 
     private View cardCategoryCity;
     private View cardCategoryNature;
@@ -72,6 +65,7 @@ public class ExploreFragment extends Fragment {
         weatherText = root.findViewById(R.id.textWeather);
         searchField = root.findViewById(R.id.editSearch);
         recyclerPopular = root.findViewById(R.id.recyclerPopular);
+        seeAll = root.findViewById(R.id.textSeeAll);
 
         cardCategoryCity = root.findViewById(R.id.cardCategoryCity);
         cardCategoryNature = root.findViewById(R.id.cardCategoryNature);
@@ -84,6 +78,7 @@ public class ExploreFragment extends Fragment {
     private void initLocalData() {
         // Local dummy data – later can be replaced with API
         allDestinations.clear();
+
         allDestinations.add(new Destination("Shymbulak Resort", "25 min drive", 4.9f));
         allDestinations.add(new Destination("Kok Tobe", "15 min drive", 4.7f));
         allDestinations.add(new Destination("Big Almaty Lake", "40 min drive", 4.8f));
@@ -143,6 +138,11 @@ public class ExploreFragment extends Fragment {
 
         cardWeekend.setOnClickListener(
                 v -> Toast.makeText(getContext(), "Almaty Apple Festival details", Toast.LENGTH_SHORT).show());
+
+        seeAll.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), PopularDestinationsActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void filterDestinations(String query) {
