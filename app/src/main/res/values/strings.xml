@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Турагентство</string>
+
+    <string name="menu1">Хостелы</string>
+    <string name="menu2">Избранное</string>
+    <string name="menu3">О проекте</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_skip">Skip</string>
+
+    <string name="onboarding1_title_top">Discover the Spirit</string>
+    <string name="onboarding1_title_bottom">of Almaty</string>
+    <string name="onboarding1_description">
+        Discover top destinations and book exclusive tours to explore the nature and culture of Almaty.
+    </string>
+
+    <string name="onboarding2_title_top">Comfort &amp;</string>
+    <string name="onboarding2_title_bottom">Adventure</string>
+    <string name="onboarding2_description">
+        Find the best hotels and book exciting tours to experience the true hospitality of Almaty.
+    </string>
+
+    <string name="onboarding3_title_top">Unforgettable</string>
+    <string name="onboarding3_title_bottom">Journeys</string>
+    <string name="onboarding3_description">
+        Immerse yourself in the majestic mountains and vibrant city life of Kazakhstans cultural capital.
+    </string>
+
+    <string name="onboarding4_title_top">Smart</string>
+    <string name="onboarding4_title_bottom">Exchange</string>
+    <string name="onboarding4_description">
+        Stay updated with real-time currency rates and easily calculate exchanges for your trip.
+    </string>
+
+    <string name="onboarding_next_arrow">\u2192</string>
+    <string name="onboarding_get_started">Get Started</string>
+
+</resources>
