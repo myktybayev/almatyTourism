@@ -128,7 +128,7 @@
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     android:text="Skiing"
-                    android:textColor="@color/color3"
+                    android:textColor="@color/purple_500"
                     android:textSize="11sp" />
 
                 <TextView
@@ -140,7 +140,7 @@
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     android:text="Hiking"
-                    android:textColor="@color/color3"
+                    android:textColor="@color/purple_500"
                     android:textSize="11sp" />
 
                 <TextView
@@ -151,7 +151,7 @@
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     android:text="Nature"
-                    android:textColor="@color/color3"
+                    android:textColor="@color/purple_500"
                     android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>

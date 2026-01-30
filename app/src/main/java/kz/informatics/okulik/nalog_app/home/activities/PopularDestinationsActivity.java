@@ -1,9 +1,8 @@
-package kz.informatics.okulik.nalog_app.home;
+package kz.informatics.okulik.nalog_app.home.activities;
 
 import android.os.Bundle;
-import android.view.View;
+import android.content.Intent;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,7 +32,7 @@ public class PopularDestinationsActivity extends AppCompatActivity {
         recycler = findViewById(R.id.recyclerPopularList);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new PopularDestinationListAdapter(
-                item -> Toast.makeText(this, "Open details: " + item.title, Toast.LENGTH_SHORT).show());
+                item -> openDetail(item));
         recycler.setAdapter(adapter);
 
         loadLocalData();
@@ -85,5 +84,15 @@ public class PopularDestinationsActivity extends AppCompatActivity {
                 new String[] { "Food", "Culture" }));
 
         adapter.setItems(items);
+    }
+
+    private void openDetail(PopularPlace item) {
+        Intent intent = new Intent(this, PopularDestinationDetailActivity.class);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_TITLE, item.title);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_SUBTITLE, item.subtitle);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_RATING, item.rating);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_IMAGE, item.imageRes);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_TAGS, item.tags);
+        startActivity(intent);
     }
 }

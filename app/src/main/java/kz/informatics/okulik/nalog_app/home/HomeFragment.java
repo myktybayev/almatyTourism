@@ -10,13 +10,9 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.activities.OneOtelActivity;
 
 public class HomeFragment extends Fragment {
 

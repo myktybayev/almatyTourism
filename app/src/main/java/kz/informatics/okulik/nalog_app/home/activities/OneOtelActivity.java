@@ -1,4 +1,4 @@
-package kz.informatics.okulik.nalog_app.home;
+package kz.informatics.okulik.nalog_app.home.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

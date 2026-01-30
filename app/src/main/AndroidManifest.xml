@@ -20,12 +20,17 @@
 <!--            android:theme="@style/Theme.Okulik.NoActionBar" />-->
 
         <activity
-            android:name=".nalog_app.home.OneOtelActivity"
+            android:name=".nalog_app.home.activities.OneOtelActivity"
             android:theme="@style/Theme.Okulik.NoActionBar"
             android:exported="false" />
 
         <activity
-            android:name=".nalog_app.home.PopularDestinationsActivity"
+            android:name=".nalog_app.home.activities.PopularDestinationDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Okulik.NoActionBar" />
+
+        <activity
+            android:name=".nalog_app.home.activities.PopularDestinationsActivity"
             android:exported="false"
             android:theme="@style/Theme.Okulik.NoActionBar" />
 

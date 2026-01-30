@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.activities.PopularDestinationsActivity;
 import kz.informatics.okulik.nalog_app.home.adapters.PopularDestinationAdapter;
 import kz.informatics.okulik.nalog_app.home.module.Destination;
 
