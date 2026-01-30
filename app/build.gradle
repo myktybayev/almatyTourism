@@ -37,6 +37,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.3'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.28'
     testImplementation 'junit:junit:4.+'

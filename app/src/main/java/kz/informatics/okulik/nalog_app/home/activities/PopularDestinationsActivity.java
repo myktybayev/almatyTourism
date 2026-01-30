@@ -55,7 +55,7 @@ public class PopularDestinationsActivity extends AppCompatActivity {
                 4.8f,
                 R.drawable.header_koktobe,
                 new String[] { "Cable Car", "City Views" },
-                new int[] { R.drawable.img_koktobe1, R.drawable.img_koktobe2, R.drawable.img_koktobe3, R.drawable.img_koktobe4, R.drawable.header_koktobe }));
+                new int[] { R.drawable.img_koktobe1, R.drawable.img_koktobe2, R.drawable.img_koktobe3, R.drawable.img_koktobe4, R.drawable.img_koktobe5, R.drawable.img_koktobe6 }));
         items.add(new PopularPlace(
                 "3",
                 "Big Almaty Lake",

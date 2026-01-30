@@ -81,7 +81,11 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         return "Discover a beautiful destination with unique atmosphere and unforgettable views.";
     }
 
+    private int[] galleryPhotosArray; // Store gallery photos for click listeners
+
     private void loadGalleryPhotos(int[] galleryPhotos) {
+        galleryPhotosArray = galleryPhotos; // Store for click listeners
+        
         ImageView gallery1 = findViewById(R.id.gallery1);
         ImageView gallery2 = findViewById(R.id.gallery2);
         ImageView gallery3 = findViewById(R.id.gallery3);
@@ -96,6 +100,10 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 if (i < galleryPhotos.length) {
                     galleryViews[i].setImageResource(galleryPhotos[i]);
                     galleryViews[i].setVisibility(android.view.View.VISIBLE);
+                    
+                    // Add click listener to open gallery preview
+                    final int position = i;
+                    galleryViews[i].setOnClickListener(v -> openGalleryPreview(position));
                 } else {
                     galleryViews[i].setVisibility(android.view.View.GONE);
                 }
@@ -106,6 +114,8 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 if (gallery4Text != null) {
                     gallery4Text.setText("+" + (galleryPhotos.length - 4));
                     gallery4Text.setVisibility(android.view.View.VISIBLE);
+                    // Also make gallery4 clickable
+                    gallery4.setOnClickListener(v -> openGalleryPreview(3));
                 }
             } else {
                 if (gallery4Text != null) {
@@ -121,6 +131,17 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 gallery4Text.setVisibility(android.view.View.GONE);
             }
         }
+    }
+
+    private void openGalleryPreview(int startPosition) {
+        if (galleryPhotosArray == null || galleryPhotosArray.length == 0) {
+            return;
+        }
+        
+        Intent intent = new Intent(this, GalleryPreviewActivity.class);
+        intent.putExtra("gallery_photos", galleryPhotosArray);
+        intent.putExtra("current_position", startPosition);
+        startActivity(intent);
     }
 }
 

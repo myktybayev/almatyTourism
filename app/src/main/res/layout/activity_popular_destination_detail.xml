@@ -358,18 +358,17 @@
 
                         <TextView
                             android:id="@+id/gallery4Text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/rating_badge_bg"
+                            android:background="@drawable/photo_gradient"
                             android:gravity="center"
                             android:paddingHorizontal="10dp"
                             android:paddingVertical="4dp"
                             android:text="+8"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </RelativeLayout>
