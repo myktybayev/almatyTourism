@@ -17,6 +17,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
     public static final String EXTRA_RATING = "extra_rating";
     public static final String EXTRA_IMAGE = "extra_image";
     public static final String EXTRA_TAGS = "extra_tags";
+    public static final String EXTRA_GALLERY_PHOTOS = "extra_gallery_photos";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         float rating = intent.getFloatExtra(EXTRA_RATING, 0f);
         int imageRes = intent.getIntExtra(EXTRA_IMAGE, 0);
         String[] tags = intent.getStringArrayExtra(EXTRA_TAGS);
+        int[] galleryPhotos = intent.getIntArrayExtra(EXTRA_GALLERY_PHOTOS);
 
         ImageView headerImage = findViewById(R.id.imageHeader);
         TextView titleText = findViewById(R.id.textTitle);
@@ -59,6 +61,9 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 tagViews[i].setVisibility(LinearLayout.GONE);
             }
         }
+
+        // Load gallery photos
+        loadGalleryPhotos(galleryPhotos);
     }
 
     private String buildAboutText(String title) {
@@ -74,6 +79,48 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
             return "A city viewpoint and entertainment spot offering panoramic views and cultural attractions.";
         }
         return "Discover a beautiful destination with unique atmosphere and unforgettable views.";
+    }
+
+    private void loadGalleryPhotos(int[] galleryPhotos) {
+        ImageView gallery1 = findViewById(R.id.gallery1);
+        ImageView gallery2 = findViewById(R.id.gallery2);
+        ImageView gallery3 = findViewById(R.id.gallery3);
+        ImageView gallery4 = findViewById(R.id.gallery4);
+        TextView gallery4Text = findViewById(R.id.gallery4Text);
+
+        ImageView[] galleryViews = new ImageView[]{gallery1, gallery2, gallery3, gallery4};
+
+        if (galleryPhotos != null && galleryPhotos.length > 0) {
+            // Show first 4 photos
+            for (int i = 0; i < galleryViews.length; i++) {
+                if (i < galleryPhotos.length) {
+                    galleryViews[i].setImageResource(galleryPhotos[i]);
+                    galleryViews[i].setVisibility(android.view.View.VISIBLE);
+                } else {
+                    galleryViews[i].setVisibility(android.view.View.GONE);
+                }
+            }
+
+            // Show "+X" text if there are more than 4 photos
+            if (galleryPhotos.length > 4) {
+                if (gallery4Text != null) {
+                    gallery4Text.setText("+" + (galleryPhotos.length - 4));
+                    gallery4Text.setVisibility(android.view.View.VISIBLE);
+                }
+            } else {
+                if (gallery4Text != null) {
+                    gallery4Text.setVisibility(android.view.View.GONE);
+                }
+            }
+        } else {
+            // Hide all gallery views if no photos
+            for (ImageView view : galleryViews) {
+                view.setVisibility(android.view.View.GONE);
+            }
+            if (gallery4Text != null) {
+                gallery4Text.setVisibility(android.view.View.GONE);
+            }
+        }
     }
 }
 
