@@ -14,15 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Okulik">
 
-<!--        <activity-->
-<!--            android:name=".nalog_app.onboarding.Onboarding"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@style/Theme.Okulik.NoActionBar" />-->
+        <!--        <activity-->
+        <!--            android:name=".nalog_app.onboarding.Onboarding"-->
+        <!--            android:exported="false"-->
+        <!--            android:theme="@style/Theme.Okulik.NoActionBar" />-->
 
         <activity
             android:name=".nalog_app.home.activities.OneOtelActivity"
-            android:theme="@style/Theme.Okulik.NoActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Okulik.NoActionBar" />
 
         <activity
             android:name=".nalog_app.home.activities.PopularDestinationDetailActivity"

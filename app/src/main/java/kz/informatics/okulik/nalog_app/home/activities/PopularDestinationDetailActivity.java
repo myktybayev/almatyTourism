@@ -52,7 +52,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         TextView tag1 = findViewById(R.id.tag1);
         TextView tag2 = findViewById(R.id.tag2);
         TextView tag3 = findViewById(R.id.tag3);
-        TextView[] tagViews = new TextView[]{tag1, tag2, tag3};
+        TextView[] tagViews = new TextView[] { tag1, tag2, tag3 };
         for (int i = 0; i < tagViews.length; i++) {
             if (tags != null && i < tags.length) {
                 tagViews[i].setText(tags[i]);
@@ -67,7 +67,8 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
     }
 
     private String buildAboutText(String title) {
-        if (title == null) return "";
+        if (title == null)
+            return "";
         String lower = title.toLowerCase();
         if (lower.contains("lake")) {
             return "Nestled in the Trans-Ili Alatau mountains, this alpine lake is famous for its turquoise waters and scenic surroundings.";
@@ -85,14 +86,14 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
 
     private void loadGalleryPhotos(int[] galleryPhotos) {
         galleryPhotosArray = galleryPhotos; // Store for click listeners
-        
+
         ImageView gallery1 = findViewById(R.id.gallery1);
         ImageView gallery2 = findViewById(R.id.gallery2);
         ImageView gallery3 = findViewById(R.id.gallery3);
         ImageView gallery4 = findViewById(R.id.gallery4);
         TextView gallery4Text = findViewById(R.id.gallery4Text);
 
-        ImageView[] galleryViews = new ImageView[]{gallery1, gallery2, gallery3, gallery4};
+        ImageView[] galleryViews = new ImageView[] { gallery1, gallery2, gallery3, gallery4 };
 
         if (galleryPhotos != null && galleryPhotos.length > 0) {
             // Show first 4 photos
@@ -100,7 +101,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 if (i < galleryPhotos.length) {
                     galleryViews[i].setImageResource(galleryPhotos[i]);
                     galleryViews[i].setVisibility(android.view.View.VISIBLE);
-                    
+
                     // Add click listener to open gallery preview
                     final int position = i;
                     galleryViews[i].setOnClickListener(v -> openGalleryPreview(position));
@@ -137,11 +138,10 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         if (galleryPhotosArray == null || galleryPhotosArray.length == 0) {
             return;
         }
-        
+
         Intent intent = new Intent(this, GalleryPreviewActivity.class);
         intent.putExtra("gallery_photos", galleryPhotosArray);
         intent.putExtra("current_position", startPosition);
         startActivity(intent);
     }
 }
-
