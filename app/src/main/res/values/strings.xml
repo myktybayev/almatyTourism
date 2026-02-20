@@ -56,4 +56,63 @@
     <string name="payment_methods">Payment Methods</string>
     <string name="help_support">Help &amp; Support</string>
     <string name="log_out">Log Out</string>
+
+    <!-- Explore (default/fallback - Russian) -->
+    <string name="explore_title">Исследовать</string>
+    <string name="weather_loading">Алматы • Загрузка…</string>
+    <string name="weather_format">Алматы • %1$s %2$s</string>
+    <string name="weather_error">Алматы • —</string>
+    <string name="search_hint">Найти места, отели, туры…</string>
+    <string name="popular_destinations">Популярные направления</string>
+    <string name="see_all">Смотреть все</string>
+    <string name="browse_categories">Категории</string>
+    <string name="category_citylife">Городская жизнь</string>
+    <string name="category_nature">Природа</string>
+    <string name="category_parks">Парки</string>
+    <string name="category_spiritual">Духовное</string>
+    <string name="filter_by">Фильтр: %1$s</string>
+    <string name="this_weekend">На выходные</string>
+    <string name="weekend_tag_cultural">КУЛЬТУРА</string>
+    <string name="weekend_event_title">Фестиваль яблок Алматы</string>
+    <string name="weekend_event_details">Сб, 10:00 • Парк Первого Президента</string>
+    <string name="toast_apple_festival">Подробности фестиваля яблок Алматы</string>
+
+    <!-- Popular Places -->
+    <string name="place_1_title">Шымбулак</string>
+    <string name="place_1_subtitle">25 мин • Горный курорт</string>
+    <string name="place_1_about">Шымбулак — крупнейший горнолыжный курорт Казахстана, расположенный в живописных горах Заилийского Алатау недалеко от Алматы. Предлагает современные подъёмники, ухоженные склоны и потрясающие панорамные виды. Зимой это популярное направление для катания на лыжах и сноуборде, летом посетители наслаждаются походами и горными видами активности. Курорт расположен на высоте более 2200 метров над уровнем моря. Один из самых известных туристических объектов страны.</string>
+    <string name="place_2_title">Кок-Тобе</string>
+    <string name="place_2_subtitle">Центр города • Развлечения</string>
+    <string name="place_2_about">Кок-Тобе — известная смотровая площадка на окраине Алматы. На вершину можно подняться по канатной дороге, наслаждаясь потрясающими видами города и окружающих гор. На вершине есть рестораны, сувенирные магазины и небольшой парк развлечений. Здесь также находится знаменитый памятник «Битлз». Кок-Тобе особенно красив вечером, когда внизу зажигаются огни города.</string>
+    <string name="place_3_title">Большое Алматинское озеро</string>
+    <string name="place_3_subtitle">1 час езды • Природа</string>
+    <string name="place_3_about">Большое Алматинское озеро — живописное горное озеро примерно в 15 километрах к югу от Алматы. Известно яркой бирюзовой водой, цвет которой меняется в зависимости от сезона. Озеро расположено на высоте около 2500 метров над уровнем моря. Окружённое горными вершинами, оно предлагает потрясающие природные пейзажи. Популярное направление для любителей природы и фотографов.</string>
+    <string name="place_4_title">Чарынский каньон</string>
+    <string name="place_4_subtitle">3 часа езды • Национальный парк</string>
+    <string name="place_4_about">Чарынский каньон часто сравнивают с Гранд-Каньоном из-за драматических скальных образований. Расположен примерно в 200 километрах к востоку от Алматы. Каньон простирается более чем на 150 километров вдоль реки Чарын. Самая известная часть — «Долина замков» с уникальными и разноцветными скальными формами. Чарынский каньон — один из самых впечатляющих природных памятников Казахстана.</string>
+    <string name="place_5_title">Центральная мечеть Алматы</string>
+    <string name="place_5_subtitle">Центр города • Историческое</string>
+    <string name="place_5_about">Центральная мечеть Алматы — одна из крупнейших мечетей Казахстана. Расположена рядом с Зелёным базаром в центре Алматы. Мечеть открыта в 1999 году и вмещает до 7000 молящихся одновременно. Беломраморные стены и большой золотой купол делают её очень впечатляющей. Сегодня это важный религиозный и культурный центр для мусульман города.</string>
+    <string name="place_6_title">Медеу</string>
+    <string name="place_6_subtitle">20 мин езды • Спорткомплекс</string>
+    <string name="place_6_about">Медеу — высокогорный открытый каток в горах недалеко от Алматы. Расположен на высоте 1691 метр над уровнем моря, что делает его одним из самых высокогорных катков в мире. Медеу знаменит проведением международных соревнований по конькобежному спорту и установлением мировых рекордов. Зимой сюда приезжают и профессионалы, и туристы. Окружающий горный пейзаж делает его уникальной и красивой спортивной площадкой.</string>
+    <string name="place_7_title">Зелёный базар</string>
+    <string name="place_7_subtitle">Центр города • Рынок</string>
+    <string name="place_7_about">Зелёный базар — один из старейших и самых популярных рынков Алматы. Идеальное место, чтобы познакомиться с местной культурой и традиционной казахской кухней. Посетители могут купить свежие фрукты, овощи, мясо, специи и национальные сладости. Рынок живой и красочный, привлекает и местных жителей, и туристов. Даёт настоящий вкус повседневной жизни Алматы.</string>
+
+    <!-- Tags -->
+    <string name="tag_skiing">Лыжи</string>
+    <string name="tag_hiking">Походы</string>
+    <string name="tag_nature">Природа</string>
+    <string name="tag_cable_car">Канатная дорога</string>
+    <string name="tag_city_views">Вид на город</string>
+    <string name="tag_lake">Озеро</string>
+    <string name="tag_photography">Фотография</string>
+    <string name="tag_adventure">Приключения</string>
+    <string name="tag_architecture">Архитектура</string>
+    <string name="tag_history">История</string>
+    <string name="tag_ice_skating">Коньки</string>
+    <string name="tag_sports">Спорт</string>
+    <string name="tag_food">Еда</string>
+    <string name="tag_culture">Культура</string>
 </resources>

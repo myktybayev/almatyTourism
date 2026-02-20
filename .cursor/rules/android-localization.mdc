@@ -1,0 +1,37 @@
+---
+description: Android локализация — жаңа беттерді 4 тілде бірден жасау
+globs: app/src/main/java/**/*Activity.java,**/*Fragment.java,**/layout/*.xml,**/values*/strings.xml
+alwaysApply: false
+---
+
+# Android локализация стандарты
+
+Жаңа экран/бет (Activity, Fragment) қосқанда **бірден** локализацияны дұрыс форматында қолданыңыз.
+
+## 1. Мәтіндер strings.xml-да
+
+- Layout-та: `android:text="..."` емес, `android:text="@string/key_name"`
+- Java/Kotlin-да: `"..."` емес, `getString(R.string.key_name)`
+
+## 2. Барлық тілдерге қосу
+
+Келесі 4 файлға қосу керек:
+- `values/strings.xml` (default)
+- `values-kk/strings.xml` (қазақша)
+- `values-ru/strings.xml` (орысша)
+- `values-en/strings.xml` (ағылшынша)
+
+## 3. Activity үшін LocaleHelper
+
+MainActivity ішінде емес, жеке ашылатын Activity үшін `attachBaseContext` қосыңыз:
+
+```java
+@Override
+protected void attachBaseContext(Context newBase) {
+    super.attachBaseContext(LocaleHelper.applyLocale(newBase));
+}
+```
+
+## 4. Форматтауды қолдану
+
+Динамикалық мәтін үшін: `getString(R.string.key_format, arg1, arg2)` — strings.xml-да `%1$s`, `%2$s` қолданыңыз.

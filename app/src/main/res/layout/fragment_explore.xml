@@ -24,7 +24,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Explore"
+                android:text="@string/explore_title"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Алматы • Жүктелуде..."
+                android:text="@string/weather_loading"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -94,7 +94,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="Find places, hotels, tours..."
+                android:hint="@string/search_hint"
                 android:inputType="text"
                 android:padding="0dp"
                 android:textColor="@color/black"
@@ -113,7 +113,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Popular Destinations"
+                android:text="@string/popular_destinations"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -122,7 +122,7 @@
                 android:id="@+id/textSeeAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See All"
+                android:text="@string/see_all"
                 android:textColor="@color/color3"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -144,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Browse Categories"
+            android:text="@string/browse_categories"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -198,7 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-                            android:text="CityLife"
+                            android:text="@string/category_citylife"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -246,7 +246,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-                            android:text="Nature"
+                            android:text="@string/category_nature"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -295,7 +295,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-                            android:text="Parks"
+                            android:text="@string/category_parks"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -346,7 +346,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-                            android:text="Spiritual"
+                            android:text="@string/category_spiritual"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -360,7 +360,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="This Weekend"
+            android:text="@string/this_weekend"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -395,7 +395,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CULTURAL"
+                        android:text="@string/weekend_tag_cultural"
                         android:textAllCaps="true"
                         android:textColor="@color/color3"
                         android:textSize="12sp"
@@ -405,7 +405,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Almaty Apple Festival"
+                        android:text="@string/weekend_event_title"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -414,7 +414,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Sat, 10:00 AM • First President Park"
+                        android:text="@string/weekend_event_details"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="12sp" />
                 </LinearLayout>

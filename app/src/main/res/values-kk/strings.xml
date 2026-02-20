@@ -57,4 +57,63 @@
     <string name="payment_methods">Төлем тәсілдері</string>
     <string name="help_support">Көмек және қолдау</string>
     <string name="log_out">Шығу</string>
+
+    <!-- Explore -->
+    <string name="explore_title">Зерттеу</string>
+    <string name="weather_loading">Алматы • Жүктелуде…</string>
+    <string name="weather_format">Алматы • %1$s %2$s</string>
+    <string name="weather_error">Алматы • —</string>
+    <string name="search_hint">Орындарды, қонақ үйлерді, турларды табыңыз…</string>
+    <string name="popular_destinations">Танымал бағыттар</string>
+    <string name="see_all">Барлығын көру</string>
+    <string name="browse_categories">Санаттарды шолу</string>
+    <string name="category_citylife">Қала өмірі</string>
+    <string name="category_nature">Табиғат</string>
+    <string name="category_parks">Саябақтар</string>
+    <string name="category_spiritual">Діни</string>
+    <string name="filter_by">Сүзгі: %1$s</string>
+    <string name="this_weekend">Осы апта соңы</string>
+    <string name="weekend_tag_cultural">МӘДЕНИ</string>
+    <string name="weekend_event_title">Алматы Алма фестивалі</string>
+    <string name="weekend_event_details">Сенбі, 10:00 • Бірінші Президент саябағы</string>
+    <string name="toast_apple_festival">Алматы Алма фестивалі туралы мәліметтер</string>
+
+    <!-- Popular Places -->
+    <string name="place_1_title">Шымбұлақ шаңғы орталығы</string>
+    <string name="place_1_subtitle">25 мин • Таулы қонақ үй</string>
+    <string name="place_1_about">Шымбұлақ — Қазақстандағы ең үлкен шаңғы орталығы, Алматы маңындағы Іле Алатау тауларында орналасқан. Қазіргі шаңғы көтергіштер, жақсы қызмет көрсетілген шаңғы жолдары және керемет панорамалық көріністер ұсынылады. Қыста шаңғы тебу және сноубордтағы ең танымал бағыт болса, жазда келушілер тау жүру мен тау әрекеттерінен ләззат алады. Курорт теңіз деңгейінен 2200 метрден жоғары биіктікте орналасқан. Еліміздегі ең атақты туристік орындардың бірі.</string>
+    <string name="place_2_title">Көк Төбе тауы</string>
+    <string name="place_2_subtitle">Қала орталығы • Ойын-сауық</string>
+    <string name="place_2_about">Көк Төбе — Алматы шетінде орналасқан атақты сөмке. Жебе арқылы шыңға жетуге болады, қала мен айналадағы таулардың керемет көрінісін қарайды. Шыңда мейрамханалар, сувенир дүкендері және кішкентай аттракциондар бар. Сондай-ақ атақты «Битлз» ескерткіші орналасқан. Көк Төбе үйкелген кезде қала шамы төменде жарқырағанда әсіресе әдемі көрінеді.</string>
+    <string name="place_3_title">Үлкен Алматы көлі</string>
+    <string name="place_3_subtitle">1 сағ жол • Табиғи сұлулық</string>
+    <string name="place_3_about">Үлкен Алматы көлі — Алматының оңтүстігінде шамамен 15 шақырым жерде орналасқан алып таулы көл. Жарқын көгілдір суымен танымал, маусымға байланысты түсі өзгереді. Көл теңіз деңгейінен шамамен 2500 метр биіктікте жатыр. Тау шыңдарымен қоршалған, таңғажайып табиғи пейзажды ұсынады. Табиғат сүйгіштер мен фотографтар үшін танымал бағыт.</string>
+    <string name="place_4_title">Шарын шатқалы</string>
+    <string name="place_4_subtitle">3 сағ жол • Ұлттық парк</string>
+    <string name="place_4_about">Шарын шатқалы драмалық тас формациялары арқылы Гранд Каньонмен салыстырылады. Алматыдан шамамен 200 шақырым шығыста орналасқан. Шатқал Шарын өзені бойымен 150 шақырымнан астам созылады. Ең атақты бөлімі — «Қамалдар аңғары» — ерекше және түрлі-түсті тас пішіндерімен танымал. Шарын шатқалы Қазақстанның ең әсерлі табиғи белгілерінің бірі.</string>
+    <string name="place_5_title">Алматы орталық мешіті</string>
+    <string name="place_5_subtitle">Қала орталығы • Тарихи</string>
+    <string name="place_5_about">Алматы орталық мешіті Қазақстандағы ең үлкен мешіттердің бірі. Алматы орталығындағы Жасыл базар маңында орналасқан. Мешіт 1999 жылы ашылып, бір уақытта 7000-ға жуық намаз оқушыны қабылдай алады. Ақ мәрмәр қабырғалары мен үлкен алтын күмбезді өте әсерлі етеді. Бүгінде қаладағы мұсылмандар үшін маңызды діни және мәдени орталық.</string>
+    <string name="place_6_title">Медеу мұз айдыны</string>
+    <string name="place_6_subtitle">20 мин жол • Спорт кешені</string>
+    <string name="place_6_about">Медеу — Алматы маңындағы тауларда орналасқан биік биіктіктегі сыртқы мұз айдыны. Теңіз деңгейінен 1691 метр биіктікте орналасқан — әлемдегі ең биік мұз айдындарының бірі. Медеу халықаралық конькимен жүгіру жарыстарын өткізуімен және әлемдік рекордтарды орнатуымен танымал. Қыста кәсіби спортшылар да, келушілер де мұнда сырғанайды. Айналадағы тау пейзажы оны бірегей және әдемі спорт алаңына айналдырады.</string>
+    <string name="place_7_title">Жасыл базар</string>
+    <string name="place_7_subtitle">Қала орталығы • Базар</string>
+    <string name="place_7_about">Жасыл базар — Алматыдағы ең көне және ең танымал базарлардың бірі. Жергілікті мәдениет пен дәстүрлі қазақ тағамдарын бастан кешіруге тамаша орын. Келушiler тәжірибе жемістерін, көкөністерді, етті, дәмдеуіштерді және ұлттық тәттілерді сатып ала алады. Базар жанды және түрлі-түсті, жергілікті тұрғындарды да, туристтерді де тартады. Алматыдағы күнделікті өмірдің шынайы дәмін ұсынады.</string>
+
+    <!-- Tags -->
+    <string name="tag_skiing">Шаңғы</string>
+    <string name="tag_hiking">Тау жүру</string>
+    <string name="tag_nature">Табиғат</string>
+    <string name="tag_cable_car">Тележебе</string>
+    <string name="tag_city_views">Қала көрінісі</string>
+    <string name="tag_lake">Көл</string>
+    <string name="tag_photography">Фотосурет</string>
+    <string name="tag_adventure">Шытырман оқиға</string>
+    <string name="tag_architecture">Сәулет</string>
+    <string name="tag_history">Тарих</string>
+    <string name="tag_ice_skating">Конькимен жүгу</string>
+    <string name="tag_sports">Спорт</string>
+    <string name="tag_food">Тағам</string>
+    <string name="tag_culture">Мәдениет</string>
 </resources>

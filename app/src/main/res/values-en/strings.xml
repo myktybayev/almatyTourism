@@ -57,4 +57,63 @@
     <string name="payment_methods">Payment Methods</string>
     <string name="help_support">Help &amp; Support</string>
     <string name="log_out">Log Out</string>
+
+    <!-- Explore -->
+    <string name="explore_title">Explore</string>
+    <string name="weather_loading">Almaty • Loading…</string>
+    <string name="weather_format">Almaty • %1$s %2$s</string>
+    <string name="weather_error">Almaty • —</string>
+    <string name="search_hint">Find places, hotels, tours…</string>
+    <string name="popular_destinations">Popular Destinations</string>
+    <string name="see_all">See All</string>
+    <string name="browse_categories">Browse Categories</string>
+    <string name="category_citylife">CityLife</string>
+    <string name="category_nature">Nature</string>
+    <string name="category_parks">Parks</string>
+    <string name="category_spiritual">Spiritual</string>
+    <string name="filter_by">Filter by: %1$s</string>
+    <string name="this_weekend">This Weekend</string>
+    <string name="weekend_tag_cultural">CULTURAL</string>
+    <string name="weekend_event_title">Almaty Apple Festival</string>
+    <string name="weekend_event_details">Sat, 10:00 AM • First President Park</string>
+    <string name="toast_apple_festival">Almaty Apple Festival details</string>
+
+    <!-- Popular Places -->
+    <string name="place_1_title">Shymbulak Resort</string>
+    <string name="place_1_subtitle">25 min • Mountain Resort</string>
+    <string name="place_1_about">Shymbulak Resort is the largest ski resort in Kazakhstan, located in the scenic Ile-Alatau mountains near Almaty. It offers modern ski lifts, well-maintained slopes, and stunning panoramic views. In winter, it is a popular destination for skiing and snowboarding, while in summer visitors enjoy hiking and mountain activities. The resort sits at an altitude of over 2,200 meters above sea level. It is one of the most famous tourist attractions in the country.</string>
+    <string name="place_2_title">Kok Tobe Hill</string>
+    <string name="place_2_subtitle">City Center • Entertainment</string>
+    <string name="place_2_about">Kok Tobe Hill is a well-known viewpoint located on the outskirts of Almaty. Visitors can reach the top by cable car, enjoying breathtaking views of the city and surrounding mountains. At the summit, there are restaurants, souvenir shops, and a small amusement park. It is also home to the famous Beatles monument. Kok Tobe is especially beautiful in the evening when the city lights shine below.</string>
+    <string name="place_3_title">Big Almaty Lake</string>
+    <string name="place_3_subtitle">1 hr drive • Scenic Nature</string>
+    <string name="place_3_about">Big Almaty Lake is a stunning alpine lake situated about 15 kilometers south of Almaty. It is famous for its bright turquoise water, which changes color depending on the season. The lake lies at an altitude of approximately 2,500 meters above sea level. Surrounded by mountain peaks, it offers spectacular natural scenery. It is a popular destination for nature lovers and photographers.</string>
+    <string name="place_4_title">Charyn Canyon</string>
+    <string name="place_4_subtitle">3 hrs drive • National Park</string>
+    <string name="place_4_about">Charyn Canyon is often compared to the Grand Canyon because of its dramatic rock formations. It is located about 200 kilometers east of Almaty. The canyon stretches for over 150 kilometers along the Charyn River. Its most famous section is the "Valley of Castles," known for unique and colorful rock shapes. Charyn Canyon is one of Kazakhstan\'s most impressive natural landmarks.</string>
+    <string name="place_5_title">Almaty Central Mosque</string>
+    <string name="place_5_subtitle">City Center • Historic</string>
+    <string name="place_5_about">Almaty Central Mosque is one of the largest mosques in Kazakhstan. It is located near the Green Bazaar in the center of Almaty. The mosque was opened in 1999 and can accommodate up to 7,000 worshippers at a time. Its white marble walls and large golden dome make it very impressive. Today, it is an important religious and cultural center for Muslims in the city.</string>
+    <string name="place_6_title">Medeu Rink</string>
+    <string name="place_6_subtitle">20 min drive • Sports Complex</string>
+    <string name="place_6_about">Medeu Rink is a high-altitude outdoor ice skating rink located in the mountains near Almaty. It sits at 1,691 meters above sea level, making it one of the highest skating rinks in the world. Medeu is famous for hosting international speed skating competitions and setting world records. In winter, both professionals and visitors come to skate here. The surrounding mountain landscape makes it a unique and beautiful sports venue.</string>
+    <string name="place_7_title">Green Bazaar</string>
+    <string name="place_7_subtitle">City Center • Market</string>
+    <string name="place_7_about">Green Bazaar is one of the oldest and most popular markets in Almaty. It is the perfect place to experience local culture and traditional Kazakh cuisine. Visitors can buy fresh fruits, vegetables, meat, spices, and national sweets. The market is lively and colorful, attracting both locals and tourists. It offers a true taste of everyday life in Almaty.</string>
+
+    <!-- Tags -->
+    <string name="tag_skiing">Skiing</string>
+    <string name="tag_hiking">Hiking</string>
+    <string name="tag_nature">Nature</string>
+    <string name="tag_cable_car">Cable Car</string>
+    <string name="tag_city_views">City Views</string>
+    <string name="tag_lake">Lake</string>
+    <string name="tag_photography">Photography</string>
+    <string name="tag_adventure">Adventure</string>
+    <string name="tag_architecture">Architecture</string>
+    <string name="tag_history">History</string>
+    <string name="tag_ice_skating">Ice Skating</string>
+    <string name="tag_sports">Sports</string>
+    <string name="tag_food">Food</string>
+    <string name="tag_culture">Culture</string>
 </resources>

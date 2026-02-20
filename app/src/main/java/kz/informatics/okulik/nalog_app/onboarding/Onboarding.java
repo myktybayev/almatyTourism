@@ -1,5 +1,6 @@
 package kz.informatics.okulik.nalog_app.onboarding;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import kz.informatics.okulik.MainActivity;
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 
 public class Onboarding extends AppCompatActivity {
 
@@ -52,6 +54,11 @@ public class Onboarding extends AppCompatActivity {
     private TextView descriptionText;
     private Button nextButton;
     private TextView skip;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
