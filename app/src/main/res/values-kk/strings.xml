@@ -116,4 +116,23 @@
     <string name="tag_sports">Спорт</string>
     <string name="tag_food">Тағам</string>
     <string name="tag_culture">Мәдениет</string>
+    <string name="tag_shopping">Сауда</string>
+    <string name="tag_exhibits">Көрме</string>
+
+    <!-- Browse by Category -->
+    <string name="browse_citylife_title">Қала өмірі және мәдениет</string>
+    <string name="browse_filter_all">Барлығы</string>
+    <string name="browse_filter_museums">Мұражайлар</string>
+    <string name="browse_filter_parks">Саябақтар</string>
+    <string name="browse_filter_shopping">Сауда</string>
+    <string name="browse_button_map">Карта</string>
+    <string name="browse_button_details">Мәліметтер</string>
+
+    <!-- CityLife destinations -->
+    <string name="place_8_title">Зенков шіркеуі</string>
+    <string name="place_8_subtitle">Панфилов саябағы, Алматы</string>
+    <string name="place_8_about">Панфилов саябағында орналасқан әдемі ағаш православиялық шіркеу. Әлемдегі ең биік ағаш ғимараттардың бірі және Алматының символы. Шақпақсыз салынған, түрлі-түсті сәулетпен ерекшеленеді, Мәңгілік от пен 28 Панфилов батырлары ескерткішімен қоршалған.</string>
+    <string name="place_9_title">Орталық мемлекеттік мұражай</string>
+    <string name="place_9_subtitle">Самал-1, Алматы</string>
+    <string name="place_9_about">Орталық Азиядағы ең үлкен мұражайлардың бірі, Қазақстан тарихы мен мәдениетін насихаттайды. Мұражайда археологиялық табыстар, этнографиялық жинақтар және ежелгі заманнан бүгінге дейінгі көрмелер бар. Ғимараттың өзі ерекше көк күмбезімен сәулет өнері нышаны.</string>
 </resources>

@@ -115,4 +115,23 @@
     <string name="tag_sports">Спорт</string>
     <string name="tag_food">Еда</string>
     <string name="tag_culture">Культура</string>
+    <string name="tag_shopping">Шопинг</string>
+    <string name="tag_exhibits">Экспозиции</string>
+
+    <!-- Browse by Category -->
+    <string name="browse_citylife_title">Городская жизнь и культура</string>
+    <string name="browse_filter_all">Все</string>
+    <string name="browse_filter_museums">Музеи</string>
+    <string name="browse_filter_parks">Парки</string>
+    <string name="browse_filter_shopping">Шопинг</string>
+    <string name="browse_button_map">Карта</string>
+    <string name="browse_button_details">Подробнее</string>
+
+    <!-- CityLife destinations -->
+    <string name="place_8_title">Вознесенский собор (Зенков)</string>
+    <string name="place_8_subtitle">Парк Панфилова, Алматы</string>
+    <string name="place_8_about">Потрясающая деревянная православная церковь в парке Панфилова. Один из самых высоких деревянных сооружений в мире и символ Алматы. Построена без гвоздей, отличается красочной архитектурой, окружена Вечным огнём и мемориалом 28 панфиловцев.</string>
+    <string name="place_9_title">Центральный государственный музей</string>
+    <string name="place_9_subtitle">Самал-1, Алматы</string>
+    <string name="place_9_about">Один из крупнейших музеев Центральной Азии, представляющий историю и культуру Казахстана. В музее хранятся археологические находки, этнографические коллекции и экспозиции от древности до наших дней. Само здание — архитектурный памятник с характерным голубым куполом.</string>
 </resources>

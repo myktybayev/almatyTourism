@@ -35,3 +35,9 @@ protected void attachBaseContext(Context newBase) {
 ## 4. Форматтауды қолдану
 
 Динамикалық мәтін үшін: `getString(R.string.key_format, arg1, arg2)` — strings.xml-да `%1$s`, `%2$s` қолданыңыз.
+
+## 5. Жаңа орын (place) қосу
+
+`DestinationsRepository.initDefinitions()` ішіне PlaceDefinition қосыңыз. Барлық экрандар (ExploreFragment, PopularDestinationsActivity, BrowseActivityByCategories) бірден жаңартады.
+- `category "all"` — Explore және Popular Destinations экрандарында көрінеді
+- `citylife`, `nature`, `parks`, `spiritual` — BrowseActivityByCategories сәйкес категориясында көрінеді

@@ -116,4 +116,23 @@
     <string name="tag_sports">Sports</string>
     <string name="tag_food">Food</string>
     <string name="tag_culture">Culture</string>
+    <string name="tag_shopping">Shopping</string>
+    <string name="tag_exhibits">Exhibits</string>
+
+    <!-- Browse by Category -->
+    <string name="browse_citylife_title">CityLife &amp; Culture</string>
+    <string name="browse_filter_all">All</string>
+    <string name="browse_filter_museums">Museums</string>
+    <string name="browse_filter_parks">Parks</string>
+    <string name="browse_filter_shopping">Shopping</string>
+    <string name="browse_button_map">Map</string>
+    <string name="browse_button_details">Details</string>
+
+    <!-- CityLife destinations -->
+    <string name="place_8_title">Zenkov Cathedral</string>
+    <string name="place_8_subtitle">Panfilov Park, Almaty</string>
+    <string name="place_8_about">A stunning wooden Orthodox church located in Panfilov Park. It is one of the tallest wooden buildings in the world and a symbol of Almaty. Built without nails, the cathedral features colorful architecture and is surrounded by the Eternal Flame and 28 Panfilov heroes memorial.</string>
+    <string name="place_9_title">Central State Museum</string>
+    <string name="place_9_subtitle">Samal-1, Almaty</string>
+    <string name="place_9_about">One of the largest museums in Central Asia, showcasing the history and culture of Kazakhstan. The museum houses archaeological finds, ethnographic collections, and exhibits from ancient times to the present day. The building itself is an architectural landmark with a distinctive blue dome.</string>
 </resources>

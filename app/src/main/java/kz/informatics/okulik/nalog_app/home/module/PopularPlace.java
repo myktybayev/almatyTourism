@@ -8,7 +8,9 @@ public class PopularPlace {
     public float rating;
     public int imageRes;
     public String[] tags;
-    public int[] listOfGalleryPhotos; // Gallery photos array
+    public int[] listOfGalleryPhotos;
+    /** Categories for filtering (e.g. "all", "citylife", "nature", "parks", "spiritual") */
+    public String[] categories;
 
     public PopularPlace(String title, String subtitle, float rating, int imageRes, String[] tags) {
         this.id = title;
@@ -17,7 +19,8 @@ public class PopularPlace {
         this.rating = rating;
         this.imageRes = imageRes;
         this.tags = tags;
-        this.listOfGalleryPhotos = new int[0]; // Empty by default
+        this.listOfGalleryPhotos = new int[0];
+        this.categories = new String[0];
     }
 
     public PopularPlace(String id, String title, String subtitle, float rating, int imageRes, String[] tags) {
@@ -27,7 +30,8 @@ public class PopularPlace {
         this.rating = rating;
         this.imageRes = imageRes;
         this.tags = tags;
-        this.listOfGalleryPhotos = new int[0]; // Empty by default
+        this.listOfGalleryPhotos = new int[0];
+        this.categories = new String[0];
     }
 
     public PopularPlace(String id, String title, String subtitle, String about, float rating, int imageRes, String[] tags, int[] listOfGalleryPhotos) {
@@ -39,5 +43,26 @@ public class PopularPlace {
         this.imageRes = imageRes;
         this.tags = tags;
         this.listOfGalleryPhotos = listOfGalleryPhotos != null ? listOfGalleryPhotos : new int[0];
+        this.categories = new String[0];
+    }
+
+    public PopularPlace(String id, String title, String subtitle, String about, float rating, int imageRes, String[] tags, int[] listOfGalleryPhotos, String[] categories) {
+        this.id = id;
+        this.title = title;
+        this.subtitle = subtitle;
+        this.about = about;
+        this.rating = rating;
+        this.imageRes = imageRes;
+        this.tags = tags;
+        this.listOfGalleryPhotos = listOfGalleryPhotos != null ? listOfGalleryPhotos : new int[0];
+        this.categories = categories != null ? categories : new String[0];
+    }
+
+    public boolean hasCategory(String category) {
+        if (category == null || categories == null) return false;
+        for (String c : categories) {
+            if (category.equals(c)) return true;
+        }
+        return false;
     }
 }

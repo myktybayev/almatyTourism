@@ -37,6 +37,11 @@
             android:theme="@style/Theme.Okulik.NoActionBar" />
 
         <activity
+            android:name=".nalog_app.home.activities.BrowseActivityByCategories"
+            android:exported="false"
+            android:theme="@style/Theme.Okulik.NoActionBar" />
+
+        <activity
             android:name=".nalog_app.home.activities.GalleryPreviewActivity"
             android:exported="false"
             android:theme="@style/Theme.Okulik.NoActionBar" />
