@@ -124,6 +124,14 @@
     <string name="browse_filter_museums">Музеи</string>
     <string name="browse_filter_parks">Парки</string>
     <string name="browse_filter_shopping">Шопинг</string>
+    <string name="browse_filter_mountains">Горы</string>
+    <string name="browse_filter_lakes">Озёра</string>
+    <string name="browse_filter_canyons">Каньоны</string>
+    <string name="browse_filter_city_parks">Городские парки</string>
+    <string name="browse_filter_botanical">Ботанические</string>
+    <string name="browse_filter_family">Семейные</string>
+    <string name="browse_filter_mosques">Мечети</string>
+    <string name="browse_filter_cathedrals">Соборы</string>
     <string name="browse_button_map">Карта</string>
     <string name="browse_button_details">Подробнее</string>
 

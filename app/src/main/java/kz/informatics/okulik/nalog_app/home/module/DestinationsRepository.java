@@ -32,86 +32,95 @@ public class DestinationsRepository {
     private void initDefinitions() {
         definitions.clear();
 
-        // place 1 - Shymbulak
+        // place 1 - Shymbulak (nature: mountains)
         definitions.add(new PlaceDefinition(
                 "1",
                 R.string.place_1_title, R.string.place_1_subtitle, R.string.place_1_about,
                 4.9f, R.drawable.header_shymbulak,
                 new int[]{R.string.tag_skiing, R.string.tag_hiking, R.string.tag_nature},
                 new int[]{R.drawable.img_shymbulak1, R.drawable.img_shymbulak2, R.drawable.img_shymbulak6, R.drawable.img_shymbulak3, R.drawable.img_shymbulak4, R.drawable.img_shymbulak5},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE},
+                new String[]{"mountains"}));
 
-        // place 2 - Kok Tobe
+        // place 2 - Kok Tobe (citylife: parks, parks: city_parks)
         definitions.add(new PlaceDefinition(
                 "2",
                 R.string.place_2_title, R.string.place_2_subtitle, R.string.place_2_about,
                 4.8f, R.drawable.header_koktobe,
                 new int[]{R.string.tag_cable_car, R.string.tag_city_views},
                 new int[]{R.drawable.img_koktobe1, R.drawable.img_koktobe2, R.drawable.img_koktobe3, R.drawable.img_koktobe4, R.drawable.img_koktobe5, R.drawable.img_koktobe6},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_CITYLIFE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_CITYLIFE, BrowseActivityByCategories.CATEGORY_PARKS},
+                new String[]{"parks", "city_parks"}));
 
-        // place 3 - Big Almaty Lake
+        // place 3 - Big Almaty Lake (nature: lakes)
         definitions.add(new PlaceDefinition(
                 "3",
                 R.string.place_3_title, R.string.place_3_subtitle, R.string.place_3_about,
                 4.9f, R.drawable.header_bigalmaty_lake,
                 new int[]{R.string.tag_lake, R.string.tag_photography},
                 new int[]{R.drawable.img_almatylake1, R.drawable.img_almatylake2, R.drawable.img_almatylake3, R.drawable.img_almatylake5, R.drawable.img_almatylake6, R.drawable.img_almatylake4},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE},
+                new String[]{"lakes"}));
 
-        // place 4 - Charyn Canyon
+        // place 4 - Charyn Canyon (nature: canyons)
         definitions.add(new PlaceDefinition(
                 "4",
                 R.string.place_4_title, R.string.place_4_subtitle, R.string.place_4_about,
                 4.8f, R.drawable.header_charyn_canyon,
                 new int[]{R.string.tag_hiking, R.string.tag_adventure},
                 new int[]{R.drawable.img_charyn1, R.drawable.img_charyn2, R.drawable.img_charyn3, R.drawable.img_charyn4, R.drawable.img_charyn5, R.drawable.img_charyn6},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE},
+                new String[]{"canyons"}));
 
-        // place 5 - Central Mosque
+        // place 5 - Central Mosque (spiritual: mosques)
         definitions.add(new PlaceDefinition(
                 "5",
                 R.string.place_5_title, R.string.place_5_subtitle, R.string.place_5_about,
                 4.7f, R.drawable.header_central_mosque,
                 new int[]{R.string.tag_architecture, R.string.tag_history},
                 new int[]{R.drawable.img_central_mosque4, R.drawable.img_central_mosque2, R.drawable.img_central_mosque6, R.drawable.img_central_mosque1, R.drawable.img_central_mosque3, R.drawable.img_central_mosque5},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_SPIRITUAL}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_SPIRITUAL},
+                new String[]{"mosques"}));
 
-        // place 6 - Medeu
+        // place 6 - Medeu (nature: mountains)
         definitions.add(new PlaceDefinition(
                 "6",
                 R.string.place_6_title, R.string.place_6_subtitle, R.string.place_6_about,
                 4.8f, R.drawable.header_medeu,
                 new int[]{R.string.tag_ice_skating, R.string.tag_sports},
                 new int[]{R.drawable.img_medeu1, R.drawable.img_medeu2, R.drawable.img_medeu3, R.drawable.img_medeu5, R.drawable.img_medeu6, R.drawable.img_medeu4},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_NATURE},
+                new String[]{"mountains"}));
 
-        // place 7 - Green Bazaar
+        // place 7 - Green Bazaar (citylife: shopping)
         definitions.add(new PlaceDefinition(
                 "7",
                 R.string.place_7_title, R.string.place_7_subtitle, R.string.place_7_about,
                 4.6f, R.drawable.header_green_bazaar,
                 new int[]{R.string.tag_food, R.string.tag_culture},
                 new int[]{R.drawable.img_green_bazaar6, R.drawable.img_green_bazaar1, R.drawable.img_green_bazaar4, R.drawable.img_green_bazaar5, R.drawable.img_green_bazaar3},
-                new String[]{"all", BrowseActivityByCategories.CATEGORY_CITYLIFE}));
+                new String[]{"all", BrowseActivityByCategories.CATEGORY_CITYLIFE},
+                new String[]{"shopping"}));
 
-        // place 8 - Zenkov Cathedral (CityLife only)
+        // place 8 - Zenkov Cathedral (citylife: museums, spiritual: cathedrals)
         definitions.add(new PlaceDefinition(
                 "8",
                 R.string.place_8_title, R.string.place_8_subtitle, R.string.place_8_about,
                 4.9f, R.drawable.header_central_mosque,
                 new int[]{R.string.tag_photography, R.string.tag_history},
                 new int[]{R.drawable.img_central_mosque1, R.drawable.img_central_mosque2, R.drawable.img_central_mosque3},
-                new String[]{BrowseActivityByCategories.CATEGORY_CITYLIFE}));
+                new String[]{BrowseActivityByCategories.CATEGORY_CITYLIFE, BrowseActivityByCategories.CATEGORY_SPIRITUAL},
+                new String[]{"museums", "cathedrals"}));
 
-        // place 9 - Central State Museum (CityLife only)
+        // place 9 - Central State Museum (citylife: museums, spiritual: museums)
         definitions.add(new PlaceDefinition(
                 "9",
                 R.string.place_9_title, R.string.place_9_subtitle, R.string.place_9_about,
                 4.6f, R.drawable.header_koktobe,
                 new int[]{R.string.tag_culture, R.string.tag_exhibits},
                 new int[]{R.drawable.img_koktobe1, R.drawable.img_koktobe2, R.drawable.img_koktobe3},
-                new String[]{BrowseActivityByCategories.CATEGORY_CITYLIFE}));
+                new String[]{BrowseActivityByCategories.CATEGORY_CITYLIFE, BrowseActivityByCategories.CATEGORY_SPIRITUAL},
+                new String[]{"museums"}));
     }
 
     /** For ExploreFragment and PopularDestinationsActivity - places with category "all" */
@@ -121,9 +130,14 @@ public class DestinationsRepository {
 
     /** For BrowseActivityByCategories - filter by category */
     public List<PopularPlace> getPlacesByCategory(Context context, String category) {
+        return getPlacesByCategoryAndSubFilter(context, category, "all");
+    }
+
+    /** For BrowseActivityByCategories - filter by category and sub-filter (all, museums, parks, shopping) */
+    public List<PopularPlace> getPlacesByCategoryAndSubFilter(Context context, String category, String subFilter) {
         List<PopularPlace> result = new ArrayList<>();
         for (PlaceDefinition def : definitions) {
-            if (def.hasCategory(category)) {
+            if (def.hasCategory(category) && def.hasSubcategory(subFilter)) {
                 result.add(buildPlace(context, def));
             }
         }

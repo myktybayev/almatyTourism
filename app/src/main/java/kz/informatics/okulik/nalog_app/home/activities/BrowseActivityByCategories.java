@@ -3,7 +3,12 @@ package kz.informatics.okulik.nalog_app.home.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import kz.informatics.okulik.R;
@@ -29,10 +35,31 @@ public class BrowseActivityByCategories extends AppCompatActivity {
     public static final String CATEGORY_PARKS = "parks";
     public static final String CATEGORY_SPIRITUAL = "spiritual";
 
+    public static final String SUBFILTER_ALL = "all";
+    // citylife
+    public static final String SUBFILTER_MUSEUMS = "museums";
+    public static final String SUBFILTER_PARKS = "parks";
+    public static final String SUBFILTER_SHOPPING = "shopping";
+    // nature
+    public static final String SUBFILTER_MOUNTAINS = "mountains";
+    public static final String SUBFILTER_LAKES = "lakes";
+    public static final String SUBFILTER_CANYONS = "canyons";
+    // parks
+    public static final String SUBFILTER_CITY_PARKS = "city_parks";
+    public static final String SUBFILTER_BOTANICAL = "botanical";
+    public static final String SUBFILTER_FAMILY = "family";
+    // spiritual
+    public static final String SUBFILTER_MOSQUES = "mosques";
+    public static final String SUBFILTER_CATHEDRALS = "cathedrals";
+
     private RecyclerView recycler;
     private TextView textTitle;
     private BrowseDestinationAdapter adapter;
     private String currentCategory;
+    private String currentSubFilter = SUBFILTER_ALL;
+    private String searchQuery = "";
+    private LinearLayout layoutSearch;
+    private EditText editSearch;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -52,6 +79,8 @@ public class BrowseActivityByCategories extends AppCompatActivity {
         textTitle = findViewById(R.id.textTitle);
         ImageView buttonBack = findViewById(R.id.buttonBack);
         ImageView buttonSearch = findViewById(R.id.buttonSearch);
+        layoutSearch = findViewById(R.id.layoutSearch);
+        editSearch = findViewById(R.id.editSearch);
         recycler = findViewById(R.id.recyclerDestinations);
 
         updateTitle();
@@ -62,12 +91,12 @@ public class BrowseActivityByCategories extends AppCompatActivity {
                 item -> Toast.makeText(this, getString(R.string.browse_button_map) + ": " + item.title, Toast.LENGTH_SHORT).show()
         );
         recycler.setAdapter(adapter);
-        loadDestinations();
 
         buttonBack.setOnClickListener(v -> finish());
-        buttonSearch.setOnClickListener(v -> Toast.makeText(this, getString(R.string.search_hint), Toast.LENGTH_SHORT).show());
-
+        buttonSearch.setOnClickListener(v -> toggleSearch());
+        setupSearch();
         setupFilterChips();
+        applyFilters();
     }
 
     private void updateTitle() {
@@ -89,35 +118,149 @@ public class BrowseActivityByCategories extends AppCompatActivity {
         }
     }
 
-    private void loadDestinations() {
-        List<PopularPlace> list = DestinationsRepository.getInstance().getPlacesByCategory(this, currentCategory);
+    private void toggleSearch() {
+        if (layoutSearch.getVisibility() == View.VISIBLE) {
+            layoutSearch.setVisibility(View.GONE);
+            editSearch.setText("");
+            searchQuery = "";
+            applyFilters();
+        } else {
+            layoutSearch.setVisibility(View.VISIBLE);
+            editSearch.requestFocus();
+        }
+    }
+
+    private void setupSearch() {
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchQuery = s != null ? s.toString().trim() : "";
+                applyFilters();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+    }
+
+    private void applyFilters() {
+        List<PopularPlace> list = DestinationsRepository.getInstance()
+                .getPlacesByCategoryAndSubFilter(this, currentCategory, currentSubFilter);
+
+        if (searchQuery != null && !searchQuery.isEmpty()) {
+            String lower = searchQuery.toLowerCase();
+            List<PopularPlace> filtered = new ArrayList<>();
+            for (PopularPlace p : list) {
+                if (matchesSearch(p, lower)) {
+                    filtered.add(p);
+                }
+            }
+            list = filtered;
+        }
+
         if (adapter != null) {
             adapter.setItems(list);
         }
     }
 
+    private boolean matchesSearch(PopularPlace p, String query) {
+        if (p.title != null && p.title.toLowerCase().contains(query)) return true;
+        if (p.subtitle != null && p.subtitle.toLowerCase().contains(query)) return true;
+        if (p.about != null && p.about.toLowerCase().contains(query)) return true;
+        if (p.tags != null) {
+            for (String tag : p.tags) {
+                if (tag != null && tag.toLowerCase().contains(query)) return true;
+            }
+        }
+        return false;
+    }
+
     private void setupFilterChips() {
         TextView chipAll = findViewById(R.id.chipAll);
-        TextView chipMuseums = findViewById(R.id.chipMuseums);
-        TextView chipParks = findViewById(R.id.chipParks);
-        TextView chipShopping = findViewById(R.id.chipShopping);
+        TextView chipFilter1 = findViewById(R.id.chipFilter1);
+        TextView chipFilter2 = findViewById(R.id.chipFilter2);
+        TextView chipFilter3 = findViewById(R.id.chipFilter3);
+
+        updateChipLabels(chipFilter1, chipFilter2, chipFilter3);
 
         chipAll.setOnClickListener(v -> {
+            currentSubFilter = SUBFILTER_ALL;
             setChipSelected(chipAll);
-            setChipUnselected(chipMuseums, chipParks, chipShopping);
+            setChipUnselected(chipFilter1, chipFilter2, chipFilter3);
+            applyFilters();
         });
-        chipMuseums.setOnClickListener(v -> {
-            setChipSelected(chipMuseums);
-            setChipUnselected(chipAll, chipParks, chipShopping);
-        });
-        chipParks.setOnClickListener(v -> {
-            setChipSelected(chipParks);
-            setChipUnselected(chipAll, chipMuseums, chipShopping);
-        });
-        chipShopping.setOnClickListener(v -> {
-            setChipSelected(chipShopping);
-            setChipUnselected(chipAll, chipMuseums, chipParks);
-        });
+        chipFilter1.setOnClickListener(v -> selectSubFilter(getSubFilter1(), chipFilter1, chipAll, chipFilter2, chipFilter3));
+        chipFilter2.setOnClickListener(v -> selectSubFilter(getSubFilter2(), chipFilter2, chipAll, chipFilter1, chipFilter3));
+        chipFilter3.setOnClickListener(v -> selectSubFilter(getSubFilter3(), chipFilter3, chipAll, chipFilter1, chipFilter2));
+    }
+
+    private void selectSubFilter(String subFilter, TextView chipSelected, TextView chipAll, TextView chipOther1, TextView chipOther2) {
+        currentSubFilter = subFilter;
+        setChipSelected(chipSelected);
+        setChipUnselected(chipAll, chipOther1, chipOther2);
+        applyFilters();
+    }
+
+    private void updateChipLabels(TextView chip1, TextView chip2, TextView chip3) {
+        switch (currentCategory) {
+            case CATEGORY_CITYLIFE:
+                chip1.setText(R.string.browse_filter_museums);
+                chip2.setText(R.string.browse_filter_parks);
+                chip3.setText(R.string.browse_filter_shopping);
+                break;
+            case CATEGORY_NATURE:
+                chip1.setText(R.string.browse_filter_mountains);
+                chip2.setText(R.string.browse_filter_lakes);
+                chip3.setText(R.string.browse_filter_canyons);
+                break;
+            case CATEGORY_PARKS:
+                chip1.setText(R.string.browse_filter_city_parks);
+                chip2.setText(R.string.browse_filter_botanical);
+                chip3.setText(R.string.browse_filter_family);
+                break;
+            case CATEGORY_SPIRITUAL:
+                chip1.setText(R.string.browse_filter_mosques);
+                chip2.setText(R.string.browse_filter_cathedrals);
+                chip3.setText(R.string.browse_filter_museums);
+                break;
+            default:
+                chip1.setText(R.string.browse_filter_museums);
+                chip2.setText(R.string.browse_filter_parks);
+                chip3.setText(R.string.browse_filter_shopping);
+        }
+    }
+
+    private String getSubFilter1() {
+        switch (currentCategory) {
+            case CATEGORY_CITYLIFE: return SUBFILTER_MUSEUMS;
+            case CATEGORY_NATURE: return SUBFILTER_MOUNTAINS;
+            case CATEGORY_PARKS: return SUBFILTER_CITY_PARKS;
+            case CATEGORY_SPIRITUAL: return SUBFILTER_MOSQUES;
+            default: return SUBFILTER_MUSEUMS;
+        }
+    }
+
+    private String getSubFilter2() {
+        switch (currentCategory) {
+            case CATEGORY_CITYLIFE: return SUBFILTER_PARKS;
+            case CATEGORY_NATURE: return SUBFILTER_LAKES;
+            case CATEGORY_PARKS: return SUBFILTER_BOTANICAL;
+            case CATEGORY_SPIRITUAL: return SUBFILTER_CATHEDRALS;
+            default: return SUBFILTER_PARKS;
+        }
+    }
+
+    private String getSubFilter3() {
+        switch (currentCategory) {
+            case CATEGORY_CITYLIFE: return SUBFILTER_SHOPPING;
+            case CATEGORY_NATURE: return SUBFILTER_CANYONS;
+            case CATEGORY_PARKS: return SUBFILTER_FAMILY;
+            case CATEGORY_SPIRITUAL: return SUBFILTER_MUSEUMS;
+            default: return SUBFILTER_SHOPPING;
+        }
     }
 
     private void setChipSelected(TextView chip) {

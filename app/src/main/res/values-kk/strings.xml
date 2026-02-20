@@ -125,6 +125,14 @@
     <string name="browse_filter_museums">Мұражайлар</string>
     <string name="browse_filter_parks">Саябақтар</string>
     <string name="browse_filter_shopping">Сауда</string>
+    <string name="browse_filter_mountains">Таулар</string>
+    <string name="browse_filter_lakes">Көлдер</string>
+    <string name="browse_filter_canyons">Шатқалдар</string>
+    <string name="browse_filter_city_parks">Қалалық саябақтар</string>
+    <string name="browse_filter_botanical">Ботаникалық</string>
+    <string name="browse_filter_family">Отбасылық</string>
+    <string name="browse_filter_mosques">Мешіттер</string>
+    <string name="browse_filter_cathedrals">Соборлар</string>
     <string name="browse_button_map">Карта</string>
     <string name="browse_button_details">Мәліметтер</string>
 

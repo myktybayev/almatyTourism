@@ -125,6 +125,14 @@
     <string name="browse_filter_museums">Museums</string>
     <string name="browse_filter_parks">Parks</string>
     <string name="browse_filter_shopping">Shopping</string>
+    <string name="browse_filter_mountains">Mountains</string>
+    <string name="browse_filter_lakes">Lakes</string>
+    <string name="browse_filter_canyons">Canyons</string>
+    <string name="browse_filter_city_parks">City Parks</string>
+    <string name="browse_filter_botanical">Botanical</string>
+    <string name="browse_filter_family">Family</string>
+    <string name="browse_filter_mosques">Mosques</string>
+    <string name="browse_filter_cathedrals">Cathedrals</string>
     <string name="browse_button_map">Map</string>
     <string name="browse_button_details">Details</string>
 
