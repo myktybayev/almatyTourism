@@ -4,6 +4,7 @@ public class PopularPlace {
     public String id;
     public String title;
     public String subtitle;
+    public String about;
     public float rating;
     public int imageRes;
     public String[] tags;
@@ -29,10 +30,11 @@ public class PopularPlace {
         this.listOfGalleryPhotos = new int[0]; // Empty by default
     }
 
-    public PopularPlace(String id, String title, String subtitle, float rating, int imageRes, String[] tags, int[] listOfGalleryPhotos) {
+    public PopularPlace(String id, String title, String subtitle, String about, float rating, int imageRes, String[] tags, int[] listOfGalleryPhotos) {
         this.id = id;
         this.title = title;
         this.subtitle = subtitle;
+        this.about = about;
         this.rating = rating;
         this.imageRes = imageRes;
         this.tags = tags;

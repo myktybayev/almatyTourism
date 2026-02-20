@@ -1,5 +1,6 @@
 package kz.informatics.okulik;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -8,6 +9,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 import androidx.navigation.NavArgument;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
@@ -16,6 +19,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

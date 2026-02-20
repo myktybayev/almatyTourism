@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Турагентство</string>
+    <string name="app_name">Travel Agency</string>
 
     <string name="menu1">Explore</string>
     <string name="menu2">Hotels</string>
@@ -45,12 +46,12 @@
     <string name="language_english">English</string>
     <string name="current_language_name">English</string>
     <string name="dialog_language_title">Choose language</string>
+
+    <!-- Example words (English) -->
     <string name="example_greeting">Hello</string>
     <string name="example_welcome">Welcome</string>
     <string name="example_thanks">Thank you</string>
-    <string name="example_greeting_kk">Сәлем</string>
-    <string name="example_greeting_ru">Привет</string>
-    <string name="example_greeting_en">Hello</string>
+
     <string name="edit_profile">Edit Profile</string>
     <string name="personal_info">Personal info, documents</string>
     <string name="payment_methods">Payment Methods</string>

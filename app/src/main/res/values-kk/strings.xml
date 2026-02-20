@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Турагенттік</string>
+
+    <string name="menu1">Зерттеу</string>
+    <string name="menu2">Қонақ үйлер</string>
+    <string name="menu3">Сапарлар</string>
+    <string name="menu4">Айырбас</string>
+    <string name="menu5">Профиль</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_skip">Өткізіп жіберу</string>
+
+    <string name="onboarding1_title_top">Ашыңыз</string>
+    <string name="onboarding1_title_bottom">Алматы рухын</string>
+    <string name="onboarding1_description">
+        Алматының табиғаты мен мәдениетін зерттеу үшін үздік бағыттарды ашыңыз және эксклюзивті турларға тапсырыс беріңіз.
+    </string>
+
+    <string name="onboarding2_title_top">Жайлылық және</string>
+    <string name="onboarding2_title_bottom">Шытырман оқиға</string>
+    <string name="onboarding2_description">
+        Ең жақсы қонақ үйлерді табыңыз және Алматының шынайы мейманжайлылығын сезіну үшін қызықты турларға тапсырыс беріңіз.
+    </string>
+
+    <string name="onboarding3_title_top">Ұмытылмас</string>
+    <string name="onboarding3_title_bottom">Сапарлар</string>
+    <string name="onboarding3_description">
+        Қазақстанның мәдени астанасының сұлу таулары мен қоғамдық қала өміріне толығымен үңіліңіз.
+    </string>
+
+    <string name="onboarding4_title_top">Ақылды</string>
+    <string name="onboarding4_title_bottom">Айырбас</string>
+    <string name="onboarding4_description">
+        Валюта бағамдарымен жаңартылып отырыңыз және сапарыңыз үшін айырбасты оңай есептеңіз.
+    </string>
+
+    <string name="onboarding_next_arrow">-></string>
+    <string name="onboarding_get_started">Бастау</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Профиль</string>
+    <string name="language_label">Тіл</string>
+    <string name="language_kazakh">Қазақ тілі</string>
+    <string name="language_russian">Русский язык</string>
+    <string name="language_english">English</string>
+    <string name="current_language_name">Қазақ тілі</string>
+    <string name="dialog_language_title">Тілді таңдаңыз</string>
+
+    <!-- Example words (Kazakh) -->
+    <string name="example_greeting">Сәлем</string>
+    <string name="example_welcome">Қош келдіңіз</string>
+    <string name="example_thanks">Рақмет</string>
+
+    <string name="edit_profile">Профильді өңдеу</string>
+    <string name="personal_info">Жеке мәліметтер</string>
+    <string name="payment_methods">Төлем тәсілдері</string>
+    <string name="help_support">Көмек және қолдау</string>
+    <string name="log_out">Шығу</string>
+</resources>

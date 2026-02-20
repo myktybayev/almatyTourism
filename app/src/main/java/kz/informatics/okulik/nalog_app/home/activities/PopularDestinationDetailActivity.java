@@ -7,13 +7,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
+import kz.informatics.okulik.nalog_app.home.module.PopularPlace;
 
 public class PopularDestinationDetailActivity extends AppCompatActivity {
 
+    public static final String EXTRA_ID = "extra_id";
     public static final String EXTRA_TITLE = "extra_title";
     public static final String EXTRA_SUBTITLE = "extra_subtitle";
+    public static final String EXTRA_ABOUT = "extra_about";
     public static final String EXTRA_RATING = "extra_rating";
     public static final String EXTRA_IMAGE = "extra_image";
     public static final String EXTRA_TAGS = "extra_tags";
@@ -28,8 +33,10 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         back.setOnClickListener(v -> finish());
 
         Intent intent = getIntent();
+        String id = intent.getStringExtra(EXTRA_ID);
         String title = intent.getStringExtra(EXTRA_TITLE);
         String subtitle = intent.getStringExtra(EXTRA_SUBTITLE);
+        String about = intent.getStringExtra(EXTRA_ABOUT);
         float rating = intent.getFloatExtra(EXTRA_RATING, 0f);
         int imageRes = intent.getIntExtra(EXTRA_IMAGE, 0);
         String[] tags = intent.getStringArrayExtra(EXTRA_TAGS);
@@ -47,7 +54,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         titleText.setText(title != null ? title : "");
         ratingText.setText(String.valueOf(rating));
         subtitleText.setText(subtitle != null ? subtitle : "");
-        aboutText.setText(buildAboutText(title));
+        aboutText.setText(about);
 
         TextView tag1 = findViewById(R.id.tag1);
         TextView tag2 = findViewById(R.id.tag2);
@@ -64,22 +71,34 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
 
         // Load gallery photos
         loadGalleryPhotos(galleryPhotos);
+
+        // Favorite button – red when favorited, saved via FavoriteRepository
+        PopularPlace place = new PopularPlace(
+                id != null ? id : title,
+                title, subtitle, about, rating, imageRes, tags, galleryPhotos);
+        setupFavoriteButton(place);
     }
 
-    private String buildAboutText(String title) {
-        if (title == null)
-            return "";
-        String lower = title.toLowerCase();
-        if (lower.contains("lake")) {
-            return "Nestled in the Trans-Ili Alatau mountains, this alpine lake is famous for its turquoise waters and scenic surroundings.";
+    private void setupFavoriteButton(PopularPlace place) {
+        ImageView btn = findViewById(R.id.buttonFavorite);
+        FavoriteRepository repo = FavoriteRepository.getInstance();
+        updateFavoriteIcon(btn, repo.isFavorite(place.id));
+
+        btn.setOnClickListener(v -> {
+            boolean isFav = repo.toggle(place);
+            updateFavoriteIcon(btn, isFav);
+        });
+    }
+
+    private void updateFavoriteIcon(ImageView btn, boolean isFavorite) {
+        if (btn == null) return;
+        if (isFavorite) {
+            btn.setImageResource(R.drawable.baseline_favorite_24);
+            btn.setColorFilter(ContextCompat.getColor(this, R.color.upai_red));
+        } else {
+            btn.setImageResource(R.drawable.favorite_outline_24);
+            btn.setColorFilter(ContextCompat.getColor(this, R.color.black));
         }
-        if (lower.contains("shymbulak")) {
-            return "A popular mountain resort with breathtaking views, perfect for skiing and year‑round outdoor adventures.";
-        }
-        if (lower.contains("kok")) {
-            return "A city viewpoint and entertainment spot offering panoramic views and cultural attractions.";
-        }
-        return "Discover a beautiful destination with unique atmosphere and unforgettable views.";
     }
 
     private int[] galleryPhotosArray; // Store gallery photos for click listeners

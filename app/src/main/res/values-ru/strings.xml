@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Турагентство</string>
-
     <string name="menu1">Explore</string>
     <string name="menu2">Hotels</string>
     <string name="menu3">Trips</string>
@@ -38,22 +38,22 @@
     <string name="onboarding_get_started">Get Started</string>
 
     <!-- Profile -->
-    <string name="profile_title">Profile</string>
-    <string name="language_label">Language</string>
+    <string name="profile_title">Профиль</string>
+    <string name="language_label">Язык</string>
     <string name="language_kazakh">Қазақ тілі</string>
     <string name="language_russian">Русский язык</string>
     <string name="language_english">English</string>
-    <string name="current_language_name">English</string>
-    <string name="dialog_language_title">Choose language</string>
-    <string name="example_greeting">Hello</string>
-    <string name="example_welcome">Welcome</string>
-    <string name="example_thanks">Thank you</string>
-    <string name="example_greeting_kk">Сәлем</string>
-    <string name="example_greeting_ru">Привет</string>
-    <string name="example_greeting_en">Hello</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="personal_info">Personal info, documents</string>
-    <string name="payment_methods">Payment Methods</string>
-    <string name="help_support">Help &amp; Support</string>
-    <string name="log_out">Log Out</string>
+    <string name="current_language_name">Русский язык</string>
+    <string name="dialog_language_title">Выберите язык</string>
+
+    <!-- Example words (Russian) -->
+    <string name="example_greeting">Привет</string>
+    <string name="example_welcome">Добро пожаловать</string>
+    <string name="example_thanks">Спасибо</string>
+
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="personal_info">Личная информация</string>
+    <string name="payment_methods">Способы оплаты</string>
+    <string name="help_support">Помощь и поддержка</string>
+    <string name="log_out">Выйти</string>
 </resources>

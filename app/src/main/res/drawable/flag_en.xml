@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="16dp"
+    android:viewportWidth="24"
+    android:viewportHeight="16">
+    <!-- Simplified UK-inspired flag: blue base with red cross -->
+    <path
+        android:fillColor="#012169"
+        android:pathData="M0,0h24v16H0z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,7h24v2H0zM11,0h2v16h-2z"/>
+    <path
+        android:fillColor="#C8102E"
+        android:pathData="M0,8h24v1.5H0zM11.75,0h0.5v16h-0.5z"/>
+</vector>
