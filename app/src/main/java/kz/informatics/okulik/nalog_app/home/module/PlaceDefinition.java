@@ -15,15 +15,23 @@ public class PlaceDefinition {
     public final String[] categories;
     /** Sub-filters for chips: "museums", "parks", "shopping" */
     public final String[] subcategories;
+    /** Geo coordinates for map: "lat,lng" e.g. "43.238949,76.889709" */
+    public final String location;
 
     public PlaceDefinition(String id, int titleResId, int subtitleResId, int aboutResId,
                            float rating, int imageRes, int[] tagResIds, int[] galleryResIds, String[] categories) {
-        this(id, titleResId, subtitleResId, aboutResId, rating, imageRes, tagResIds, galleryResIds, categories, null);
+        this(id, titleResId, subtitleResId, aboutResId, rating, imageRes, tagResIds, galleryResIds, categories, null, null);
     }
 
     public PlaceDefinition(String id, int titleResId, int subtitleResId, int aboutResId,
                            float rating, int imageRes, int[] tagResIds, int[] galleryResIds,
                            String[] categories, String[] subcategories) {
+        this(id, titleResId, subtitleResId, aboutResId, rating, imageRes, tagResIds, galleryResIds, categories, subcategories, null);
+    }
+
+    public PlaceDefinition(String id, int titleResId, int subtitleResId, int aboutResId,
+                           float rating, int imageRes, int[] tagResIds, int[] galleryResIds,
+                           String[] categories, String[] subcategories, String location) {
         this.id = id;
         this.titleResId = titleResId;
         this.subtitleResId = subtitleResId;
@@ -34,6 +42,7 @@ public class PlaceDefinition {
         this.galleryResIds = galleryResIds != null ? galleryResIds : new int[0];
         this.categories = categories != null ? categories : new String[0];
         this.subcategories = subcategories != null ? subcategories : new String[0];
+        this.location = location != null ? location : "";
     }
 
     public boolean hasCategory(String category) {

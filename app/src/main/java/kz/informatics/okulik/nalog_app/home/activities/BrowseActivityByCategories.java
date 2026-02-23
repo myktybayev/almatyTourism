@@ -2,6 +2,7 @@ package kz.informatics.okulik.nalog_app.home.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -93,7 +93,7 @@ public class BrowseActivityByCategories extends AppCompatActivity {
         recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new BrowseDestinationAdapter(
                 this::openDetail,
-                item -> Toast.makeText(this, getString(R.string.browse_button_map) + ": " + item.title, Toast.LENGTH_SHORT).show()
+                this::openMap
         );
         recycler.setAdapter(adapter);
 
@@ -290,6 +290,15 @@ public class BrowseActivityByCategories extends AppCompatActivity {
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_IMAGE, item.imageRes);
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_TAGS, item.tags);
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_GALLERY_PHOTOS, item.listOfGalleryPhotos);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_LOCATION, item.location);
+        startActivity(intent);
+    }
+
+    private void openMap(PopularPlace item) {
+        if (item == null || item.location == null || item.location.trim().isEmpty()) return;
+        String title = item.title != null ? item.title : "";
+        Uri uri = Uri.parse("geo:" + item.location + "?q=" + item.location + "(" + title + ")");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 }

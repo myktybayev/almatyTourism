@@ -56,6 +56,7 @@ public class PopularDestinationsActivity extends AppCompatActivity {
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_IMAGE, item.imageRes);
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_TAGS, item.tags);
         intent.putExtra(PopularDestinationDetailActivity.EXTRA_GALLERY_PHOTOS, item.listOfGalleryPhotos);
+        intent.putExtra(PopularDestinationDetailActivity.EXTRA_LOCATION, item.location);
         startActivity(intent);
     }
 }

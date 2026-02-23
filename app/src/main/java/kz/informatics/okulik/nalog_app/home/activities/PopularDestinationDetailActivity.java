@@ -1,7 +1,9 @@
 package kz.informatics.okulik.nalog_app.home.activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
     public static final String EXTRA_IMAGE = "extra_image";
     public static final String EXTRA_TAGS = "extra_tags";
     public static final String EXTRA_GALLERY_PHOTOS = "extra_gallery_photos";
+    public static final String EXTRA_LOCATION = "extra_location";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
         int imageRes = intent.getIntExtra(EXTRA_IMAGE, 0);
         String[] tags = intent.getStringArrayExtra(EXTRA_TAGS);
         int[] galleryPhotos = intent.getIntArrayExtra(EXTRA_GALLERY_PHOTOS);
+        String location = intent.getStringExtra(EXTRA_LOCATION);
 
         ImageView headerImage = findViewById(R.id.imageHeader);
         TextView titleText = findViewById(R.id.textTitle);
@@ -71,6 +75,12 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
 
         // Load gallery photos
         loadGalleryPhotos(galleryPhotos);
+
+        // Map button
+        View buttonViewMap = findViewById(R.id.buttonViewMap);
+        if (buttonViewMap != null) {
+            buttonViewMap.setOnClickListener(v -> openMap(location, title));
+        }
 
         // Favorite button – red when favorited, saved via FavoriteRepository
         PopularPlace place = new PopularPlace(
@@ -151,6 +161,14 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
                 gallery4Text.setVisibility(android.view.View.GONE);
             }
         }
+    }
+
+    private void openMap(String location, String title) {
+        if (location == null || location.trim().isEmpty()) return;
+        String placeName = title != null ? title : "";
+        Uri uri = Uri.parse("geo:" + location + "?q=" + location + "(" + placeName + ")");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(mapIntent);
     }
 
     private void openGalleryPreview(int startPosition) {
