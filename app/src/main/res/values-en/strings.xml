@@ -51,6 +51,9 @@
     <string name="example_greeting">Hello</string>
     <string name="example_welcome">Welcome</string>
     <string name="example_thanks">Thank you</string>
+    <string name="example_greeting_kk">Сәлем</string>
+    <string name="example_greeting_ru">Привет</string>
+    <string name="example_greeting_en">Hello</string>
 
     <string name="edit_profile">Edit Profile</string>
     <string name="personal_info">Personal info, documents</string>
@@ -122,9 +125,14 @@
     <!-- Browse by Category -->
     <string name="browse_citylife_title">CityLife &amp; Culture</string>
     <string name="browse_filter_all">All</string>
+
     <string name="browse_filter_museums">Museums</string>
     <string name="browse_filter_parks">Parks</string>
+
+    <string name="browse_mall">Malls</string>
+    <string name="browse_entertainment">Entertainment</string>
     <string name="browse_filter_shopping">Shopping</string>
+
     <string name="browse_filter_mountains">Mountains</string>
     <string name="browse_filter_lakes">Lakes</string>
     <string name="browse_filter_canyons">Canyons</string>
@@ -143,4 +151,193 @@
     <string name="place_9_title">Central State Museum</string>
     <string name="place_9_subtitle">Samal-1, Almaty</string>
     <string name="place_9_about">One of the largest museums in Central Asia, showcasing the history and culture of Kazakhstan. The museum houses archaeological finds, ethnographic collections, and exhibits from ancient times to the present day. The building itself is an architectural landmark with a distinctive blue dome.</string>
+
+    <string name="place_101_title">Green Bazaar</string>
+    <string name="place_101_subtitle">City Center • Traditional Market</string>
+    <string name="place_101_about">Green Bazaar is one of the oldest and most authentic markets in Almaty. Visitors can find fresh fruits, spices, traditional Kazakh products, and local delicacies. It is a vibrant place where tourists can experience the true atmosphere of the city. The market is located near Panfilov Park and is a must-visit cultural spot.</string>
+
+    <string name="tag_market">Market</string>
+    <string name="tag_food2">Local Food</string>
+    <string name="tag_local">Local Culture</string>
+
+    <string name="place_102_title">Esentai Mall</string>
+    <string name="place_102_subtitle">Luxury • Shopping and Dining</string>
+    <string name="place_102_about">Esentai Mall is a premium shopping destination in Almaty featuring international luxury brands, fine dining restaurants, and a modern cinema. It offers a high-end shopping experience in a stylish and comfortable environment. The mall is popular among tourists and locals seeking quality leisure time.</string>
+
+    <string name="tag_luxury">Luxury</string>
+    <string name="tag_entertainment">Entertainment</string>
+
+    <string name="place_103_title">Dostyk Plaza</string>
+    <string name="place_103_subtitle">Modern Mall • Shopping and Cinema</string>
+    <string name="place_103_about">Dostyk Plaza is a modern shopping center offering a wide range of international brands, cafes, and a cinema complex. Its contemporary design and convenient location make it a popular destination for shopping and entertainment in Almaty.</string>
+
+    <string name="tag_mall">Mall</string>
+    <string name="tag_cinema">Cinema</string>
+
+    <string name="place_104_title">Mega Center Almaty</string>
+    <string name="place_104_subtitle">Large Mall • Family Friendly</string>
+    <string name="place_104_about">Mega Center Almaty is one of the largest shopping malls in the city. It offers numerous shops, restaurants, a cinema, and entertainment areas for families. It is a popular destination for both shopping and weekend leisure activities.</string>
+
+    <string name="tag_family">Family</string>
+
+    <string name="place_105_title">Forum Almaty</string>
+    <string name="place_105_subtitle">Urban Mall • Modern Lifestyle</string>
+    <string name="place_105_about">Forum Almaty is a stylish shopping and lifestyle center located in the heart of the city. It features fashion stores, restaurants, cafes, and entertainment facilities. The mall combines urban design with a comfortable shopping atmosphere.</string>
+
+    <string name="tag_modern">Modern</string>
+    <string name="place_106_title">Asia Park</string>
+    <string name="place_106_subtitle">Shopping Center • Local Brands</string>
+    <string name="place_106_about">Asia Park is a convenient shopping center offering a variety of local and international stores. It is popular among residents for everyday shopping and casual entertainment. The mall provides a relaxed and accessible atmosphere.</string>
+
+    <string name="place_107_title">Almaty Arena</string>
+    <string name="place_107_subtitle">Sports and Concert Venue</string>
+    <string name="place_107_about">Almaty Arena is a large modern sports and concert complex hosting international events, ice shows, and music concerts. It is one of the main entertainment venues in the city and attracts thousands of visitors.</string>
+
+    <string name="tag_events">Events</string>
+
+    <string name="place_108_title">Palace of the Republic</string>
+    <string name="place_108_subtitle">Concert Hall • Cultural Events</string>
+    <string name="place_108_about">The Palace of the Republic is one of Almaty’s most iconic concert halls. It hosts major cultural events, performances, and festivals. Located near Kok-Tobe, it is a key venue for national and international artists.</string>
+
+    <string name="tag_concerts">Concerts</string>
+
+
+    <string name="place_109_title">Auezov Kazakh Drama Theatre</string>
+    <string name="place_109_subtitle">National Theatre • Drama</string>
+    <string name="place_109_about">Auezov Kazakh Drama Theatre is one of the most prestigious cultural institutions in Kazakhstan. It presents classical and modern performances in the Kazakh language and plays a significant role in preserving national theatre traditions.</string>
+
+    <string name="tag_theatre">Theatre</string>
+
+
+    <string name="place_14_title">Issyk Lake</string>
+    <string name="place_14_subtitle">1 hr • Mountain Lake</string>
+    <string name="place_14_about">Issyk Lake is located in the Issyk Gorge and is known for its peaceful atmosphere and scenic mountain landscape. It is popular for day trips and picnics.</string>
+
+    <string name="tag_picnic">Picnic</string>
+
+    <string name="place_15_title">Kapchagay Reservoir</string>
+    <string name="place_15_subtitle">1 hr • Lakeside отдых</string>
+    <string name="place_15_about">Kapchagay Reservoir is a popular summer destination with beaches, resorts, and water activities. It is perfect for swimming and relaxation.</string>
+
+    <string name="tag_beach">Beach</string>
+    <string name="tag_water">Water Activities</string>
+
+    <string name="place_17_title">Turgen Gorge</string>
+    <string name="place_17_subtitle">1.5 hr • Mountain Gorge</string>
+    <string name="place_17_about">Turgen Gorge is famous for its waterfalls, forests, and scenic hiking trails. It is a popular destination for outdoor lovers.</string>
+
+    <string name="tag_waterfall">Waterfall</string>
+
+
+    <string name="place_18_title">Tamgaly Tas</string>
+    <string name="place_18_subtitle">2 hr • Rock Carvings</string>
+    <string name="place_18_about">Tamgaly Tas is an open-air site featuring ancient Buddhist rock carvings along the Ili River. It combines природная красота and historical significance.</string>
+
+    <string name="tag_petroglyphs">Petroglyphs</string>
+
+
+    <string name="place_19_title">Panfilov Park</string>
+    <string name="place_19_subtitle">City Center • Historic Park</string>
+    <string name="place_19_about">Panfilov Park is one of the most historic green spaces in Almaty. It is home to memorial monuments and is a popular place for walking and relaxation in the city center.</string>
+
+    <string name="tag_walks">Walking</string>
+    <string name="tag_citypark">City Park</string>
+
+    <string name="place_20_title">First President Park</string>
+    <string name="place_20_subtitle">South Almaty • Modern Park</string>
+    <string name="place_20_about">First President Park is a spacious and beautifully landscaped park with fountains, walking paths, and mountain views. It is popular for evening walks and public events.</string>
+
+    <string name="tag_fountain">Fountains</string>
+
+    <string name="place_21_title">Central Park of Culture and Leisure</string>
+    <string name="place_21_subtitle">City Park • Family Recreation</string>
+    <string name="place_21_about">Central Park is a large recreational area with a lake, amusement rides, спортивные площадки, and walking zones. It is one of the most visited parks in Almaty.</string>
+
+    <string name="tag_attractions">Attractions</string>
+
+    <string name="place_22_title">Almaty Botanical Garden</string>
+    <string name="place_22_subtitle">Botanical • Green Collection</string>
+    <string name="place_22_about">Almaty Botanical Garden features a diverse collection of plants, trees, and flowers. It is a peaceful place for прогулки and enjoying nature inside the city.</string>
+
+    <string name="tag_botanical">Botanical</string>
+
+
+    <string name="place_23_title">Japanese Garden</string>
+    <string name="place_23_subtitle">Decorative Garden • Calm Atmosphere</string>
+    <string name="place_23_about">Japanese Garden is a small but beautiful landscaped park with traditional design elements, ponds, and quiet paths for relaxation.</string>
+
+    <string name="tag_garden">Garden</string>
+    <string name="tag_relax">Relax</string>
+
+    <string name="place_24_title">Baum Grove</string>
+    <string name="place_24_subtitle">Urban Forest • Natural Area</string>
+    <string name="place_24_about">Baum Grove is a natural forest zone within Almaty, offering shade, свежий воздух, and walking trails away from busy streets.</string>
+
+    <string name="tag_forest">Forest</string>
+
+    <string name="place_25_title">Fantasy World</string>
+    <string name="place_25_subtitle">Amusement Park • Family Fun</string>
+    <string name="place_25_about">Fantasy World is an amusement park with rides and entertainment attractions suitable for children and adults.</string>
+
+    <string name="tag_amusement">Amusement Park</string>
+
+
+    <string name="place_26_title">Almaty Zoo</string>
+    <string name="place_26_subtitle">Zoo • Wildlife Experience</string>
+    <string name="place_26_about">Almaty Zoo hosts a wide variety of animals and offers educational programs for visitors. It is a popular destination for families with children.</string>
+
+    <string name="tag_animals">Animals</string>
+    <string name="tag_education">Education</string>
+
+
+    <string name="place_27_title">Halyk Arena</string>
+    <string name="place_27_subtitle">Ice Arena • Sports and Events</string>
+    <string name="place_27_about">Halyk Arena is a modern sports complex that hosts ice skating, хоккей games, and large public events.</string>
+
+
+    <string name="place_29_title">Baiken Mosque</string>
+    <string name="place_29_subtitle">Modern Mosque • Peaceful Atmosphere</string>
+    <string name="place_29_about">Baiken Mosque is known for its elegant modern design and calm atmosphere. It is a popular place for prayer and quiet reflection.</string>
+
+    <string name="place_30_title">Nur Mubarak Mosque</string>
+    <string name="place_30_subtitle">Islamic University Mosque</string>
+    <string name="place_30_about">Nur Mubarak Mosque is located near the Islamic University and combines traditional Islamic design with educational significance.</string>
+
+    <string name="tag_islamic">Islamic</string>
+
+
+    <string name="tag_cathedral">Cathedral</string>
+
+
+    <string name="place_32_title">St. Nicholas Cathedral</string>
+    <string name="place_32_subtitle">Orthodox Cathedral</string>
+    <string name="place_32_about">St. Nicholas Cathedral is an important православный church in Almaty, known for its traditional architecture and peaceful courtyard.</string>
+
+    <string name="tag_orthodox">Orthodox</string>
+
+
+    <string name="place_33_title">Ascension Cathedral</string>
+    <string name="place_33_subtitle">Historic Orthodox Cathedral</string>
+    <string name="place_33_about">Ascension Cathedral is a remarkable wooden cathedral built without nails. It represents one of the finest examples of Orthodox architecture in Central Asia.</string>
+
+    <string name="place_34_title">Central State Museum of Kazakhstan</string>
+    <string name="place_34_subtitle">National History Museum</string>
+    <string name="place_34_about">The Central State Museum showcases Kazakhstan’s history, culture, and археологические artifacts from ancient to modern times.</string>
+
+    <string name="tag_museum">Museum</string>
+
+    <string name="place_35_title">Museum of Folk Musical Instruments</string>
+    <string name="place_35_subtitle">Traditional Music Museum</string>
+    <string name="place_35_about">This museum presents a rich collection of traditional Kazakh musical instruments and cultural heritage exhibits.</string>
+
+    <string name="tag_music">Music</string>
+    <string name="tag_mosque">Mosque</string>
+    <string name="tag_spiritual">Spiritual</string>
+
+    <string name="place_36_title">Kasteev State Museum of Arts</string>
+    <string name="place_36_subtitle">Art Museum • Fine Arts Collection</string>
+    <string name="place_36_about">Kasteev State Museum of Arts is the largest art museum in Kazakhstan, featuring national and international fine art collections.</string>
+
+    <string name="tag_art">Art</string>
+
 </resources>

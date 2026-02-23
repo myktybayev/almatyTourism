@@ -50,6 +50,9 @@
     <string name="example_greeting">Привет</string>
     <string name="example_welcome">Добро пожаловать</string>
     <string name="example_thanks">Спасибо</string>
+    <string name="example_greeting_kk">Сәлем</string>
+    <string name="example_greeting_ru">Привет</string>
+    <string name="example_greeting_en">Hello</string>
 
     <string name="edit_profile">Редактировать профиль</string>
     <string name="personal_info">Личная информация</string>
@@ -142,4 +145,172 @@
     <string name="place_9_title">Центральный государственный музей</string>
     <string name="place_9_subtitle">Самал-1, Алматы</string>
     <string name="place_9_about">Один из крупнейших музеев Центральной Азии, представляющий историю и культуру Казахстана. В музее хранятся археологические находки, этнографические коллекции и экспозиции от древности до наших дней. Само здание — архитектурный памятник с характерным голубым куполом.</string>
+
+    <string name="place_105_about">Forum Almaty — это современный торгово-развлекательный центр, расположенный в самом сердце города. Здесь представлены модные магазины, рестораны, кафе и зоны развлечений. Центр сочетает урбанистический дизайн с комфортной атмосферой для шопинга.</string>
+
+    <string name="tag_modern">Современный</string>
+
+    <string name="place_106_about">Asia Park — удобный торговый центр с широким выбором местных и международных магазинов. Он популярен среди жителей для повседневных покупок и отдыха. Центр предлагает спокойную и доступную атмосферу.</string>
+
+    <string name="place_107_about">Almaty Arena — крупный современный спортивно-концертный комплекс, где проходят международные соревнования, ледовые шоу и музыкальные концерты. Это одна из главных площадок развлечений города, привлекающая тысячи посетителей.</string>
+
+    <string name="place_108_about">Дворец Республики — один из самых знаковых концертных залов Алматы. Здесь проходят крупные культурные мероприятия, выступления и фестивали. Расположенный рядом с Кок-Тобе, он является важной сценой для национальных и международных артистов.</string>
+
+    <string name="place_109_about">Казахский национальный драматический театр имени М. Ауэзова — одно из самых престижных культурных учреждений Казахстана. В театре ставятся классические и современные спектакли на казахском языке, он играет важную роль в сохранении национальных театральных традиций.</string>
+    <string name="browse_mall">Торговые центры</string>
+    <string name="browse_entertainment">Развлечения</string>
+
+    <string name="place_101_title">Зелёный базар</string>
+    <string name="place_101_subtitle">Центр города • Традиционный рынок</string>
+    <string name="place_101_about">Зелёный базар — один из самых старых и аутентичных рынков Алматы. Здесь можно найти свежие фрукты, специи, традиционные казахские продукты и местные деликатесы.</string>
+
+    <string name="tag_market">Рынок</string>
+    <string name="tag_food2">Местная кухня</string>
+    <string name="tag_local">Местная культура</string>
+
+    <string name="place_102_title">Esentai Mall</string>
+    <string name="place_102_subtitle">Люкс • Шопинг и рестораны</string>
+
+    <string name="tag_luxury">Люкс</string>
+    <string name="tag_entertainment">Развлечения</string>
+
+    <string name="tag_mall">Торговый центр</string>
+    <string name="tag_cinema">Кинотеатр</string>
+
+    <string name="tag_family">Семейный</string>
+    <string name="tag_events">События</string>
+    <string name="tag_concerts">Концерты</string>
+    <string name="tag_theatre">Театр</string>
+
+    <string name="tag_picnic">Пикник</string>
+    <string name="tag_beach">Пляж</string>
+    <string name="tag_water">Водные развлечения</string>
+    <string name="tag_waterfall">Водопад</string>
+    <string name="tag_petroglyphs">Петроглифы</string>
+
+    <string name="tag_walks">Прогулки</string>
+    <string name="tag_citypark">Городской парк</string>
+    <string name="tag_fountain">Фонтаны</string>
+    <string name="tag_attractions">Аттракционы</string>
+    <string name="tag_botanical">Ботанический</string>
+    <string name="tag_garden">Сад</string>
+    <string name="tag_relax">Отдых</string>
+    <string name="tag_forest">Роща</string>
+    <string name="tag_amusement">Парк развлечений</string>
+    <string name="tag_animals">Животные</string>
+    <string name="tag_education">Образование</string>
+
+    <string name="tag_islamic">Исламский</string>
+    <string name="tag_cathedral">Собор</string>
+    <string name="tag_orthodox">Православный</string>
+    <string name="tag_museum">Музей</string>
+    <string name="tag_music">Музыка</string>
+    <string name="tag_mosque">Мечеть</string>
+    <string name="tag_spiritual">Духовное</string>
+    <string name="tag_art">Искусство</string>
+
+    <string name="place_102_about">Esentai Mall — это премиальный торговый центр в Алматы, где представлены международные люксовые бренды, рестораны высокой кухни и современный кинотеатр. Он предлагает атмосферу эксклюзивного шопинга в стильной и комфортной обстановке. Центр популярен среди туристов и местных жителей, ценящих качественный отдых.</string>
+
+    <string name="place_103_title">Dostyk Plaza</string>
+    <string name="place_103_subtitle">Современный ТРЦ • Шопинг и кинотеатр</string>
+    <string name="place_103_about">Dostyk Plaza — современный торговый центр с широким выбором международных брендов, кафе и кинотеатром. Современный дизайн и удобное расположение делают его популярным местом для покупок и развлечений в Алматы.</string>
+
+    <string name="place_104_title">Mega Center Almaty</string>
+    <string name="place_104_subtitle">Крупный ТРЦ • Для всей семьи</string>
+    <string name="place_104_about">Mega Center Almaty — один из крупнейших торговых центров города. Здесь расположены многочисленные магазины, рестораны, кинотеатр и зоны развлечений для всей семьи. Это популярное место для шопинга и отдыха в выходные дни.</string>
+
+    <string name="place_105_title">Forum Almaty</string>
+    <string name="place_105_subtitle">Городской ТРЦ • Современный стиль</string>
+
+    <string name="place_106_title">Asia Park</string>
+    <string name="place_106_subtitle">Торговый центр • Местные бренды</string>
+
+    <string name="place_107_title">Almaty Arena</string>
+    <string name="place_107_subtitle">Спортивно-концертная площадка</string>
+
+    <string name="place_108_title">Дворец Республики</string>
+    <string name="place_108_subtitle">Концертный зал • Культурные события</string>
+
+    <string name="place_109_title">Казахский национальный драматический театр имени М. Ауэзова</string>
+    <string name="place_109_subtitle">Национальный театр • Драма</string>
+
+    <string name="place_14_title">Озеро Иссык</string>
+    <string name="place_14_subtitle">1 час • Горное озеро</string>
+    <string name="place_14_about">Озеро Иссык расположено в Иссыкском ущелье и известно своей спокойной атмосферой и живописными горными пейзажами. Это популярное место для однодневных поездок и пикников.</string>
+
+    <string name="place_15_title">Капчагайское водохранилище</string>
+    <string name="place_15_subtitle">1 час • Отдых у воды</string>
+    <string name="place_15_about">Капчагайское водохранилище — популярное летнее направление с пляжами, базами отдыха и водными развлечениями. Отлично подходит для купания и отдыха.</string>
+
+    <string name="place_17_title">Тургеньское ущелье</string>
+    <string name="place_17_subtitle">1,5 часа • Горное ущелье</string>
+    <string name="place_17_about">Тургеньское ущелье славится своими водопадами, лесами и живописными маршрутами для пеших прогулок. Это популярное место среди любителей активного отдыха.</string>
+
+    <string name="place_18_title">Тамгалы Тас</string>
+    <string name="place_18_subtitle">2 часа • Наскальные рисунки</string>
+    <string name="place_18_about">Тамгалы Тас — это природно-исторический комплекс под открытым небом с древними буддийскими наскальными изображениями на берегу реки Или. Он сочетает природную красоту и историческую ценность.</string>
+
+    <string name="place_19_title">Парк Панфиловцев</string>
+    <string name="place_19_subtitle">Центр города • Исторический парк</string>
+    <string name="place_19_about">Парк Панфиловцев — одно из самых исторических зелёных пространств Алматы. Здесь расположены памятники и мемориалы, а также это популярное место для прогулок и отдыха в центре города.</string>
+
+    <string name="place_20_title">Парк Первого Президента</string>
+    <string name="place_20_subtitle">Юг Алматы • Современный парк</string>
+    <string name="place_20_about">Парк Первого Президента — просторный и благоустроенный парк с фонтанами, прогулочными аллеями и видом на горы. Популярен для вечерних прогулок и общественных мероприятий.</string>
+
+    <string name="place_21_title">Центральный парк культуры и отдыха</string>
+    <string name="place_21_subtitle">Городской парк • Семейный отдых</string>
+    <string name="place_21_about">Центральный парк — большая зона отдыха с озером, аттракционами, спортивными площадками и прогулочными зонами. Это один из самых посещаемых парков Алматы.</string>
+
+    <string name="place_22_title">Алматинский ботанический сад</string>
+    <string name="place_22_subtitle">Ботанический • Коллекция растений</string>
+    <string name="place_22_about">Алматинский ботанический сад представляет разнообразную коллекцию растений, деревьев и цветов. Это спокойное место для прогулок и наслаждения природой в черте города.</string>
+
+    <string name="place_23_title">Японский сад</string>
+    <string name="place_23_subtitle">Декоративный сад • Спокойная атмосфера</string>
+    <string name="place_23_about">Японский сад — небольшой, но красивый ландшафтный парк с традиционными элементами дизайна, прудами и тихими аллеями для отдыха.</string>
+
+    <string name="place_24_title">Роща Баума</string>
+    <string name="place_24_subtitle">Городской лес • Природная зона</string>
+    <string name="place_24_about">Роща Баума — природная лесная зона в пределах Алматы, предлагающая тень, свежий воздух и прогулочные маршруты вдали от городского шума.</string>
+
+    <string name="place_25_title">Fantasy World</string>
+    <string name="place_25_subtitle">Парк аттракционов • Семейные развлечения</string>
+    <string name="place_25_about">Fantasy World — парк аттракционов с разнообразными развлечениями для детей и взрослых.</string>
+
+    <string name="place_26_title">Алматинский зоопарк</string>
+    <string name="place_26_subtitle">Зоопарк • Мир животных</string>
+    <string name="place_26_about">Алматинский зоопарк представляет широкий выбор животных и предлагает образовательные программы для посетителей. Это популярное место для семей с детьми.</string>
+
+    <string name="place_27_title">Halyk Arena</string>
+    <string name="place_27_subtitle">Ледовая арена • Спорт и мероприятия</string>
+    <string name="place_27_about">Halyk Arena — современный спортивный комплекс, где проходят массовые катания на льду, хоккейные матчи и крупные общественные мероприятия.</string>
+
+    <string name="place_29_title">Мечеть Байкен</string>
+    <string name="place_29_subtitle">Современная мечеть • Спокойная атмосфера</string>
+    <string name="place_29_about">Мечеть Байкен известна своим элегантным современным дизайном и спокойной атмосферой. Это популярное место для молитвы и уединённого размышления.</string>
+
+    <string name="place_30_title">Мечеть Нур-Мубарак</string>
+    <string name="place_30_subtitle">Мечеть при Исламском университете</string>
+    <string name="place_30_about">Мечеть Нур-Мубарак расположена рядом с Исламским университетом и сочетает традиционный исламский архитектурный стиль с образовательной значимостью.</string>
+
+    <string name="place_32_title">Свято-Никольский собор</string>
+    <string name="place_32_subtitle">Православный собор</string>
+    <string name="place_32_about">Свято-Никольский собор — важный православный храм Алматы, известный своей традиционной архитектурой и уютным внутренним двором.</string>
+
+    <string name="place_33_title">Вознесенский собор</string>
+    <string name="place_33_subtitle">Исторический православный собор</string>
+    <string name="place_33_about">Вознесенский собор — уникальный деревянный храм, построенный без единого гвоздя. Он является одним из лучших образцов православной архитектуры в Центральной Азии.</string>
+
+    <string name="place_34_title">Центральный государственный музей Республики Казахстан</string>
+    <string name="place_34_subtitle">Национальный исторический музей</string>
+    <string name="place_34_about">Центральный государственный музей представляет историю, культуру и археологические артефакты Казахстана от древности до современности.</string>
+
+    <string name="place_35_title">Музей народных музыкальных инструментов</string>
+    <string name="place_35_subtitle">Музей традиционной музыки</string>
+    <string name="place_35_about">В музее представлена богатая коллекция традиционных казахских музыкальных инструментов и экспонатов культурного наследия.</string>
+
+    <string name="place_36_title">Государственный музей искусств имени Кастеева</string>
+    <string name="place_36_subtitle">Художественный музей • Коллекция изобразительного искусства</string>
+    <string name="place_36_about">Государственный музей искусств имени Кастеева — крупнейший художественный музей Казахстана, где представлены национальные и международные коллекции изобразительного искусства.</string>
 </resources>

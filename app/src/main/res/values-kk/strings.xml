@@ -51,6 +51,9 @@
     <string name="example_greeting">Сәлем</string>
     <string name="example_welcome">Қош келдіңіз</string>
     <string name="example_thanks">Рақмет</string>
+    <string name="example_greeting_kk">Сәлем</string>
+    <string name="example_greeting_ru">Привет</string>
+    <string name="example_greeting_en">Hello</string>
 
     <string name="edit_profile">Профильді өңдеу</string>
     <string name="personal_info">Жеке мәліметтер</string>
@@ -143,4 +146,169 @@
     <string name="place_9_title">Орталық мемлекеттік мұражай</string>
     <string name="place_9_subtitle">Самал-1, Алматы</string>
     <string name="place_9_about">Орталық Азиядағы ең үлкен мұражайлардың бірі, Қазақстан тарихы мен мәдениетін насихаттайды. Мұражайда археологиялық табыстар, этнографиялық жинақтар және ежелгі заманнан бүгінге дейінгі көрмелер бар. Ғимараттың өзі ерекше көк күмбезімен сәулет өнері нышаны.</string>
+
+    <string name="tag_modern">Заманауи</string>
+    <string name="place_106_about">Asia Park — жергілікті және халықаралық дүкендердің алуан түрін ұсынатын ыңғайлы сауда орталығы. Ол тұрғындар арасында күнделікті сауда мен демалыс үшін танымал. Орталық жайлы әрі қолжетімді атмосферасымен ерекшеленеді.</string>
+    <string name="place_107_about">Almaty Arena — халықаралық жарыстарды, мұз шоуларын және музыкалық концерттерді өткізетін ірі заманауи спорт және концерт кешені. Бұл қаладағы негізгі ойын-сауық орындарының бірі және мыңдаған келушілерді тартады.</string>
+    <string name="place_108_about">Republic сарайы — Алматыдағы ең танымал концерт залдарының бірі. Мұнда ірі мәдени іс-шаралар, қойылымдар мен фестивальдер өтеді. Көктөбе маңында орналасқан бұл орын ұлттық және халықаралық әртістер үшін маңызды сахна болып табылады.</string>
+    <string name="place_109_about">М. Әуезов атындағы Қазақ ұлттық драма театры — Қазақстандағы ең беделді мәдени мекемелердің бірі. Мұнда қазақ тілінде классикалық және заманауи қойылымдар сахналанады және ұлттық театр дәстүрін сақтауда маңызды рөл атқарады.</string>
+
+    <string name="browse_mall">Сауда орталықтары</string>
+    <string name="browse_entertainment">Ойын-сауық</string>
+
+    <string name="place_101_title">Жасыл базар</string>
+    <string name="place_101_subtitle">Қала орталығы • Дәстүрлі базар</string>
+    <string name="place_101_about">Жасыл базар — Алматыдағы ең көне әрі шынайы базарлардың бірі. Мұнда жаңа піскен жемістер, дәмдеуіштер, дәстүрлі қазақ өнімдері мен ұлттық тағамдарды табуға болады. Бұл жер қаланың шынайы атмосферасын сезінуге мүмкіндік береді. Базар Панфилов саябағының жанында орналасқан және туристер үшін міндетті түрде баруға тұрарлық орын.</string>
+
+    <string name="tag_market">Базар</string>
+    <string name="tag_food2">Жергілікті тағам</string>
+    <string name="tag_local">Жергілікті мәдениет</string>
+
+    <string name="place_102_title">Esentai Mall</string>
+    <string name="place_102_subtitle">Люкс • Сауда және мейрамханалар</string>
+    <string name="place_102_about">Esentai Mall — халықаралық люкс брендтері, таңдаулы мейрамханалар және заманауи кинотеатры бар премиум сауда орталығы. Ол жоғары деңгейдегі сауда мен жайлы демалыс атмосферасын ұсынады.</string>
+
+    <string name="tag_luxury">Люкс</string>
+    <string name="tag_entertainment">Ойын-сауық</string>
+
+    <string name="place_103_title">Dostyk Plaza</string>
+    <string name="place_103_subtitle">Заманауи сауда орталығы • Кинотеатр</string>
+    <string name="place_103_about">Dostyk Plaza — халықаралық брендтер, кафелер және кино кешені бар заманауи сауда орталығы.</string>
+
+    <string name="tag_mall">Сауда орталығы</string>
+    <string name="tag_cinema">Кинотеатр</string>
+
+    <string name="place_104_title">Mega Center Almaty</string>
+    <string name="place_104_subtitle">Үлкен сауда орталығы • Отбасылық</string>
+    <string name="place_104_about">Mega Center — қаладағы ең ірі сауда орталықтарының бірі. Мұнда дүкендер, мейрамханалар, кинотеатр және балаларға арналған ойын аймақтары бар.</string>
+
+    <string name="tag_family">Отбасылық</string>
+
+    <string name="place_105_title">Forum Almaty</string>
+    <string name="place_105_subtitle">Қалалық сауда орталығы • Заманауи өмір салты</string>
+
+    <string name="place_106_title">Asia Park</string>
+    <string name="place_106_subtitle">Сауда орталығы • Жергілікті брендтер</string>
+
+    <string name="place_107_title">Almaty Arena</string>
+    <string name="place_107_subtitle">Спорт және концерт кешені</string>
+    <string name="tag_events">Іс-шаралар</string>
+
+    <string name="place_108_title">Республика сарайы</string>
+    <string name="place_108_subtitle">Концерт залы • Мәдени шаралар</string>
+    <string name="tag_concerts">Концерттер</string>
+
+    <string name="place_109_title">Әуезов атындағы Қазақ драма театры</string>
+    <string name="place_109_subtitle">Ұлттық театр • Драма</string>
+    <string name="tag_theatre">Театр</string>
+
+    <string name="tag_picnic">Пикник</string>
+    <string name="tag_beach">Жағажай</string>
+    <string name="tag_water">Су белсенділігі</string>
+    <string name="tag_waterfall">Сарқырама</string>
+    <string name="tag_petroglyphs">Жартас суреттері</string>
+
+    <string name="tag_walks">Серуен</string>
+    <string name="tag_citypark">Қалалық саябақ</string>
+    <string name="tag_fountain">Субұрқақтар</string>
+    <string name="tag_attractions">Аттракциондар</string>
+    <string name="tag_botanical">Ботаникалық</string>
+    <string name="tag_garden">Бақ</string>
+    <string name="tag_relax">Демалыс</string>
+    <string name="tag_forest">Орман</string>
+    <string name="tag_amusement">Ойын-сауық саябағы</string>
+    <string name="tag_animals">Жануарлар</string>
+    <string name="tag_education">Білім беру</string>
+
+    <string name="tag_islamic">Исламдық</string>
+    <string name="tag_cathedral">Собор</string>
+    <string name="tag_orthodox">Православие</string>
+    <string name="tag_museum">Мұражай</string>
+    <string name="tag_music">Музыка</string>
+    <string name="tag_mosque">Мешіт</string>
+    <string name="tag_spiritual">Рухани</string>
+    <string name="tag_art">Өнер</string>
+
+    <string name="place_105_about">Forum Almaty — қаланың дәл орталығында орналасқан сәнді сауда және lifestyle орталығы. Мұнда сән дүкендері, мейрамханалар, кафелер және ойын-сауық орындары бар. Сауда орталығы урбанистік дизайнды жайлы сауда атмосферасымен үйлестіреді.</string>
+
+    <string name="place_14_title">Есік көлі</string>
+    <string name="place_14_subtitle">1 сағ • Таулы көл</string>
+    <string name="place_14_about">Есік көлі Есік шатқалында орналасқан және өзінің тыныш атмосферасымен әрі көркем таулы табиғатымен танымал. Бұл бір күндік сапарлар мен пикниктер үшін танымал орын.</string>
+
+    <string name="place_15_title">Қапшағай су қоймасы</string>
+    <string name="place_15_subtitle">1 сағ • Жағалаудағы демалыс</string>
+    <string name="place_15_about">Қапшағай су қоймасы — жағажайлары, демалыс орындары және судағы ойын-сауық түрлері бар танымал жазғы бағыт. Шомылу мен тынығу үшін өте қолайлы.</string>
+
+    <string name="place_17_title">Түрген шатқалы</string>
+    <string name="place_17_subtitle">1,5 сағ • Таулы шатқал</string>
+    <string name="place_17_about">Түрген шатқалы сарқырамаларымен, ормандарымен және көркем жаяу серуен бағыттарымен танымал. Бұл табиғат аясындағы белсенді демалысты ұнататындар үшін танымал орын.</string>
+
+    <string name="place_18_title">Тамғалы тас</string>
+    <string name="place_18_subtitle">2 сағ • Жартастағы бейнелер</string>
+    <string name="place_18_about">Тамғалы тас — Іле өзені бойында орналасқан көне буддалық жартас бейнелері бар ашық аспан астындағы тарихи орын. Бұл жер табиғи сұлулық пен тарихи маңыздылықты үйлестіреді.</string>
+
+    <string name="place_19_title">Панфилов саябағы</string>
+    <string name="place_19_subtitle">Қала орталығы • Тарихи саябақ</string>
+    <string name="place_19_about">Панфилов саябағы — Алматыдағы ең тарихи жасыл аймақтардың бірі. Мұнда мемориалдық ескерткіштер орналасқан және қала орталығында серуендеу мен демалу үшін танымал орын болып табылады.</string>
+
+    <string name="place_20_title">Тұңғыш Президент саябағы</string>
+    <string name="place_20_subtitle">Алматының оңтүстігі • Заманауи саябақ</string>
+    <string name="place_20_about">Тұңғыш Президент саябағы — субұрқақтары, серуен жолдары және тауға көрінісі бар кең әрі көркем абаттандырылған саябақ. Кешкі серуендер мен қоғамдық іс-шаралар үшін танымал.</string>
+
+    <string name="place_21_title">Орталық мәдениет және демалыс саябағы</string>
+    <string name="place_21_subtitle">Қалалық саябақ • Отбасылық демалыс</string>
+    <string name="place_21_about">Орталық саябақ — көлі, аттракциондары, спорт алаңдары және серуен аймақтары бар үлкен демалыс орны. Бұл Алматыдағы ең көп келетін саябақтардың бірі.</string>
+
+    <string name="place_22_title">Алматы ботаникалық бағы</string>
+    <string name="place_22_subtitle">Ботаникалық • Жасыл коллекция</string>
+    <string name="place_22_about">Алматы ботаникалық бағында өсімдіктердің, ағаштардың және гүлдердің алуан түрлі коллекциясы бар. Қала ішінде табиғат аясында тыныш серуендеуге қолайлы орын.</string>
+
+    <string name="place_23_title">Жапон бағы</string>
+    <string name="place_23_subtitle">Сәндік бақ • Тыныш атмосфера</string>
+    <string name="place_23_about">Жапон бағы — дәстүрлі дизайн элементтері, тоғандары және тыныш серуен жолдары бар шағын, бірақ әдемі абаттандырылған саябақ.</string>
+
+    <string name="place_24_title">Баум тоғайы</string>
+    <string name="place_24_subtitle">Қалалық орман • Табиғи аймақ</string>
+    <string name="place_24_about">Баум тоғайы — Алматы аумағындағы табиғи орман аймағы. Мұнда көлеңке, таза ауа және қаланың қарбаласынан алыс серуен жолдары бар.</string>
+
+    <string name="place_25_title">Fantasy World</string>
+    <string name="place_25_subtitle">Аттракциондар паркі • Отбасылық ойын-сауық</string>
+    <string name="place_25_about">Fantasy World — балалар мен ересектерге арналған түрлі аттракциондар мен ойын-сауық орындары бар саябақ.</string>
+
+    <string name="place_26_title">Алматы хайуанаттар бағы</string>
+    <string name="place_26_subtitle">Хайуанаттар бағы • Жабайы табиғат</string>
+    <string name="place_26_about">Алматы хайуанаттар бағында жануарлардың алуан түрі бар және келушілерге арналған білім беру бағдарламалары ұйымдастырылады. Бұл балалармен келетін отбасылар үшін танымал орын.</string>
+
+    <string name="place_27_title">Halyk Arena</string>
+    <string name="place_27_subtitle">Мұз айдыны • Спорт және іс-шаралар</string>
+    <string name="place_27_about">Halyk Arena — мұзда сырғанау, хоккей ойындары және ірі қоғамдық іс-шаралар өтетін заманауи спорт кешені.</string>
+
+    <string name="place_29_title">Байкен мешіті</string>
+    <string name="place_29_subtitle">Заманауи мешіт • Тыныш атмосфера</string>
+    <string name="place_29_about">Байкен мешіті өзінің әсем заманауи дизайнымен және тыныш атмосферасымен танымал. Бұл құлшылық етуге және тыныш ой жүгіртуге арналған орын.</string>
+
+    <string name="place_30_title">Нұр-Мүбарак мешіті</string>
+    <string name="place_30_subtitle">Ислам университеті мешіті</string>
+    <string name="place_30_about">Нұр-Мүбарак мешіті Ислам университетінің жанында орналасқан және дәстүрлі исламдық сәулетті білім беру маңыздылығымен үйлестіреді.</string>
+
+    <string name="place_32_title">Әулие Николай соборы</string>
+    <string name="place_32_subtitle">Православие соборы</string>
+    <string name="place_32_about">Әулие Николай соборы — Алматыдағы маңызды православие шіркеулерінің бірі. Ол дәстүрлі сәулетімен және тыныш ауласымен танымал.</string>
+
+    <string name="place_33_title">Вознесенский соборы</string>
+    <string name="place_33_subtitle">Тарихи православие соборы</string>
+    <string name="place_33_about">Вознесенский соборы — бірде-бір шеге қолданбай салынған ерекше ағаш ғимарат. Ол Орталық Азиядағы православие сәулет өнерінің ең үздік үлгілерінің бірі болып саналады.</string>
+
+    <string name="place_34_title">Қазақстан Республикасының Орталық мемлекеттік музейі</string>
+    <string name="place_34_subtitle">Ұлттық тарих музейі</string>
+    <string name="place_34_about">Орталық мемлекеттік музей Қазақстанның көне дәуірден қазіргі заманға дейінгі тарихын, мәдениетін және археологиялық жәдігерлерін таныстырады.</string>
+
+    <string name="place_35_title">Халық музыкалық аспаптар музейі</string>
+    <string name="place_35_subtitle">Дәстүрлі музыка музейі</string>
+    <string name="place_35_about">Бұл музейде қазақтың дәстүрлі музыкалық аспаптарының бай коллекциясы және мәдени мұра экспонаттары ұсынылған.</string>
+
+    <string name="place_36_title">Әбілхан Қастеев атындағы Мемлекеттік өнер музейі</string>
+    <string name="place_36_subtitle">Өнер музейі • Бейнелеу өнері коллекциясы</string>
+    <string name="place_36_about">Әбілхан Қастеев атындағы Мемлекеттік өнер музейі — Қазақстандағы ең ірі өнер музейі. Мұнда ұлттық және халықаралық бейнелеу өнері коллекциялары ұсынылған.</string>
+
 </resources>

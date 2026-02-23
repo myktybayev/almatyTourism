@@ -37,20 +37,25 @@ public class BrowseActivityByCategories extends AppCompatActivity {
 
     public static final String SUBFILTER_ALL = "all";
     // citylife
-    public static final String SUBFILTER_MUSEUMS = "museums";
-    public static final String SUBFILTER_PARKS = "parks";
+    public static final String SUBFILTER_MALL = "malls";
+    public static final String SUBFILTER_ENTERTAINMENT = "entertainment";
     public static final String SUBFILTER_SHOPPING = "shopping";
+
+
+
     // nature
     public static final String SUBFILTER_MOUNTAINS = "mountains";
     public static final String SUBFILTER_LAKES = "lakes";
     public static final String SUBFILTER_CANYONS = "canyons";
     // parks
+    public static final String SUBFILTER_PARKS = "parks";
     public static final String SUBFILTER_CITY_PARKS = "city_parks";
     public static final String SUBFILTER_BOTANICAL = "botanical";
     public static final String SUBFILTER_FAMILY = "family";
     // spiritual
     public static final String SUBFILTER_MOSQUES = "mosques";
     public static final String SUBFILTER_CATHEDRALS = "cathedrals";
+    public static final String SUBFILTER_MUSEUMS = "museums";
 
     private RecyclerView recycler;
     private TextView textTitle;
@@ -207,8 +212,8 @@ public class BrowseActivityByCategories extends AppCompatActivity {
     private void updateChipLabels(TextView chip1, TextView chip2, TextView chip3) {
         switch (currentCategory) {
             case CATEGORY_CITYLIFE:
-                chip1.setText(R.string.browse_filter_museums);
-                chip2.setText(R.string.browse_filter_parks);
+                chip1.setText(R.string.browse_mall);
+                chip2.setText(R.string.browse_entertainment);
                 chip3.setText(R.string.browse_filter_shopping);
                 break;
             case CATEGORY_NATURE:
@@ -235,7 +240,7 @@ public class BrowseActivityByCategories extends AppCompatActivity {
 
     private String getSubFilter1() {
         switch (currentCategory) {
-            case CATEGORY_CITYLIFE: return SUBFILTER_MUSEUMS;
+            case CATEGORY_CITYLIFE: return SUBFILTER_MALL;
             case CATEGORY_NATURE: return SUBFILTER_MOUNTAINS;
             case CATEGORY_PARKS: return SUBFILTER_CITY_PARKS;
             case CATEGORY_SPIRITUAL: return SUBFILTER_MOSQUES;
@@ -245,7 +250,7 @@ public class BrowseActivityByCategories extends AppCompatActivity {
 
     private String getSubFilter2() {
         switch (currentCategory) {
-            case CATEGORY_CITYLIFE: return SUBFILTER_PARKS;
+            case CATEGORY_CITYLIFE: return SUBFILTER_ENTERTAINMENT;
             case CATEGORY_NATURE: return SUBFILTER_LAKES;
             case CATEGORY_PARKS: return SUBFILTER_BOTANICAL;
             case CATEGORY_SPIRITUAL: return SUBFILTER_CATHEDRALS;
