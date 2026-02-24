@@ -340,4 +340,40 @@
 
     <string name="tag_art">Art</string>
 
+    <!-- Hotels -->
+    <string name="hotels_title">Hotels</string>
+    <string name="hotels_select">Select</string>
+    <string name="hotels_check_in">Check-in</string>
+    <string name="hotels_check_out">Check-out</string>
+    <string name="hotels_guests">Guests</string>
+    <string name="hotels_rooms">Rooms</string>
+    <string name="hotels_guests_count">%1$d</string>
+    <string name="hotels_rooms_count">%1$d</string>
+    <string name="hotels_find">Find Hotels</string>
+    <string name="hotels_recommended">Recommended</string>
+    <string name="hotels_per_night">Per night</string>
+    <string name="hotels_view_details">View Details</string>
+    <string name="hotel_about">About</string>
+    <string name="hotel_facilities">Facilities</string>
+    <string name="hotel_facility_wifi">Free Wifi</string>
+    <string name="hotel_facility_dining">Dining</string>
+    <string name="hotel_facility_pool">Pool</string>
+    <string name="hotel_facility_spa">Spa</string>
+    <string name="hotel_gallery">Gallery</string>
+    <string name="hotel_location">Location</string>
+    <string name="hotel_open_map">Open Map</string>
+    <string name="hotel_start_from">Start from</string>
+    <string name="hotel_per_night">/night</string>
+    <string name="hotel_book_now">Book Now</string>
+    <string name="currency_tenge">〒</string>
+    <!-- Booking -->
+    <string name="booking_select_room">Select Room</string>
+    <string name="booking_nights">%1$d Nights</string>
+    <string name="booking_guests_rooms">%1$d Guests, %2$d Room</string>
+    <string name="booking_available_rooms">Available Rooms</string>
+    <string name="booking_enhance_stay">Enhance Your Stay</string>
+    <string name="booking_addon_per_guest">%1$s 〒 / guest</string>
+    <string name="booking_addon_fixed">%1$s 〒</string>
+    <string name="booking_total">Total (%1$d Nights)</string>
+    <string name="booking_continue">Continue</string>
 </resources>

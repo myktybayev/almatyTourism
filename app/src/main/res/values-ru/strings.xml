@@ -312,4 +312,41 @@
     <string name="place_36_title">Государственный музей искусств имени Кастеева</string>
     <string name="place_36_subtitle">Художественный музей • Коллекция изобразительного искусства</string>
     <string name="place_36_about">Государственный музей искусств имени Кастеева — крупнейший художественный музей Казахстана, где представлены национальные и международные коллекции изобразительного искусства.</string>
+
+    <!-- Hotels -->
+    <string name="hotels_title">Отели</string>
+    <string name="hotels_select">Выбрать</string>
+    <string name="hotels_check_in">Заезд</string>
+    <string name="hotels_check_out">Выезд</string>
+    <string name="hotels_guests">Гости</string>
+    <string name="hotels_rooms">Комнаты</string>
+    <string name="hotels_guests_count">%1$d</string>
+    <string name="hotels_rooms_count">%1$d</string>
+    <string name="hotels_find">Найти отели</string>
+    <string name="hotels_recommended">Рекомендуемые</string>
+    <string name="hotels_per_night">За ночь</string>
+    <string name="hotels_view_details">Подробнее</string>
+    <string name="hotel_about">О нас</string>
+    <string name="hotel_facilities">Удобства</string>
+    <string name="hotel_facility_wifi">Бесплатный Wi‑Fi</string>
+    <string name="hotel_facility_dining">Ресторан</string>
+    <string name="hotel_facility_pool">Бассейн</string>
+    <string name="hotel_facility_spa">Спа</string>
+    <string name="hotel_gallery">Галерея</string>
+    <string name="hotel_location">Расположение</string>
+    <string name="hotel_open_map">Открыть карту</string>
+    <string name="hotel_start_from">От</string>
+    <string name="hotel_per_night">/ночь</string>
+    <string name="hotel_book_now">Забронировать</string>
+    <string name="currency_tenge">〒</string>
+    <!-- Booking -->
+    <string name="booking_select_room">Выбрать комнату</string>
+    <string name="booking_nights">%1$d ночей</string>
+    <string name="booking_guests_rooms">%1$d гостей, %2$d комната</string>
+    <string name="booking_available_rooms">Доступные комнаты</string>
+    <string name="booking_enhance_stay">Улучшите проживание</string>
+    <string name="booking_addon_per_guest">%1$s 〒 / гость</string>
+    <string name="booking_addon_fixed">%1$s 〒</string>
+    <string name="booking_total">Итого (%1$d ночей)</string>
+    <string name="booking_continue">Продолжить</string>
 </resources>

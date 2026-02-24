@@ -311,4 +311,41 @@
     <string name="place_36_subtitle">Өнер музейі • Бейнелеу өнері коллекциясы</string>
     <string name="place_36_about">Әбілхан Қастеев атындағы Мемлекеттік өнер музейі — Қазақстандағы ең ірі өнер музейі. Мұнда ұлттық және халықаралық бейнелеу өнері коллекциялары ұсынылған.</string>
 
+    <!-- Hotels -->
+    <string name="hotels_title">Қонақ үйлер</string>
+    <string name="hotels_select">Таңдау</string>
+    <string name="hotels_check_in">Кіру күні</string>
+    <string name="hotels_check_out">Шығу күні</string>
+    <string name="hotels_guests">Қонақтар</string>
+    <string name="hotels_rooms">Бөлмелер</string>
+    <string name="hotels_guests_count">%1$d</string>
+    <string name="hotels_rooms_count">%1$d</string>
+    <string name="hotels_find">Қонақ үйлерді табу</string>
+    <string name="hotels_recommended">Ұсынылады</string>
+    <string name="hotels_per_night">Түнгі бағасы</string>
+    <string name="hotels_view_details">Толығырақ</string>
+    <string name="hotel_about">Туралы</string>
+    <string name="hotel_facilities">Жабдықтар</string>
+    <string name="hotel_facility_wifi">Тегін Wi-Fi</string>
+    <string name="hotel_facility_dining">Тамақтану</string>
+    <string name="hotel_facility_pool">Жүзу бассейні</string>
+    <string name="hotel_facility_spa">Спа</string>
+    <string name="hotel_gallery">Галерея</string>
+    <string name="hotel_location">Орналасуы</string>
+    <string name="hotel_open_map">Картаны ашу</string>
+    <string name="hotel_start_from">Бастап</string>
+    <string name="hotel_per_night">/түн</string>
+    <string name="hotel_book_now">Брондау</string>
+    <string name="currency_tenge">〒</string>
+    <!-- Booking -->
+    <string name="booking_select_room">Бөлмені таңдау</string>
+    <string name="booking_nights">%1$d түн</string>
+    <string name="booking_guests_rooms">%1$d қонақ, %2$d бөлме</string>
+    <string name="booking_available_rooms">Қолда бар бөлмелер</string>
+    <string name="booking_enhance_stay">Тұруыңызды жақсарту</string>
+    <string name="booking_addon_per_guest">%1$s 〒 / қонақ</string>
+    <string name="booking_addon_fixed">%1$s 〒</string>
+    <string name="booking_total">Жалпы (%1$d түн)</string>
+    <string name="booking_continue">Жалғастыру</string>
+
 </resources>

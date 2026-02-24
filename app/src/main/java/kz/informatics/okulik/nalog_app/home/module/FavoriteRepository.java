@@ -35,6 +35,19 @@ public class FavoriteRepository {
         }
     }
 
+    /** Toggle favorite for a generic place (e.g. hotel) by id and title. */
+    public boolean togglePlace(String id, String title) {
+        if (id == null) return false;
+        if (favoriteMap.containsKey(id)) {
+            favoriteMap.remove(id);
+            return false;
+        } else {
+            PopularPlace p = new PopularPlace(id, title, "", 0f, 0, new String[0]);
+            favoriteMap.put(id, p);
+            return true;
+        }
+    }
+
     public List<PopularPlace> getFavorites() {
         return Collections.unmodifiableList(new ArrayList<>(favoriteMap.values()));
     }
