@@ -205,9 +205,9 @@ public class HotelsFragment extends Fragment {
     private void loadHotels() {
         List<Hotel> list;
         if (checkInDate == null || checkInDate.isEmpty() || checkOutDate == null || checkOutDate.isEmpty()) {
-            list = HotelsRepository.getInstance().getAllHotels();
+            list = HotelsRepository.getInstance().getAllHotels(requireContext());
         } else {
-            list = HotelsRepository.getInstance().getHotelsByAvailability(checkInDate, checkOutDate);
+            list = HotelsRepository.getInstance().getHotelsByAvailability(requireContext(), checkInDate, checkOutDate);
         }
         adapter.setItems(list);
     }

@@ -349,4 +349,137 @@
     <string name="booking_addon_fixed">%1$s 〒</string>
     <string name="booking_total">Итого (%1$d ночей)</string>
     <string name="booking_continue">Продолжить</string>
+
+    <string name="price_format">%1$s ₸</string>
+
+    <string name="hotel_rixos_name">Rixos Almaty</string>
+    <string name="hotel_rixos_address">проспект Сейфуллина, 506</string>
+    <string name="hotel_rixos_desc">Ощутите роскошь мирового уровня в самом сердце Алматы. Отель Rixos Almaty предлагает уникальное сочетание комфорта и традиционного казахского гостеприимства. Просторные номера, изысканные рестораны и современный SPA-центр обеспечат незабываемый отдых.</string>
+
+    <string name="hotel_kz_name">Отель «Казахстан»</string>
+    <string name="hotel_kz_address">проспект Достык, 52</string>
+    <string name="hotel_kz_desc"> Историческая достопримечательность в центре Алматы. Отель «Казахстан» предлагает великолепные виды на горы и город. Идеальное сочетание советской архитектурной монументальности и современного комфорта.</string>
+
+    <string name="hotel_novotel_name">Novotel City Center</string>
+    <string name="hotel_novotel_address">проспект Достык, 104A</string>
+    <string name="hotel_novotel_desc"> Современный международный отель в центральном деловом районе. Novotel предлагает комфортные номера, фитнес-центр и удобный доступ к торговым и развлекательным объектам. </string>
+
+    <string name="addon_royal_breakfast">Королевский завтрак</string>
+    <string name="addon_vip_transfer">VIP трансфер из аэропорта</string>
+    <string name="addon_breakfast">Завтрак</string>
+    <string name="addon_airport_transfer">Трансфер из аэропорта</string>
+    <string name="addon_breakfast_buffet">Завтрак «шведский стол»</string>
+    <string name="addon_airport_shuttle">Трансфер в аэропорт</string>
+    <string name="addon_spa_package">SPA-пакет</string>
+    <string name="addon_transfer_medeu">Трансфер на Медеу</string>
+    <string name="addon_club_lounge_access">Доступ в Club Lounge</string>
+    <string name="addon_heli_transfer">Вертолетный трансфер</string>
+    <string name="addon_national_breakfast">Национальный завтрак</string>
+    <string name="addon_horse_riding">Конные прогулки</string>
+    <string name="addon_ski_lift_pass">Ски-пасс</string>
+    <string name="addon_spa_day">SPA-день</string>
+    <string name="addon_breakfast_incl">Завтрак включен</string>
+    <string name="addon_wellness_breakfast">Wellness-завтрак</string>
+    <string name="addon_gym_pool_access">Доступ в спортзал и бассейн</string>
+
+    <string name="room_deluxe_king">Делюкс с кроватью King Size</string>
+    <string name="room_deluxe_twin">Делюкс с двумя кроватями</string>
+    <string name="room_royal_suite">Королевский люкс</string>
+    <string name="room_standard">Стандартный номер</string>
+    <string name="room_superior">Улучшенный номер</string>
+    <string name="room_executive">Представительский номер</string>
+    <string name="room_standard_double">Стандарт с двуспальной кроватью</string>
+    <string name="room_superior_twin">Улучшенный с двумя кроватями</string>
+    <string name="room_junior_suite">Полулюкс</string>
+    <string name="room_deluxe_double">Делюкс с двуспальной кроватью</string>
+    <string name="room_suite">Люкс</string>
+    <string name="room_classic_room">Классический номер</string>
+    <string name="room_premier_twin">Премьер с двумя кроватями</string>
+    <string name="room_wellness_suite">Wellness люкс</string>
+    <string name="room_eco_room">Эко номер</string>
+    <string name="room_family_room">Семейный номер</string>
+    <string name="room_premium_cottage">Премиум коттедж</string>
+    <string name="room_deluxe_king_short">Делюкс King</string>
+    <string name="room_club_twin">Клубный номер с двумя кроватями</string>
+    <string name="room_ritz_suite">Люкс Ritz</string>
+    <string name="room_deluxe">Делюкс</string>
+    <string name="room_apartment_suite">Апартамент-люкс</string>
+    <string name="room_classic_king">Классический King</string>
+    <string name="room_club_room">Клубный номер</string>
+    <string name="room_executive_suite">Представительский люкс</string>
+
+    <string name="room_sqm_format">%1$s м²</string>
+
+    <string name="room_feature_king_bed">Кровать King Size</string>
+    <string name="room_feature_2_queen_beds">2 кровати Queen Size</string>
+    <string name="room_feature_garden_view">Вид на сад</string>
+    <string name="room_feature_city_view">Вид на город</string>
+    <string name="room_feature_mountain_view">Вид на горы</string>
+    <string name="room_feature_separate_living">Отдельная гостиная</string>
+    <string name="room_feature_spa_access">Доступ в SPA</string>
+    <string name="room_feature_double_bed">Двуспальная кровать</string>
+    <string name="room_feature_2_beds">2 кровати</string>
+    <string name="room_feature_queen_bed">Кровать Queen Size</string>
+    <string name="room_feature_balcony">Балкон</string>
+    <string name="room_feature_jacuzzi">Джакузи</string>
+    <string name="room_feature_living_area">Гостиная зона</string>
+    <string name="room_feature_breakfast_incl">Завтрак включен</string>
+    <string name="room_feature_street_view">Вид на улицу</string>
+    <string name="room_feature_nature_view">Вид на природу</string>
+    <string name="room_feature_yurt_style">В стиле юрты</string>
+    <string name="room_feature_private_yard">Частный двор</string>
+    <string name="room_feature_club_lounge">Клубная гостиная</string>
+    <string name="room_feature_panorama_view">Панорамный вид</string>
+    <string name="room_feature_butler_service">Услуги дворецкого</string>
+    <string name="room_feature_ski_view">Вид на склон</string>
+    <string name="room_feature_kitchenette">Мини-кухня</string>
+    <string name="room_feature_forest_view">Вид на лес</string>
+    <string name="room_feature_terrace">Терраса</string>
+    <string name="room_feature_spa_bath">SPA-ванна</string>
+    <string name="room_feature_private_terrace">Частная терраса</string>
+    <string name="room_feature_club_benefits">Клубные привилегии</string>
+    <string name="room_feature_executive_lounge">Представительская гостиная</string>
+    <string name="room_feature_city_mountain_view">Вид на город и горы</string>
+
+    <string name="hotel_grand_aura_name">Отель Grand Aura</string>
+    <string name="hotel_grand_aura_address">проспект Сейфуллина, 49/1</string>
+    <string name="hotel_grand_aura_desc">Современный 4-звездочный отель в центре Алматы. Комфортные номера, ресторан и фитнес-зал. Вид на город и удобное расположение, популярное среди туристов.</string>
+
+    <string name="hotel_royal_tulip_name">Royal Tulip Алматы</string>
+    <string name="hotel_royal_tulip_address">ул. Марата Оспанова 401/2</string>
+    <string name="hotel_royal_tulip_desc">Курортный отель рядом с Медеу. Вид на горы, бассейн и SPA. Отличный выбор для отдыха.</string>
+
+    <string name="hotel_swissotel_name">Swissôtel Wellness Resort Alatau</string>
+    <string name="hotel_swissotel_address">Тау-Самалы 50A</string>
+    <string name="hotel_swissotel_desc">Wellness-курорт в горах Алатау. SPA, бассейн и природное окружение. Идеально для восстановления и релаксации.</string>
+
+    <string name="hotel_qazaq_auyl_name">Qazaq Auyl Eco Hotel</string>
+    <string name="hotel_qazaq_auyl_address">Медеу Роуд</string>
+    <string name="hotel_qazaq_auyl_desc">Эко-курорт в национальном стиле. Юрты, чистый воздух и природа. Для любителей экотуризма.</string>
+
+    <string name="hotel_ritz_name">The Ritz-Carlton Алматы</string>
+    <string name="hotel_ritz_address">пр. Аль-Фараби 77/7, Esentai Tower</string>
+    <string name="hotel_ritz_desc">Роскошный 5-звездочный отель у подножия Алатау. SPA, бассейн и панорамные виды. Элитный отдых.</string>
+
+    <string name="hotel_shymbulak_name">Shymbulak Resort Hotel &amp; Spa</string>
+    <string name="hotel_shymbulak_address">Керей-Жанибек хандар 640</string>
+    <string name="hotel_shymbulak_desc">Отель на горнолыжном курорте Шымбулак. Рядом подъемник, SPA и горные пейзажи. Популярен зимой и летом.</string>
+
+    <string name="hotel_inter_name">InterContinental Алматы</string>
+    <string name="hotel_inter_address">ул. Желтоксан 181</string>
+    <string name="hotel_inter_desc">5-звездочный бизнес-отель в центре города рядом с горами. Конференции, фитнес и высокий уровень сервиса.</string>
+
+    <string name="wifi">Wi-Fi</string>
+    <string name="dining">Питание</string>
+    <string name="pool">Бассейн</string>
+    <string name="spa">SPA</string>
+    <string name="restaurant">Ресторан</string>
+    <string name="gym">Тренажерный зал</string>
+    <string name="parking">Парковка</string>
+    <string name="ski">Горные лыжи</string>
+    <string name="hiking">Пешие прогулки</string>
+    <string name="nature">Природа</string>
+    <string name="fine_dining">Ресторан высокой кухни</string>
+    <string name="fitness">Фитнес</string>
+    <string name="business">Бизнес-услуги</string>
 </resources>

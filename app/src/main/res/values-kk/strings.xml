@@ -330,6 +330,15 @@
     <string name="hotel_facility_dining">Тамақтану</string>
     <string name="hotel_facility_pool">Жүзу бассейні</string>
     <string name="hotel_facility_spa">Спа</string>
+    <string name="hotel_facility_restaurant">Мейрамхана</string>
+    <string name="hotel_facility_gym">Фитнес</string>
+    <string name="hotel_facility_parking">Тоқталатын орын</string>
+    <string name="hotel_facility_nature">Табиғат</string>
+    <string name="hotel_facility_ski">Шаңғы</string>
+    <string name="hotel_facility_hiking">Тау жүру</string>
+    <string name="hotel_facility_fine_dining">Ресторан</string>
+    <string name="hotel_facility_fitness">Фитнес</string>
+    <string name="hotel_facility_business">Бизнес</string>
     <string name="hotel_gallery">Галерея</string>
     <string name="hotel_location">Орналасуы</string>
     <string name="hotel_open_map">Картаны ашу</string>
@@ -347,5 +356,136 @@
     <string name="booking_addon_fixed">%1$s 〒</string>
     <string name="booking_total">Жалпы (%1$d түн)</string>
     <string name="booking_continue">Жалғастыру</string>
+
+    <string name="hotel_rixos_name">Rixos Almaty</string>
+    <string name="hotel_rixos_address">Сейфуллин даңғылы, 506</string>
+    <string name="hotel_rixos_desc">Алматы орталығында әлемдік люкс. Rixos Almaty қонақ үйі жайлылық пен дәстүрлі қазақ мейманжайлылығын ұсынады. Кең бөлмелер, ресторандар және спа орталығы.</string>
+    <string name="hotel_kz_name">Қазақстан қонақ үйі</string>
+    <string name="hotel_kz_address">Достық даңғылы, 52</string>
+    <string name="hotel_kz_desc">Алматы орталығындағы тарихи белгі. Тау мен қала көріністері. Кеңестік салт пен заманауи жайлылық.</string>
+    <string name="hotel_novotel_name">Novotel City Center</string>
+    <string name="hotel_novotel_address">Достық даңғылы, 104А</string>
+    <string name="hotel_novotel_desc">Орталық бизнес ауданындағы халықаралық қонақ үй. Жайлы бөлмелер, фитнес және сауда орталықтарына жақын.</string>
+
+
+    <string name="price_format">%1$s ₸</string>
+    <string name="addon_royal_breakfast">Корольдік таңғы ас</string>
+    <string name="addon_vip_transfer">VIP әуежай трансфері</string>
+    <string name="addon_breakfast">Таңғы ас</string>
+    <string name="addon_airport_transfer">Әуежай трансфері</string>
+    <string name="addon_breakfast_buffet">Таңғы ас (швед үстелі)</string>
+    <string name="addon_airport_shuttle">Әуежайға трансфер</string>
+    <string name="addon_spa_package">SPA пакеті</string>
+    <string name="addon_transfer_medeu">Медеуге трансфер</string>
+    <string name="addon_club_lounge_access">Club Lounge қолжетімділігі</string>
+    <string name="addon_heli_transfer">Тікұшақ трансфері</string>
+    <string name="addon_national_breakfast">Ұлттық таңғы ас</string>
+    <string name="addon_horse_riding">Атпен серуендеу</string>
+    <string name="addon_ski_lift_pass">Шаңғы билетi (ski-pass)</string>
+    <string name="addon_spa_day">SPA күні</string>
+    <string name="addon_breakfast_incl">Таңғы ас кіреді</string>
+    <string name="addon_wellness_breakfast">Wellness таңғы ас</string>
+    <string name="addon_gym_pool_access">Спортзал және бассейнге қолжетімділік</string>
+
+    <string name="room_deluxe_king">King Size төсегі бар Делюкс</string>
+    <string name="room_deluxe_twin">Екі төсекті Делюкс</string>
+    <string name="room_royal_suite">Корольдік люкс</string>
+    <string name="room_standard">Стандарт бөлме</string>
+    <string name="room_superior">Жоғары санатты бөлме</string>
+    <string name="room_executive">Бизнес санатты бөлме</string>
+    <string name="room_standard_double">Екі кісілік стандарт</string>
+    <string name="room_superior_twin">Екі төсекті superior</string>
+    <string name="room_junior_suite">Жартылай люкс</string>
+    <string name="room_deluxe_double">Екі кісілік Делюкс</string>
+    <string name="room_suite">Люкс</string>
+    <string name="room_classic_room">Классикалық бөлме</string>
+    <string name="room_premier_twin">Premier екі төсекті</string>
+    <string name="room_wellness_suite">Wellness люкс</string>
+    <string name="room_eco_room">Эко бөлме</string>
+    <string name="room_family_room">Отбасылық бөлме</string>
+    <string name="room_premium_cottage">Премиум коттедж</string>
+    <string name="room_deluxe_king_short">Делюкс King</string>
+    <string name="room_club_twin">Club екі төсекті</string>
+    <string name="room_ritz_suite">Ritz люкс</string>
+    <string name="room_deluxe">Делюкс</string>
+    <string name="room_apartment_suite">Апартамент люкс</string>
+    <string name="room_classic_king">Классикалық King</string>
+    <string name="room_club_room">Club бөлме</string>
+    <string name="room_executive_suite">Бизнес люкс</string>
+
+    <string name="room_sqm_format">%1$s м²</string>
+
+    <string name="room_feature_king_bed">King Size төсек</string>
+    <string name="room_feature_2_queen_beds">2 Queen Size төсек</string>
+    <string name="room_feature_garden_view">Бақша көрінісі</string>
+    <string name="room_feature_city_view">Қала көрінісі</string>
+    <string name="room_feature_mountain_view">Тау көрінісі</string>
+    <string name="room_feature_separate_living">Жеке қонақ бөлме</string>
+    <string name="room_feature_spa_access">SPA қолжетімділігі</string>
+    <string name="room_feature_double_bed">Екі кісілік төсек</string>
+    <string name="room_feature_2_beds">2 төсек</string>
+    <string name="room_feature_queen_bed">Queen Size төсек</string>
+    <string name="room_feature_balcony">Балкон</string>
+    <string name="room_feature_jacuzzi">Джакузи</string>
+    <string name="room_feature_living_area">Қонақ аймағы</string>
+    <string name="room_feature_breakfast_incl">Таңғы ас кіреді</string>
+    <string name="room_feature_street_view">Көше көрінісі</string>
+    <string name="room_feature_nature_view">Табиғат көрінісі</string>
+    <string name="room_feature_yurt_style">Киіз үй стилінде</string>
+    <string name="room_feature_private_yard">Жеке аула</string>
+    <string name="room_feature_club_lounge">Club Lounge</string>
+    <string name="room_feature_panorama_view">Панорамалық көрініс</string>
+    <string name="room_feature_butler_service">Дворецкий қызметі</string>
+    <string name="room_feature_ski_view">Шаңғы трассасына көрініс</string>
+    <string name="room_feature_kitchenette">Шағын ас үй</string>
+    <string name="room_feature_forest_view">Орман көрінісі</string>
+    <string name="room_feature_terrace">Терраса</string>
+    <string name="room_feature_spa_bath">SPA ванна</string>
+    <string name="room_feature_private_terrace">Жеке терраса</string>
+    <string name="room_feature_club_benefits">Club артықшылықтары</string>
+    <string name="room_feature_executive_lounge">Бизнес Lounge</string>
+    <string name="room_feature_city_mountain_view">Қала және тау көрінісі</string>
+
+    <string name="hotel_grand_aura_name">Grand Aura қонақ үйі</string>
+    <string name="hotel_grand_aura_address">Сейфуллин даңғылы, 49/1</string>
+    <string name="hotel_grand_aura_desc">Алматы орталығындағы заманауи 4 жұлдызды қонақ үй. Ыңғайлы бөлмелер, мейрамхана және фитнес орталығы. Қала көрінісі мен тиімді орналасуы туристер арасында танымал.</string>
+
+    <string name="hotel_royal_tulip_name">Royal Tulip Алматы</string>
+    <string name="hotel_royal_tulip_address">Марат Оспанов көшесі, 401/2</string>
+    <string name="hotel_royal_tulip_desc">Медеу маңындағы курорттық қонақ үй. Тау көрінісі, бассейн және SPA. Демалысқа тамаша таңдау.</string>
+
+    <string name="hotel_swissotel_name">Swissôtel Wellness Resort Alatau</string>
+    <string name="hotel_swissotel_address">Тау-Самалы 50A</string>
+    <string name="hotel_swissotel_desc">Алатау тауларындағы wellness курорт. SPA, бассейн және табиғи орта. Демалып, күш жинауға өте қолайлы.</string>
+
+    <string name="hotel_qazaq_auyl_name">Qazaq Auyl эко қонақ үйі</string>
+    <string name="hotel_qazaq_auyl_address">Медеу жолы</string>
+    <string name="hotel_qazaq_auyl_desc">Ұлттық стильдегі эко-курорт. Киіз үйлер, таза ауа және табиғат. Экотуризмді сүйетіндерге арналған.</string>
+
+    <string name="hotel_ritz_name">The Ritz-Carlton Алматы</string>
+    <string name="hotel_ritz_address">Әл-Фараби даңғылы 77/7, Esentai Tower</string>
+    <string name="hotel_ritz_desc">Алатау етегіндегі сәнді 5 жұлдызды қонақ үй. SPA, бассейн және панорамалық көріністер. Жоғары деңгейлі демалыс.</string>
+
+    <string name="hotel_shymbulak_name">Shymbulak Resort Hotel &amp; Spa</string>
+    <string name="hotel_shymbulak_address">Керей-Жәнібек хандар көшесі, 640</string>
+    <string name="hotel_shymbulak_desc">Шымбұлақ тау курортындағы қонақ үй. Шаңғы көтергішке жақын, SPA және тау көрінісі бар. Қыста да, жазда да танымал.</string>
+
+    <string name="hotel_inter_name">InterContinental Алматы</string>
+    <string name="hotel_inter_address">Желтоқсан көшесі, 181</string>
+    <string name="hotel_inter_desc">Қала орталығындағы 5 жұлдызды бизнес қонақ үй. Конференциялар, фитнес және жоғары деңгейлі қызмет көрсету.</string>
+
+    <string name="wifi">Wi-Fi</string>
+    <string name="dining">Тамақтану</string>
+    <string name="pool">Бассейн</string>
+    <string name="spa">SPA</string>
+    <string name="restaurant">Мейрамхана</string>
+    <string name="gym">Спортзал</string>
+    <string name="parking">Тұрақ</string>
+    <string name="ski">Шаңғы</string>
+    <string name="hiking">Жаяу серуен</string>
+    <string name="nature">Табиғат</string>
+    <string name="fine_dining">Жоғары деңгейлі асхана</string>
+    <string name="fitness">Фитнес</string>
+    <string name="business">Бизнес қызметтері</string>
 
 </resources>

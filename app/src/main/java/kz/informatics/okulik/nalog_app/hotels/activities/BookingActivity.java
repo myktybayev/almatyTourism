@@ -75,7 +75,7 @@ public class BookingActivity extends AppCompatActivity {
             checkOut = sdf.format(cal.getTime());
         }
 
-        hotel = HotelsRepository.getInstance().getHotelById(hotelId);
+        hotel = HotelsRepository.getInstance().getHotelById(this, hotelId);
         if (hotel == null) {
             finish();
             return;
