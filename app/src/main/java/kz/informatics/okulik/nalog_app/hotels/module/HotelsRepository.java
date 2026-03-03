@@ -71,7 +71,7 @@ public class HotelsRepository {
                 4.9f, R.drawable.header_rixos_almaty,
                 new int[]{R.drawable.img_rixos1, R.drawable.img_rixos2, R.drawable.img_rixos3},
                 new int[]{R.string.hotel_facility_wifi, R.string.hotel_facility_dining, R.string.hotel_facility_pool, R.string.hotel_facility_spa},
-                "43.258611,76.945000", 85000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.249440012439486, 76.93467796624502", 85000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 rixosRooms, rixosAddOns
         ));
 
@@ -93,7 +93,7 @@ public class HotelsRepository {
                 4.6f, R.drawable.header_hotel_kaz,
                 new int[]{R.drawable.img_hotel_kz1, R.drawable.img_hotel_kz2, R.drawable.img_hotel_kz3},
                 new int[]{R.string.hotel_facility_wifi, R.string.hotel_facility_dining},
-                "43.250000,76.950000", 35000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.24549393343316, 76.95766115011808", 35000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 kzRooms, kzAddOns
         ));
 
@@ -116,7 +116,7 @@ public class HotelsRepository {
                 4.8f, R.drawable.header_novotel,
                 new int[]{R.drawable.img_novotel1, R.drawable.img_novotel2, R.drawable.img_novotel3},
                 new int[]{R.string.hotel_facility_wifi, R.string.hotel_facility_dining, R.string.hotel_facility_pool, R.string.hotel_facility_spa},
-                "43.248000,76.945000", 45000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.24267979710195, 76.95835845011608", 45000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 novotelRooms, novotelAddOns
         ));
 
@@ -142,7 +142,7 @@ public class HotelsRepository {
                 4.8f, R.drawable.header_grand_aura,
                 new int[]{R.drawable.img_grand_aura1, R.drawable.img_grand_aura2, R.drawable.img_grand_aura3},
                 new int[]{R.string.hotel_facility_wifi, R.string.hotel_facility_restaurant, R.string.hotel_facility_gym, R.string.hotel_facility_parking},
-                "43.250000,76.920000", 60000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.32790275123822, 76.94141009599468", 60000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 grandAuraRooms, grandAuraAddOns
         ));
 
@@ -168,7 +168,7 @@ public class HotelsRepository {
                 4.6f, R.drawable.header_royal_tulip,
                 new int[]{R.drawable.img_royal_tulip1, R.drawable.img_royal_tulip2, R.drawable.img_royal_tulip3},
                 new int[]{R.string.hotel_facility_pool, R.string.hotel_facility_spa, R.string.hotel_facility_ski, R.string.hotel_facility_wifi},
-                "43.210000,76.910000", 55000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.20379861846676, 76.97803261146308", 55000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 royalRooms, royalAddOns
         ));
 
@@ -194,7 +194,7 @@ public class HotelsRepository {
                 4.7f, R.drawable.header_hotel_resort2,
                 new int[]{R.drawable.img_alatau1, R.drawable.img_alatau2, R.drawable.img_alatau3},
                 new int[]{R.string.hotel_facility_spa, R.string.hotel_facility_pool, R.string.hotel_facility_gym, R.string.hotel_facility_hiking},
-                "43.196330,76.812270", 75000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.19746449038821, 76.81291936542688", 75000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 swissRooms, swissAddOns
         ));
 
@@ -220,7 +220,7 @@ public class HotelsRepository {
                 4.5f, R.drawable.header_hotel_resort3,
                 new int[]{R.drawable.img_eco1, R.drawable.img_eco2, R.drawable.img_eco3},
                 new int[]{R.string.hotel_facility_nature, R.string.hotel_facility_restaurant, R.string.hotel_facility_parking, R.string.hotel_facility_wifi},
-                "43.200000,76.900000", 45000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.163165705419125, 77.05969084036829", 45000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 qazaqRooms, qazaqAddOns
         ));
 
@@ -246,7 +246,7 @@ public class HotelsRepository {
                 4.7f, R.drawable.header_hotel_mountain1,
                 new int[]{R.drawable.img_ritz1, R.drawable.img_ritz2, R.drawable.img_ritz3},
                 new int[]{R.string.hotel_facility_spa, R.string.hotel_facility_pool, R.string.hotel_facility_fine_dining, R.string.hotel_facility_fitness},
-                "43.219078,76.929240", 120000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.21960889833865, 76.92949764216227", 120000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 ritzRooms, ritzAddOns
         ));
 
@@ -272,7 +272,7 @@ public class HotelsRepository {
                 4.6f, R.drawable.header_hotel_mountain2,
                 new int[]{R.drawable.img_shym1, R.drawable.img_shym2, R.drawable.img_shym3},
                 new int[]{R.string.hotel_facility_ski, R.string.hotel_facility_spa, R.string.hotel_facility_pool, R.string.hotel_facility_restaurant},
-                "43.170000,76.880000", 80000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.12927387017616, 77.0822251960649", 80000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 shymRooms, shymAddOns
         ));
 
@@ -298,7 +298,7 @@ public class HotelsRepository {
                 4.4f, R.drawable.header_hotel_mountain3,
                 new int[]{R.drawable.img_inter1, R.drawable.img_inter2, R.drawable.img_inter3},
                 new int[]{R.string.hotel_facility_business, R.string.hotel_facility_pool, R.string.hotel_facility_gym, R.string.hotel_facility_dining},
-                "43.235556,76.940000", 70000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
+                "43.237221372698706, 76.93995114927073", 70000, new ArrayList<>(DEFAULT_AVAILABLE_DAYS),
                 interRooms, interAddOns
         ));
     }

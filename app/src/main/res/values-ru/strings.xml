@@ -364,6 +364,16 @@
     <string name="hotel_novotel_address">проспект Достык, 104A</string>
     <string name="hotel_novotel_desc"> Современный международный отель в центральном деловом районе. Novotel предлагает комфортные номера, фитнес-центр и удобный доступ к торговым и развлекательным объектам. </string>
 
+    <string name="hotel_facility_restaurant">Ресторан</string>
+    <string name="hotel_facility_gym">Тренажёрный зал</string>
+    <string name="hotel_facility_parking">Парковка</string>
+    <string name="hotel_facility_nature">Природа</string>
+    <string name="hotel_facility_ski">Горные лыжи</string>
+    <string name="hotel_facility_hiking">Пешие прогулки</string>
+    <string name="hotel_facility_fine_dining">Ресторан высокой кухни</string>
+    <string name="hotel_facility_fitness">Фитнес</string>
+    <string name="hotel_facility_business">Бизнес-услуги</string>
+
     <string name="addon_royal_breakfast">Королевский завтрак</string>
     <string name="addon_vip_transfer">VIP трансфер из аэропорта</string>
     <string name="addon_breakfast">Завтрак</string>

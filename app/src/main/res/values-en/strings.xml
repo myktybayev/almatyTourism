@@ -460,6 +460,15 @@
     <string name="hotel_novotel_address">Dostyk Avenue, 104A</string>
     <string name="hotel_novotel_desc">Modern international hotel in the central business district. Novotel offers comfortable rooms, fitness center, and easy access to shopping and entertainment.</string>
 
+    <string name="hotel_facility_restaurant">Restaurant</string>
+    <string name="hotel_facility_gym">Gym</string>
+    <string name="hotel_facility_parking">Parking</string>
+    <string name="hotel_facility_nature">Nature</string>
+    <string name="hotel_facility_ski">Ski</string>
+    <string name="hotel_facility_hiking">Hiking</string>
+    <string name="hotel_facility_fine_dining">Fine Dining</string>
+    <string name="hotel_facility_fitness">Fitness</string>
+    <string name="hotel_facility_business">Business</string>
 
     <string name="price_format">%1$s 〒</string>
     <string name="hotel_grand_aura_name">Grand Aura Hotel</string>
