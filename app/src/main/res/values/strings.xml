@@ -394,6 +394,9 @@
     <string name="booking_addon_fixed">%1$s 〒</string>
     <string name="booking_total">Total (%1$d Nights)</string>
     <string name="booking_continue">Continue</string>
+    <string name="booking_summary_title">Booking summary</string>
+    <string name="booking_summary_hotel">Hotel</string>
+    <string name="booking_save">Save</string>
     <string name="price_format">%1$s 〒</string>
     <string name="addon_royal_breakfast">Royal Breakfast</string>
     <string name="addon_vip_transfer">VIP Airport Transfer</string>
@@ -503,5 +506,23 @@
     <string name="fine_dining">fine_dining</string>
     <string name="fitness">fitness</string>
     <string name="business">business</string>
+
+    <!-- My Cabinet -->
+    <string name="cabinet_back">Back</string>
+    <string name="cabinet_tab_favorites">Favorites</string>
+    <string name="cabinet_tab_bookings">Bookings</string>
+    <string name="cabinet_tab_trips">Trips</string>
+    <string name="cabinet_ref">Ref: #%1$s</string>
+    <string name="cabinet_status_confirmed">CONFIRMED</string>
+    <string name="cabinet_status_completed">COMPLETED</string>
+    <string name="cabinet_check_in">Check-in</string>
+    <string name="cabinet_check_out">Check-out</string>
+    <string name="cabinet_guests">Guests</string>
+    <string name="cabinet_total_price">Total Price</string>
+    <string name="cabinet_room_type">Room Type</string>
+    <string name="cabinet_cancel">Cancel</string>
+    <string name="cabinet_view_details">View Details</string>
+    <string name="cabinet_view_receipt">View Receipt</string>
+    <string name="cabinet_cancel_booking">Cancel booking</string>
 
 </resources>

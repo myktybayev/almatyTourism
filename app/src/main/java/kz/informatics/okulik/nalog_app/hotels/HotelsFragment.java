@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Locale;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
 import kz.informatics.okulik.nalog_app.hotels.activities.HotelDetailActivity;
 import kz.informatics.okulik.nalog_app.hotels.adapters.HotelListAdapter;
 import kz.informatics.okulik.nalog_app.hotels.module.Hotel;
@@ -150,6 +151,10 @@ public class HotelsFragment extends Fragment {
 
         if (buttonFindHotels != null) {
             buttonFindHotels.setOnClickListener(v -> loadHotels());
+        }
+        View myCabinet = getView().findViewById(R.id.my_cabinet);
+        if (myCabinet != null) {
+            myCabinet.setOnClickListener(v -> startActivity(new Intent(requireContext(), MyCabinet.class)));
         }
     }
 

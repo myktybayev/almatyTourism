@@ -356,6 +356,9 @@
     <string name="booking_addon_fixed">%1$s 〒</string>
     <string name="booking_total">Жалпы (%1$d түн)</string>
     <string name="booking_continue">Жалғастыру</string>
+    <string name="booking_summary_title">Брон туралы жалпы ақпарат</string>
+    <string name="booking_summary_hotel">Қонақ үй</string>
+    <string name="booking_save">Сақтау</string>
 
     <string name="hotel_rixos_name">Rixos Almaty</string>
     <string name="hotel_rixos_address">Сейфуллин даңғылы, 506</string>
@@ -487,5 +490,23 @@
     <string name="fine_dining">Жоғары деңгейлі асхана</string>
     <string name="fitness">Фитнес</string>
     <string name="business">Бизнес қызметтері</string>
+
+    <!-- My Cabinet -->
+    <string name="cabinet_back">Артқа</string>
+    <string name="cabinet_tab_favorites">Таңдаулылар</string>
+    <string name="cabinet_tab_bookings">Брондар</string>
+    <string name="cabinet_tab_trips">Сапарлар</string>
+    <string name="cabinet_ref">Ref: #%1$s</string>
+    <string name="cabinet_status_confirmed">РАСТАЛДЫ</string>
+    <string name="cabinet_status_completed">АЯҚТАЛДЫ</string>
+    <string name="cabinet_check_in">Кіру күні</string>
+    <string name="cabinet_check_out">Шығу күні</string>
+    <string name="cabinet_guests">Қонақтар</string>
+    <string name="cabinet_total_price">Жалпы бағасы</string>
+    <string name="cabinet_room_type">Бөлме түрі</string>
+    <string name="cabinet_cancel">Болдырмау</string>
+    <string name="cabinet_view_details">Толығырақ</string>
+    <string name="cabinet_view_receipt">Төлем түбіртегі</string>
+    <string name="cabinet_cancel_booking">Бронды болдырмау</string>
 
 </resources>

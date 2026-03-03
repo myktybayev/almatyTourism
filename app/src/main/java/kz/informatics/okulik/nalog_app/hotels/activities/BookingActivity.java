@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
@@ -26,8 +27,12 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
+import kz.informatics.okulik.nalog_app.cabinet.SavedBooking;
+import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
 import kz.informatics.okulik.nalog_app.hotels.module.Hotel;
 import kz.informatics.okulik.nalog_app.hotels.module.HotelAddOn;
 import kz.informatics.okulik.nalog_app.hotels.module.HotelRoom;
@@ -105,10 +110,68 @@ public class BookingActivity extends AppCompatActivity {
         updateTotal();
 
         Button buttonContinue = findViewById(R.id.buttonContinue);
-        buttonContinue.setOnClickListener(v -> {
-            // Could navigate to confirmation
-            finish();
+        buttonContinue.setOnClickListener(v -> showBookingSummaryDialog());
+    }
+
+    private void showBookingSummaryDialog() {
+        if (selectedRoom == null || hotel == null) return;
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_booking_summary, null);
+        TextView tvHotel = dialogView.findViewById(R.id.dialogSummaryHotelName);
+        TextView tvCheckIn = dialogView.findViewById(R.id.dialogSummaryCheckIn);
+        TextView tvCheckOut = dialogView.findViewById(R.id.dialogSummaryCheckOut);
+        TextView tvGuests = dialogView.findViewById(R.id.dialogSummaryGuests);
+        TextView tvRoomType = dialogView.findViewById(R.id.dialogSummaryRoomType);
+        TextView tvTotal = dialogView.findViewById(R.id.dialogSummaryTotal);
+        Button btnSave = dialogView.findViewById(R.id.dialogButtonSave);
+
+        tvHotel.setText(hotel.name);
+        tvCheckIn.setText(formatDateForSummary(checkIn));
+        tvCheckOut.setText(formatDateForSummary(checkOut));
+        tvGuests.setText(getString(R.string.booking_guests_rooms, guests, rooms));
+        tvRoomType.setText(selectedRoom.name);
+        int total = calculateTotal();
+        tvTotal.setText(String.format(Locale.US, "%,d 〒", total));
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(dialogView)
+                .setCancelable(true)
+                .create();
+        btnSave.setOnClickListener(v -> {
+            dialog.dismiss();
+            saveBookingAndOpenCabinet(total);
         });
+        dialog.show();
+    }
+
+    private String formatDateForSummary(String yyyyMmDd) {
+        if (yyyyMmDd == null || yyyyMmDd.isEmpty()) return yyyyMmDd;
+        try {
+            SimpleDateFormat in = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+            SimpleDateFormat out = new SimpleDateFormat("dd MMM yyyy", Locale.US);
+            Date d = in.parse(yyyyMmDd);
+            return d != null ? out.format(d) : yyyyMmDd;
+        } catch (ParseException e) {
+            return yyyyMmDd;
+        }
+    }
+
+    private void saveBookingAndOpenCabinet(int totalPrice) {
+        String ref = "BK-" + (1000 + new Random().nextInt(9000));
+        SavedBooking saved = new SavedBooking(
+                hotel.id,
+                hotel.name,
+                ref,
+                checkIn,
+                checkOut,
+                getString(R.string.booking_guests_rooms, guests, rooms),
+                String.format(Locale.US, "%,d", totalPrice) + " 〒",
+                selectedRoom != null ? selectedRoom.name : "",
+                hotel.imageRes,
+                kz.informatics.okulik.nalog_app.cabinet.BookingItem.STATUS_CONFIRMED
+        );
+        SavedBookingsRepository.getInstance(this).addBooking(saved);
+        startActivity(new Intent(this, MyCabinet.class));
+        finish();
     }
 
     private String formatDateRange(String start, String end) {

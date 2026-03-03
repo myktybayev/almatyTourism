@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
 import kz.informatics.okulik.nalog_app.home.api.WeatherApi;
 import kz.informatics.okulik.nalog_app.home.activities.BrowseActivityByCategories;
 import kz.informatics.okulik.nalog_app.home.activities.PopularDestinationsActivity;
@@ -195,6 +196,10 @@ public class ExploreFragment extends Fragment {
             Intent intent = new Intent(getContext(), PopularDestinationsActivity.class);
             startActivity(intent);
         });
+        View myCabinet = root.findViewById(R.id.my_cabinet);
+        if (myCabinet != null) {
+            myCabinet.setOnClickListener(v -> startActivity(new Intent(requireContext(), MyCabinet.class)));
+        }
     }
 
     private void filterDestinations(String query) {

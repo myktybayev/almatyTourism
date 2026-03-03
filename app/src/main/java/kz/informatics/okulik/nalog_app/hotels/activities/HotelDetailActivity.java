@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat;
 import java.util.Locale;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.home.activities.GalleryPreviewActivity;
 import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
 import kz.informatics.okulik.nalog_app.hotels.module.Hotel;
 import kz.informatics.okulik.nalog_app.hotels.module.HotelsRepository;
@@ -167,6 +168,7 @@ public class HotelDetailActivity extends AppCompatActivity {
         int cornerRadius = (int) (12 * density);
 
         for (int i = 0; i < Math.min(hotel.galleryResIds.length, 4); i++) {
+            final int position = i;
             CardView card = new CardView(this);
             card.setRadius(cornerRadius);
             card.setCardElevation(0);
@@ -184,8 +186,17 @@ public class HotelDetailActivity extends AppCompatActivity {
                     LinearLayout.LayoutParams.MATCH_PARENT);
             iv.setLayoutParams(ivLp);
             card.addView(iv);
+            card.setOnClickListener(v -> openGalleryPreview(position));
             layout.addView(card);
         }
+    }
+
+    private void openGalleryPreview(int startPosition) {
+        if (hotel == null || hotel.galleryResIds == null || hotel.galleryResIds.length == 0) return;
+        Intent intent = new Intent(this, GalleryPreviewActivity.class);
+        intent.putExtra("gallery_photos", hotel.galleryResIds);
+        intent.putExtra("current_position", startPosition);
+        startActivity(intent);
     }
 
     private void setupOpenMap() {

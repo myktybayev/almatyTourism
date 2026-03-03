@@ -28,4 +28,14 @@
     <color name="onboarding">#FBF7F2</color>
     <color name="splash_back">#027F93</color>
     <color name="hotel_gold">#C5A028</color>
+    <!-- My Cabinet -->
+    <color name="cabinet_background">#F7F7F7</color>
+    <color name="cabinet_card_bg">#FCFCFC</color>
+    <color name="cabinet_text_secondary">#757575</color>
+    <color name="cabinet_tab_inactive">#9E9E9E</color>
+    <color name="cabinet_status_confirmed_bg">#E0FFE0</color>
+    <color name="cabinet_status_confirmed_text">#008000</color>
+    <color name="cabinet_status_completed_bg">#E0E0E0</color>
+    <color name="cabinet_status_completed_text">#808080</color>
+    <color name="cabinet_cancel_red">#B71C1C</color>
 </resources>
