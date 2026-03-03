@@ -1,6 +1,7 @@
 package kz.informatics.okulik.nalog_app.cabinet;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +19,13 @@ import java.util.List;
 import kz.informatics.okulik.MainActivity;
 import kz.informatics.okulik.R;
 import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
+import kz.informatics.okulik.nalog_app.home.activities.PopularDestinationDetailActivity;
+import kz.informatics.okulik.nalog_app.home.adapters.BrowseDestinationAdapter;
+import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
+import kz.informatics.okulik.nalog_app.home.module.PopularPlace;
 import kz.informatics.okulik.nalog_app.hotels.activities.HotelDetailActivity;
+import kz.informatics.okulik.nalog_app.hotels.module.Hotel;
+import kz.informatics.okulik.nalog_app.hotels.module.HotelsRepository;
 
 /**
  * Profile / My Cabinet screen: user info, tabs (Favorites, Bookings, Trips), list of bookings.
@@ -63,6 +70,8 @@ public class MyCabinet extends AppCompatActivity {
         updateTabUnderlines();
         if (TAB_BOOKINGS.equals(tab)) {
             loadBookings();
+        } else if (TAB_FAVORITES.equals(tab)) {
+            loadFavorites();
         } else {
             recyclerContent.setAdapter(new BookingAdapter(new ArrayList<>(), this::onBookingAction));
         }
@@ -91,6 +100,60 @@ public class MyCabinet extends AppCompatActivity {
                     R.drawable.header_hotel_kaz, false));
         }
         recyclerContent.setAdapter(new BookingAdapter(items, this::onBookingAction));
+    }
+
+    private void loadFavorites() {
+        List<PopularPlace> raw = FavoriteRepository.getInstance().getFavorites();
+        List<PopularPlace> enriched = new ArrayList<>();
+        for (PopularPlace p : raw) {
+            if (p.id != null && p.id.startsWith("hotel_")) {
+                String hotelId = p.id.substring("hotel_".length());
+                Hotel hotel = HotelsRepository.getInstance().getHotelById(this, hotelId);
+                if (hotel != null) {
+                    int[] gallery = hotel.galleryResIds != null ? hotel.galleryResIds : new int[0];
+                    enriched.add(new PopularPlace(
+                            p.id, hotel.name, hotel.address, hotel.description,
+                            hotel.rating, hotel.imageRes, new String[0], gallery,
+                            new String[0], hotel.location != null ? hotel.location : ""));
+                } else {
+                    enriched.add(p);
+                }
+            } else {
+                enriched.add(p);
+            }
+        }
+        BrowseDestinationAdapter adapter = new BrowseDestinationAdapter(this::openFavoriteDetail, this::openFavoriteMap);
+        adapter.setItems(enriched);
+        recyclerContent.setAdapter(adapter);
+    }
+
+    private void openFavoriteDetail(PopularPlace item) {
+        if (item == null || item.id == null) return;
+        if (item.id.startsWith("hotel_")) {
+            String hotelId = item.id.substring("hotel_".length());
+            Intent intent = new Intent(this, HotelDetailActivity.class);
+            intent.putExtra(HotelDetailActivity.EXTRA_HOTEL_ID, hotelId);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, PopularDestinationDetailActivity.class);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_ID, item.id);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_TITLE, item.title);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_SUBTITLE, item.subtitle != null ? item.subtitle : "");
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_ABOUT, item.about != null ? item.about : "");
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_RATING, item.rating);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_IMAGE, item.imageRes);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_TAGS, item.tags);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_GALLERY_PHOTOS, item.listOfGalleryPhotos);
+            intent.putExtra(PopularDestinationDetailActivity.EXTRA_LOCATION, item.location != null ? item.location : "");
+            startActivity(intent);
+        }
+    }
+
+    private void openFavoriteMap(PopularPlace item) {
+        if (item == null || item.location == null || item.location.trim().isEmpty()) return;
+        String title = item.title != null ? item.title : "";
+        Uri uri = Uri.parse("geo:" + item.location + "?q=" + item.location + "(" + title + ")");
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 
     private void onBookingAction(BookingItem item, String action) {
