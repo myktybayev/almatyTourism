@@ -525,4 +525,27 @@
     <string name="cabinet_view_receipt">View Receipt</string>
     <string name="cabinet_cancel_booking">Cancel booking</string>
 
+    <!-- Trips -->
+    <string name="trips_title">Trips</string>
+    <string name="trips_guided_tours">Guided Tours</string>
+    <string name="trips_self_planned">Self-Planned</string>
+    <string name="trips_button_details">Details</string>
+    <string name="trip_detail_duration">DURATION</string>
+    <string name="trip_detail_distance">DISTANCE</string>
+    <string name="trip_detail_transport">TRANSPORT</string>
+    <string name="trip_detail_group_size">GROUP SIZE</string>
+    <string name="trip_detail_itinerary">Itinerary</string>
+    <string name="trip_detail_included">What\'s Included</string>
+    <string name="trip_detail_not_included">Not Included</string>
+    <string name="trip_detail_organized_by">Organized by</string>
+    <string name="trip_detail_booking_details">Booking Details</string>
+    <string name="trip_detail_select_date">Select Date</string>
+    <string name="trip_detail_participants">Participants</string>
+    <string name="trip_detail_price_per_person">Tour Price (per person)</string>
+    <string name="trip_detail_eco_tax">Eco-tax &amp; Insurance</string>
+    <string name="trip_detail_total_guests">Total for %1$d Guests</string>
+    <string name="trip_detail_adults">Adults</string>
+    <string name="trip_detail_total_price">Total Price</string>
+    <string name="trip_detail_send_request">Send Request</string>
+
 </resources>

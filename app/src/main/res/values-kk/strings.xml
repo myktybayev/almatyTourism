@@ -509,4 +509,27 @@
     <string name="cabinet_view_receipt">Төлем түбіртегі</string>
     <string name="cabinet_cancel_booking">Бронды болдырмау</string>
 
+    <!-- Trips -->
+    <string name="trips_title">Сапарлар</string>
+    <string name="trips_guided_tours">Экскурсиялық турлар</string>
+    <string name="trips_self_planned">Өз жоспарыңыз</string>
+    <string name="trips_button_details">Толығырақ</string>
+    <string name="trip_detail_duration">ҰЗАҚТЫҒЫ</string>
+    <string name="trip_detail_distance">ҚАШЫҚТЫҚ</string>
+    <string name="trip_detail_transport">КӨЛІК</string>
+    <string name="trip_detail_group_size">ТОП ӨЛШЕМІ</string>
+    <string name="trip_detail_itinerary">Маршрут</string>
+    <string name="trip_detail_included">Қамтылғандар</string>
+    <string name="trip_detail_not_included">Қамтылмағандар</string>
+    <string name="trip_detail_organized_by">Ұйымдастырушы</string>
+    <string name="trip_detail_booking_details">Брондау</string>
+    <string name="trip_detail_select_date">Күнді таңдаңыз</string>
+    <string name="trip_detail_participants">Қатысушылар</string>
+    <string name="trip_detail_price_per_person">Тур бағасы (адамбасы)</string>
+    <string name="trip_detail_eco_tax">Эко-салық және сақтандыру</string>
+    <string name="trip_detail_total_guests">Жалпы %1$d қонақ үшін</string>
+    <string name="trip_detail_total_price">Жалпы баға</string>
+    <string name="trip_detail_send_request">Сұраныс жіберу</string>
+    <string name="trip_detail_adults">Ересек</string>
+
 </resources>

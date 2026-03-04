@@ -62,6 +62,11 @@
             android:theme="@style/Theme.Okulik.NoActionBar" />
 
         <activity
+            android:name=".nalog_app.trips.TripsDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Okulik.NoActionBar" />
+
+        <activity
             android:name=".nalog_app.onboarding.Onboarding"
             android:exported="true"
             android:label="@string/app_name"

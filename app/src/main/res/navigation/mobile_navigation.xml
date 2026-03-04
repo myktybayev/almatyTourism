@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/nav_menu3"
-        android:name="kz.informatics.okulik.nalog_app.about.AboutFragment"
-        android:label="Ақпарат"
-        tools:layout="@layout/fragment_home" />
+        android:name="kz.informatics.okulik.nalog_app.trips.TripsFragment"
+        android:label="@string/menu3"
+        tools:layout="@layout/fragment_trips" />
 
     <fragment
         android:id="@+id/nav_menu4"
