@@ -57,7 +57,7 @@ public class HotelDetailActivity extends AppCompatActivity {
         back.setOnClickListener(v -> finish());
 
         ImageButton favorite = findViewById(R.id.buttonFavorite);
-        FavoriteRepository repo = FavoriteRepository.getInstance();
+        FavoriteRepository repo = FavoriteRepository.getInstance(this);
         updateFavoriteIcon(favorite, repo.isFavorite("hotel_" + hotel.id));
         favorite.setOnClickListener(v -> {
             boolean isFav = repo.togglePlace("hotel_" + hotel.id, hotel.name);

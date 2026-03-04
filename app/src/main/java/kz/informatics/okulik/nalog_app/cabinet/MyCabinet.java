@@ -128,7 +128,7 @@ public class MyCabinet extends AppCompatActivity {
     }
 
     private void loadFavorites() {
-        List<PopularPlace> raw = FavoriteRepository.getInstance().getFavorites();
+        List<PopularPlace> raw = FavoriteRepository.getInstance(this).getFavorites();
         List<PopularPlace> enriched = new ArrayList<>();
         for (PopularPlace p : raw) {
             if (p.id != null && p.id.startsWith("hotel_")) {

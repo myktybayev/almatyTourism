@@ -26,7 +26,6 @@ public class PopularDestinationListAdapter extends RecyclerView.Adapter<PopularD
 
     private final List<PopularPlace> items = new ArrayList<>();
     private final OnItemClickListener listener;
-    private final FavoriteRepository favorites = FavoriteRepository.getInstance();
 
     public PopularDestinationListAdapter(OnItemClickListener listener) {
         this.listener = listener;
@@ -56,7 +55,8 @@ public class PopularDestinationListAdapter extends RecyclerView.Adapter<PopularD
         h.rating.setText(String.format(Locale.US, "%.1f", item.rating));
         h.image.setImageResource(item.imageRes);
 
-        bindFavorite(h, item);
+        FavoriteRepository favorites = FavoriteRepository.getInstance(h.itemView.getContext());
+        bindFavorite(h, item, favorites);
 
         // Tags (up to 3)
         TextView[] tags = new TextView[] { h.tag1, h.tag2, h.tag3 };
@@ -76,7 +76,7 @@ public class PopularDestinationListAdapter extends RecyclerView.Adapter<PopularD
 
         h.favorite.setOnClickListener(v -> {
             favorites.toggle(item);
-            bindFavorite(h, item);
+            bindFavorite(h, item, favorites);
         });
     }
 
@@ -108,7 +108,7 @@ public class PopularDestinationListAdapter extends RecyclerView.Adapter<PopularD
         }
     }
 
-    private void bindFavorite(@NonNull VH h, @NonNull PopularPlace item) {
+    private void bindFavorite(@NonNull VH h, @NonNull PopularPlace item, FavoriteRepository favorites) {
         boolean isFav = favorites.isFavorite(item.id);
         if (isFav) {
             h.favorite.setImageResource(R.drawable.baseline_favorite_24);

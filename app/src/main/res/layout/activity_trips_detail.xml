@@ -16,16 +16,25 @@
             android:orientation="vertical"
             android:paddingBottom="100dp">
 
-            <!-- Hero image -->
+            <!-- Gallery: 3-4 images, tap to open full-screen swipe -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="260dp">
 
-                <ImageView
-                    android:id="@+id/imageHero"
+                <HorizontalScrollView
+                    android:id="@+id/scrollGallery"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:scrollbars="none"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:id="@+id/layoutTripGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" />
+                </HorizontalScrollView>
 
                 <ImageButton
                     android:id="@+id/buttonBack"

@@ -1,6 +1,20 @@
 package kz.informatics.okulik.nalog_app.home.module;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class PopularPlace {
+    private static final String KEY_ID = "id";
+    private static final String KEY_TITLE = "title";
+    private static final String KEY_SUBTITLE = "subtitle";
+    private static final String KEY_ABOUT = "about";
+    private static final String KEY_RATING = "rating";
+    private static final String KEY_IMAGE_RES = "imageRes";
+    private static final String KEY_TAGS = "tags";
+    private static final String KEY_GALLERY = "listOfGalleryPhotos";
+    private static final String KEY_CATEGORIES = "categories";
+    private static final String KEY_LOCATION = "location";
     public String id;
     public String title;
     public String subtitle;
@@ -83,5 +97,54 @@ public class PopularPlace {
             if (category.equals(c)) return true;
         }
         return false;
+    }
+
+    public JSONObject toJson() throws JSONException {
+        JSONObject o = new JSONObject();
+        o.put(KEY_ID, id != null ? id : "");
+        o.put(KEY_TITLE, title != null ? title : "");
+        o.put(KEY_SUBTITLE, subtitle != null ? subtitle : "");
+        o.put(KEY_ABOUT, about != null ? about : "");
+        o.put(KEY_RATING, (double) rating);
+        o.put(KEY_IMAGE_RES, imageRes);
+        o.put(KEY_LOCATION, location != null ? location : "");
+        JSONArray tagsArr = new JSONArray();
+        if (tags != null) for (String t : tags) tagsArr.put(t);
+        o.put(KEY_TAGS, tagsArr);
+        JSONArray galleryArr = new JSONArray();
+        if (listOfGalleryPhotos != null) for (int i : listOfGalleryPhotos) galleryArr.put(i);
+        o.put(KEY_GALLERY, galleryArr);
+        JSONArray catArr = new JSONArray();
+        if (categories != null) for (String c : categories) catArr.put(c);
+        o.put(KEY_CATEGORIES, catArr);
+        return o;
+    }
+
+    public static PopularPlace fromJson(JSONObject o) throws JSONException {
+        String id = o.optString(KEY_ID, "");
+        String title = o.optString(KEY_TITLE, "");
+        String subtitle = o.optString(KEY_SUBTITLE, "");
+        String about = o.optString(KEY_ABOUT, "");
+        float rating = (float) o.optDouble(KEY_RATING, 0);
+        int imageRes = o.optInt(KEY_IMAGE_RES, 0);
+        String location = o.optString(KEY_LOCATION, "");
+        String[] tags = jsonArrayToStringArray(o.optJSONArray(KEY_TAGS));
+        int[] gallery = jsonArrayToIntArray(o.optJSONArray(KEY_GALLERY));
+        String[] categories = jsonArrayToStringArray(o.optJSONArray(KEY_CATEGORIES));
+        return new PopularPlace(id, title, subtitle, about, rating, imageRes, tags, gallery, categories, location);
+    }
+
+    private static String[] jsonArrayToStringArray(JSONArray arr) {
+        if (arr == null) return new String[0];
+        String[] a = new String[arr.length()];
+        for (int i = 0; i < arr.length(); i++) a[i] = arr.optString(i, "");
+        return a;
+    }
+
+    private static int[] jsonArrayToIntArray(JSONArray arr) {
+        if (arr == null) return new int[0];
+        int[] a = new int[arr.length()];
+        for (int i = 0; i < arr.length(); i++) a[i] = arr.optInt(i, 0);
+        return a;
     }
 }

@@ -22,12 +22,14 @@ public class TripDetailData {
     /** Price per person in tenge */
     public final int pricePerPerson;
     public final String ecoTaxLabel;        // e.g. "Included"
+    /** Gallery image resource IDs (3–4 images). Tapping opens full-screen gallery with swipe. */
+    public final int[] galleryResIds;
 
     public TripDetailData(GuidedTour tour, String[] labels, String location,
                           String durationLong, String distance, String transport, String groupSize,
                           List<TripDay> itinerary, String[] included, String[] notIncluded,
                           int organizerAvatarRes, String organizerReviews, boolean organizerVerified,
-                          int pricePerPerson, String ecoTaxLabel) {
+                          int pricePerPerson, String ecoTaxLabel, int[] galleryResIds) {
         this.tour = tour;
         this.labels = labels != null ? labels : new String[0];
         this.location = location != null ? location : "";
@@ -43,5 +45,6 @@ public class TripDetailData {
         this.organizerVerified = organizerVerified;
         this.pricePerPerson = pricePerPerson;
         this.ecoTaxLabel = ecoTaxLabel != null ? ecoTaxLabel : "";
+        this.galleryResIds = galleryResIds != null && galleryResIds.length > 0 ? galleryResIds : new int[]{tour.imageResId};
     }
 }

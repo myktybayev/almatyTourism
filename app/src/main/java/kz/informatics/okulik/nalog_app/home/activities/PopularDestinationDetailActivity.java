@@ -91,7 +91,7 @@ public class PopularDestinationDetailActivity extends AppCompatActivity {
 
     private void setupFavoriteButton(PopularPlace place) {
         ImageView btn = findViewById(R.id.buttonFavorite);
-        FavoriteRepository repo = FavoriteRepository.getInstance();
+        FavoriteRepository repo = FavoriteRepository.getInstance(this);
         updateFavoriteIcon(btn, repo.isFavorite(place.id));
 
         btn.setOnClickListener(v -> {

@@ -3,6 +3,7 @@ package kz.informatics.okulik.nalog_app.trips;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -27,6 +29,7 @@ import kz.informatics.okulik.nalog_app.cabinet.BookingItem;
 import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
 import kz.informatics.okulik.nalog_app.cabinet.SavedBooking;
 import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
+import kz.informatics.okulik.nalog_app.home.activities.GalleryPreviewActivity;
 import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
 import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 
@@ -60,7 +63,7 @@ public class TripsDetailActivity extends AppCompatActivity {
         back.setOnClickListener(v -> finish());
 
         ImageButton favorite = findViewById(R.id.buttonFavorite);
-        FavoriteRepository repo = FavoriteRepository.getInstance();
+        FavoriteRepository repo = FavoriteRepository.getInstance(this);
         boolean isFav = repo.isFavorite("trip_" + data.tour.id);
         updateFavoriteIcon(favorite, isFav);
         favorite.setOnClickListener(v -> {
@@ -68,8 +71,7 @@ public class TripsDetailActivity extends AppCompatActivity {
             updateFavoriteIcon(favorite, nowFav);
         });
 
-        ImageView imageHero = findViewById(R.id.imageHero);
-        imageHero.setImageResource(data.tour.imageResId);
+        setupGallery();
 
         LinearLayout layoutLabels = findViewById(R.id.layoutLabels);
         layoutLabels.removeAllViews();
@@ -144,8 +146,8 @@ public class TripsDetailActivity extends AppCompatActivity {
         findViewById(R.id.iconVerified).setVisibility(data.organizerVerified ? View.VISIBLE : View.GONE);
         ((TextView) findViewById(R.id.textOrganizerRatingReviews)).setText(
                 String.format(Locale.US, "%.1f (%s)", data.tour.organizerRating, data.organizerReviews));
-        findViewById(R.id.buttonOrganizerMessage).setOnClickListener(v -> Toast.makeText(this, "Message"+data.tour.organizerPhone, Toast.LENGTH_SHORT).show());
-        findViewById(R.id.buttonOrganizerPhone).setOnClickListener(v -> Toast.makeText(this, "Call"+data.tour.organizerPhone, Toast.LENGTH_SHORT).show());
+        findViewById(R.id.buttonOrganizerMessage).setOnClickListener(v -> sendWhatsAppMessage(this, data.tour.organizerPhone, "Message from Almaty Tourism App"));
+        findViewById(R.id.buttonOrganizerPhone).setOnClickListener(v -> makeCall(this, data.tour.organizerPhone));
 
         TextView textPricePerPerson = findViewById(R.id.textPricePerPerson);
         textPricePerPerson.setText(TripsRepository.formatPrice(data.pricePerPerson));
@@ -161,6 +163,33 @@ public class TripsDetailActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.textParticipants)).setText(participantsCount + " " + getString(R.string.trip_detail_adults));
 
         findViewById(R.id.buttonSendRequest).setOnClickListener(v -> showTripRequestDialog());
+    }
+
+    public void sendWhatsAppMessage(Context context, String phoneNumber, String message) {
+        try {
+            String url = "https://api.whatsapp.com/send?phone="
+                    + phoneNumber
+                    + "&text="
+                    + URLEncoder.encode(message, "UTF-8");
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            intent.setPackage("com.whatsapp");
+
+            context.startActivity(intent);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "WhatsApp not installed", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void makeCall(Context context, String phone) {
+
+        Uri uri = Uri.parse("tel:" + phone);
+
+        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+        context.startActivity(intent);
     }
 
     private void showTripRequestDialog() {
@@ -210,6 +239,38 @@ public class TripsDetailActivity extends AppCompatActivity {
     private String formatDateForStorage(Calendar cal) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         return sdf.format(cal.getTime());
+    }
+
+    private void setupGallery() {
+        LinearLayout layoutGallery = findViewById(R.id.layoutTripGallery);
+        layoutGallery.removeAllViews();
+        if (data.galleryResIds == null || data.galleryResIds.length == 0) return;
+
+        float density = getResources().getDisplayMetrics().density;
+        int imageWidth = (int) (200 * density);
+        int imageHeight = (int) (260 * density);
+        int margin = (int) (4 * density);
+
+        for (int i = 0; i < data.galleryResIds.length; i++) {
+            final int position = i;
+            ImageView iv = new ImageView(this);
+            iv.setImageResource(data.galleryResIds[i]);
+            iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            iv.setLayoutParams(new LinearLayout.LayoutParams(imageWidth, imageHeight));
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) iv.getLayoutParams();
+            lp.setMargins(0, 0, margin, 0);
+            iv.setLayoutParams(lp);
+            iv.setOnClickListener(v -> openGalleryAt(position));
+            layoutGallery.addView(iv);
+        }
+    }
+
+    private void openGalleryAt(int position) {
+        if (data.galleryResIds == null || data.galleryResIds.length == 0) return;
+        Intent intent = new Intent(this, GalleryPreviewActivity.class);
+        intent.putExtra("gallery_photos", data.galleryResIds);
+        intent.putExtra("current_position", position);
+        startActivity(intent);
     }
 
     private void updateTotalPrice() {

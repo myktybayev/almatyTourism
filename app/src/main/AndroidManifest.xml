@@ -3,6 +3,7 @@
     package="kz.informatics.okulik">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <uses-feature
         android:name="android.hardware.telephony"
