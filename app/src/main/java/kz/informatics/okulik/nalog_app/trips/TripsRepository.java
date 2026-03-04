@@ -29,6 +29,17 @@ public class TripsRepository {
         return instance;
     }
 
+    public List<GuidedTour> getGuidedTours() {
+        return new ArrayList<>(guidedTours);
+    }
+
+    public GuidedTour getGuidedTourById(String id) {
+        for (GuidedTour t : guidedTours) {
+            if (t.id != null && t.id.equals(id)) return t;
+        }
+        return null;
+    }
+
     private void loadGuidedTours() {
         guidedTours.clear();
         guidedTours.add(new GuidedTour("t1", "Golden Triangle of Almaty", "",
@@ -40,17 +51,24 @@ public class TripsRepository {
         guidedTours.add(new GuidedTour("t3", "Cultural Heritage Walk", "",
                 "4 Hours", R.drawable.img_grand_aura1, 8500, "CultureGuide", "87071112233", 4.8f,
                 "Mosque → Green Bazaar → Panfilov Park", "Weekends", "Walking"));
-    }
 
-    public List<GuidedTour> getGuidedTours() {
-        return new ArrayList<>(guidedTours);
-    }
+        // t4: Shopping Malls Tour
+        guidedTours.add(new GuidedTour("t4", "Almaty Shopping Malls", "",
+                "5 Hours", R.drawable.header_mega, 10000, "Almaty City Tours", "87071112233", 4.8f,
+                "MEGA → Esentai → Aport → Dostyk Plaza", "Daily", "Small Group"));
+        // t5: Parks Explorer
+        guidedTours.add(new GuidedTour("t5", "Almaty Parks Trail", "",
+                "6 Hours", R.drawable.header_panfilov, 9000, "Green Almaty", "87071112233", 4.7f,
+                "Panfilov → Kok Tobe → First President → Central Park", "Weekends", "Walking"));
+        // t6: Mosques Heritage
+        guidedTours.add(new GuidedTour("t6", "Almaty Mosques Tour", "",
+                "4 Hours", R.drawable.header_central_mosque, 7000, "CultureGuide", "87071112233", 4.9f,
+                "Central Mosque → Aynalyn → Beisenova → Amankul Ata", "Daily", "Cultural"));
+        // t7: Nature Lakes & Gorge
+        guidedTours.add(new GuidedTour("t7", "Big Almaty & Issyk Lakes", "",
+                "10 Hours", R.drawable.header_bigalmaty_lake, 15000, "Steppe Travel", "87071112233", 4.8f,
+                "Big Almaty → Issyk → Turgen → Tamgaly Tas", "Sat-Sun", "Max 12"));
 
-    public GuidedTour getGuidedTourById(String id) {
-        for (GuidedTour t : guidedTours) {
-            if (t.id != null && t.id.equals(id)) return t;
-        }
-        return null;
     }
 
     /** Full detail for TripsDetailActivity (itinerary, included/not included, organizer, etc.). */

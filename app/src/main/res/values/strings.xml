@@ -547,5 +547,7 @@
     <string name="trip_detail_adults">Adults</string>
     <string name="trip_detail_total_price">Total Price</string>
     <string name="trip_detail_send_request">Send Request</string>
+    <string name="trip_request_summary_title">Trip request summary</string>
+    <string name="trip_request_save">Save</string>
 
 </resources>

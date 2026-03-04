@@ -531,5 +531,7 @@
     <string name="trip_detail_total_price">Жалпы баға</string>
     <string name="trip_detail_send_request">Сұраныс жіберу</string>
     <string name="trip_detail_adults">Ересек</string>
+    <string name="trip_request_summary_title">Тур сұранысының қорытындысы</string>
+    <string name="trip_request_save">Сақтау</string>
 
 </resources>

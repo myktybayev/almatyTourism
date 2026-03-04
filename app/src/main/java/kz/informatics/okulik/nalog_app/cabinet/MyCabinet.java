@@ -25,6 +25,7 @@ import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
 import kz.informatics.okulik.nalog_app.home.module.PopularPlace;
 import kz.informatics.okulik.nalog_app.hotels.activities.HotelDetailActivity;
 import kz.informatics.okulik.nalog_app.hotels.module.Hotel;
+import kz.informatics.okulik.nalog_app.trips.TripsDetailActivity;
 import kz.informatics.okulik.nalog_app.hotels.module.HotelsRepository;
 
 /**
@@ -35,6 +36,7 @@ public class MyCabinet extends AppCompatActivity {
     public static final String TAB_FAVORITES = "favorites";
     public static final String TAB_BOOKINGS = "bookings";
     public static final String TAB_TRIPS = "trips";
+    public static final String EXTRA_INITIAL_TAB = "extra_initial_tab";
 
     private TextView tabFavorites, tabBookings, tabTrips;
     private View underlineFavorites, underlineBookings, underlineTrips;
@@ -62,7 +64,12 @@ public class MyCabinet extends AppCompatActivity {
         tabTrips.setOnClickListener(v -> switchTab(TAB_TRIPS));
 
         recyclerContent.setLayoutManager(new LinearLayoutManager(this));
-        switchTab(TAB_BOOKINGS);
+        String initialTab = getIntent().getStringExtra(EXTRA_INITIAL_TAB);
+        if (TAB_TRIPS.equals(initialTab)) {
+            switchTab(TAB_TRIPS);
+        } else {
+            switchTab(TAB_BOOKINGS);
+        }
     }
 
     private void switchTab(String tab) {
@@ -72,6 +79,8 @@ public class MyCabinet extends AppCompatActivity {
             loadBookings();
         } else if (TAB_FAVORITES.equals(tab)) {
             loadFavorites();
+        } else if (TAB_TRIPS.equals(tab)) {
+            loadTrips();
         } else {
             recyclerContent.setAdapter(new BookingAdapter(new ArrayList<>(), this::onBookingAction));
         }
@@ -89,8 +98,13 @@ public class MyCabinet extends AppCompatActivity {
     }
 
     private void loadBookings() {
-        List<BookingItem> items = new ArrayList<>(SavedBookingsRepository.getInstance(this).getAllBookingsAsItems());
-        // Demo items when no saved bookings
+        List<BookingItem> all = SavedBookingsRepository.getInstance(this).getAllBookingsAsItems();
+        List<BookingItem> items = new ArrayList<>();
+        for (BookingItem b : all) {
+            if (b.reference == null || !b.reference.startsWith("TRIP-")) {
+                items.add(b);
+            }
+        }
         if (items.isEmpty()) {
             items.add(new BookingItem("h1", "Rixos Almaty", "BK-7829", BookingItem.STATUS_CONFIRMED,
                     "15 Oct 2023", "20 Oct 2023", "2 Adults", "425,000 〒", "Deluxe King with Mountain View",
@@ -100,6 +114,17 @@ public class MyCabinet extends AppCompatActivity {
                     R.drawable.header_hotel_kaz, false));
         }
         recyclerContent.setAdapter(new BookingAdapter(items, this::onBookingAction));
+    }
+
+    private void loadTrips() {
+        List<BookingItem> all = SavedBookingsRepository.getInstance(this).getAllBookingsAsItems();
+        List<BookingItem> trips = new ArrayList<>();
+        for (BookingItem b : all) {
+            if (b.reference != null && b.reference.startsWith("TRIP-")) {
+                trips.add(b);
+            }
+        }
+        recyclerContent.setAdapter(new BookingAdapter(trips, this::onBookingAction));
     }
 
     private void loadFavorites() {
@@ -158,7 +183,10 @@ public class MyCabinet extends AppCompatActivity {
 
     private void onBookingAction(BookingItem item, String action) {
         if ("view_details".equals(action)) {
-            if (item.hotelId != null && !item.hotelId.isEmpty()) {
+            if (item.hotelId != null && item.hotelId.startsWith("trip_")) {
+                String tourId = item.hotelId.substring("trip_".length());
+                TripsDetailActivity.open(this, tourId);
+            } else if (item.hotelId != null && !item.hotelId.isEmpty()) {
                 Intent intent = new Intent(this, HotelDetailActivity.class);
                 intent.putExtra(HotelDetailActivity.EXTRA_HOTEL_ID, item.hotelId);
                 startActivity(intent);
@@ -167,7 +195,11 @@ public class MyCabinet extends AppCompatActivity {
             }
         } else if ("cancel".equals(action)) {
             SavedBookingsRepository.getInstance(this).removeBookingByReference(item.reference);
-            loadBookings();
+            if (TAB_TRIPS.equals(currentTab)) {
+                loadTrips();
+            } else {
+                loadBookings();
+            }
             Toast.makeText(this, getString(R.string.cabinet_cancel_booking), Toast.LENGTH_SHORT).show();
         } else if ("view_receipt".equals(action)) {
             Toast.makeText(this, getString(R.string.cabinet_view_receipt), Toast.LENGTH_SHORT).show();

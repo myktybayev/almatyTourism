@@ -23,6 +23,10 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.cabinet.BookingItem;
+import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
+import kz.informatics.okulik.nalog_app.cabinet.SavedBooking;
+import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
 import kz.informatics.okulik.nalog_app.home.module.FavoriteRepository;
 import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 
@@ -156,8 +160,56 @@ public class TripsDetailActivity extends AppCompatActivity {
         findViewById(R.id.rowParticipants).setOnClickListener(v -> showParticipantsPicker());
         ((TextView) findViewById(R.id.textParticipants)).setText(participantsCount + " " + getString(R.string.trip_detail_adults));
 
-        findViewById(R.id.buttonSendRequest).setOnClickListener(v ->
-                Toast.makeText(this, getString(R.string.trip_detail_send_request), Toast.LENGTH_SHORT).show());
+        findViewById(R.id.buttonSendRequest).setOnClickListener(v -> showTripRequestDialog());
+    }
+
+    private void showTripRequestDialog() {
+        int total = data.pricePerPerson * participantsCount;
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_trip_request_summary, null);
+        ((TextView) view.findViewById(R.id.textDialogTripName)).setText(data.tour.name);
+        ((TextView) view.findViewById(R.id.textDialogDate)).setText(
+                ((TextView) findViewById(R.id.textSelectedDate)).getText());
+        ((TextView) view.findViewById(R.id.textDialogParticipants)).setText(
+                ((TextView) findViewById(R.id.textParticipants)).getText());
+        ((TextView) view.findViewById(R.id.textDialogPricePerPerson))
+                .setText(TripsRepository.formatPrice(data.pricePerPerson));
+        ((TextView) view.findViewById(R.id.textDialogTotal)).setText(TripsRepository.formatPrice(total));
+
+        new AlertDialog.Builder(this)
+                .setView(view)
+                .setNegativeButton(android.R.string.cancel, null)
+                .setPositiveButton(R.string.trip_request_save, (d, which) -> saveTripRequest(total))
+                .show();
+    }
+
+    private void saveTripRequest(int totalPrice) {
+        String ref = "TRIP-" + System.currentTimeMillis();
+        String dateStr = formatDateForStorage(selectedDate);
+        String guestsStr = participantsCount + " " + getString(R.string.trip_detail_adults);
+        String totalPriceStr = TripsRepository.formatPrice(totalPrice);
+        SavedBooking saved = new SavedBooking(
+                "trip_" + data.tour.id,
+                data.tour.name,
+                ref,
+                dateStr,
+                "",
+                guestsStr,
+                totalPriceStr,
+                data.durationLong,
+                data.tour.imageResId,
+                BookingItem.STATUS_CONFIRMED
+        );
+        SavedBookingsRepository.getInstance(this).addBooking(saved);
+
+        Intent intent = new Intent(this, MyCabinet.class);
+        intent.putExtra(MyCabinet.EXTRA_INITIAL_TAB, MyCabinet.TAB_TRIPS);
+        startActivity(intent);
+        finish();
+    }
+
+    private String formatDateForStorage(Calendar cal) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        return sdf.format(cal.getTime());
     }
 
     private void updateTotalPrice() {
