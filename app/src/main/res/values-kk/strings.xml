@@ -529,6 +529,26 @@
     <string name="trips_guided_tours">Экскурсиялық турлар</string>
     <string name="trips_self_planned">Өз жоспарыңыз</string>
     <string name="trips_button_details">Толығырақ</string>
+    <string name="trips_self_planned_hint">Сақталған сапар жоспарларыңыз. Толығырақ ашу үшін сапарды басыңыз немесе меню арқылы өңдеңіз.</string>
+    <string name="trips_no_trips_yet">Сапарлар әлі жоқ</string>
+    <string name="trips_no_trips_description">Алматыда алғашқы жеке сапарыңызды жасау арқылы сапарыңызды жоспарлауды бастаңыз.</string>
+    <string name="trips_create_new_trip">Жаңа сапар жасау</string>
+    <string name="trips_edit_trip">Сапарды өңдеу</string>
+    <string name="trips_delete">Өшіру</string>
+    <string name="trips_self_planned_menu">Меню</string>
+    <string name="create_trip_dialog_title">Жаңа сапар жасау</string>
+    <string name="create_trip_name_label">Сапар аты</string>
+    <string name="create_trip_name_hint">Мыс., Алматыда жаз</string>
+    <string name="create_trip_destination_label">Бағыт</string>
+    <string name="create_trip_destination_hint">Орындарды іздеу…</string>
+    <string name="create_trip_description_label">Сипаттама</string>
+    <string name="create_trip_description_hint">Сипаттама қосу…</string>
+    <string name="create_trip_start_date">Басталу күні</string>
+    <string name="create_trip_end_date">Аяқталу күні</string>
+    <string name="create_trip_date_select">Таңдау</string>
+    <string name="create_trip_button">Сапар жасау</string>
+    <string name="close">Жабу</string>
+    <string name="self_planned_trip_placeholder">Сапар: %1$s\nБағыт: %2$s\nБасталу: %3$s\nАяқталу: %4$s</string>
     <string name="trip_detail_duration">ҰЗАҚТЫҒЫ</string>
     <string name="trip_detail_distance">ҚАШЫҚТЫҚ</string>
     <string name="trip_detail_transport">КӨЛІК</string>
@@ -657,4 +677,43 @@
     <string name="trip_t5_day1_title">Саябақ маршруты</string>
     <string name="trip_t6_day1_title">Мешіттер бойынша серуен</string>
     <string name="trip_t7_day1_title">Табиғат күні</string>
+
+    <!-- Self-Planned Trip detail screen -->
+    <string name="self_planned_journey">САПАР</string>
+    <string name="self_planned_expand_map">Картаны үлкейту</string>
+    <string name="self_planned_add_stop">+ Тоқталыс қосу</string>
+    <string name="self_planned_add_note_hint">Жазба немесе уақыт қосу</string>
+    <string name="self_planned_note_prefix">Жазба:</string>
+    <string name="self_planned_budget_estimate">Шығын бағасы</string>
+    <string name="self_planned_add_expense">+ Шығын қосу</string>
+    <string name="self_planned_accommodation">Тұру</string>
+    <string name="self_planned_transport">Көлік</string>
+    <string name="self_planned_entry_tickets">Кіру билеттері</string>
+    <string name="self_planned_food_custom">Тамақ (өзге)</string>
+    <string name="self_planned_total_estimated">Жалпы шамамен</string>
+    <string name="self_planned_save">Сақтау</string>
+    <string name="self_planned_trip_saved">Сапар сақталды</string>
+    <string name="self_planned_stop_medeu">Медеу мәйданшасы</string>
+    <string name="self_planned_stop_shymbulak">Шымбұлақ шаңғы курорты</string>
+    <string name="self_planned_stop_kok_tobe">Көк Төбе</string>
+    <string name="self_planned_note_tickets">Билеттерді онлайн сатып алыңыз</string>
+    <string name="self_planned_note_lunch">3200м шыңда түскі ас</string>
+
+    <string name="add_location_title">Орын қосу</string>
+    <string name="add_location_type_manually_hint">Орын атын қолмен енгізіңіз…</string>
+    <string name="add_location_or_by_hand">Немесе орын атын қолмен енгізіңіз</string>
+    <string name="add_location_search_hint">Орындарды, орынбелгілерді іздеңіз…</string>
+    <string name="add_location_suggested_places">Ұсынылған орындар</string>
+
+    <string name="add_expense_title">Шығын қосу</string>
+    <string name="add_expense_category">Санат</string>
+    <string name="add_expense_amount">Сома</string>
+    <string name="add_expense_note_optional">Жазба (міндетті емес)</string>
+    <string name="add_expense_note_hint">мысалы Navat-та кешкі ас</string>
+    <string name="add_expense_select_category">Санатты таңдаңыз</string>
+    <string name="add_expense_or">немесе</string>
+    <string name="add_expense_or_manual">Немесе атауды қолмен енгізіңіз</string>
+    <string name="add_expense_manual_hint">Атауды қолмен жазыңыз</string>
+    <string name="cancel">Болдырмау</string>
+    <string name="add_expense_button">Шығын қосу</string>
 </resources>

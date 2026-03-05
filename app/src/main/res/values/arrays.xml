@@ -241,4 +241,12 @@
         <item>Personal expenses</item>
         <item>Extra hikes</item>
     </string-array>
+
+    <!-- Order: Accommodation, Transport, Entry Tickets, Food (Custom) - select from list -->
+    <string-array name="expense_categories">
+        <item>Accommodation</item>
+        <item>Transport</item>
+        <item>Entry Tickets</item>
+        <item>Food (Custom)</item>
+    </string-array>
 </resources>

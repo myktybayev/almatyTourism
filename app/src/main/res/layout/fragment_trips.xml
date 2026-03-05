@@ -1,62 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:paddingBottom="24dp">
+    android:background="@drawable/back">
 
-    <TextView
-        android:id="@+id/textTripsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/trips_title"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <!-- Segmented control: Guided Tours | Self-Planned -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_trips_segmented"
-        android:orientation="horizontal"
-        android:padding="4dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="88dp">
 
         <TextView
-            android:id="@+id/tabGuidedTours"
-            android:layout_width="0dp"
+            android:id="@+id/textTripsTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_trips_tab_selected"
-            android:gravity="center"
-            android:paddingVertical="12dp"
-            android:text="@string/trips_guided_tours"
+            android:text="@string/trips_title"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tabSelfPlanned"
-            android:layout_width="0dp"
+        <!-- Segmented control: Guided Tours | Self-Planned -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingVertical="12dp"
-            android:text="@string/trips_self_planned"
-            android:textColor="@color/cabinet_tab_inactive"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_trips_segmented"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tabGuidedTours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_trips_tab_selected"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="@string/trips_guided_tours"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tabSelfPlanned"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="@string/trips_self_planned"
+                android:textColor="@color/cabinet_tab_inactive"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Hint (visible only for Self-Planned) -->
+        <TextView
+            android:id="@+id/textSelfPlannedHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:text="@string/trips_self_planned_hint"
+            android:textColor="@color/cabinet_text_secondary"
             android:textSize="14sp" />
+
+        <!-- List or empty state -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTrips"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp" />
+
+            <include
+                android:id="@+id/layoutSelfPlannedEmpty"
+                layout="@layout/layout_trips_self_planned_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTrips"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:clipToPadding="false"
-        android:paddingBottom="16dp" />
-</LinearLayout>
+    <!-- FAB (visible only for Self-Planned) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/trips_create_new_trip"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_add"
+        app:backgroundTint="@color/hotel_gold"
+        app:tint="@color/white" />
+</FrameLayout>

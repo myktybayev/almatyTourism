@@ -531,6 +531,26 @@
     <string name="trips_guided_tours">Экскурсионные туры</string>
     <string name="trips_self_planned">Самостоятельные</string>
     <string name="trips_button_details">Подробнее</string>
+    <string name="trips_self_planned_hint">Ваши сохранённые планы поездок. Нажмите на поездку для просмотра или используйте меню для редактирования.</string>
+    <string name="trips_no_trips_yet">Поездок пока нет</string>
+    <string name="trips_no_trips_description">Начните планировать поездку в Алматы, создав свою первую индивидуальную поездку.</string>
+    <string name="trips_create_new_trip">Создать поездку</string>
+    <string name="trips_edit_trip">Редактировать</string>
+    <string name="trips_delete">Удалить</string>
+    <string name="trips_self_planned_menu">Меню</string>
+    <string name="create_trip_dialog_title">Создать поездку</string>
+    <string name="create_trip_name_label">Название поездки</string>
+    <string name="create_trip_name_hint">напр., Лето в Алматы</string>
+    <string name="create_trip_destination_label">Направление</string>
+    <string name="create_trip_destination_hint">Поиск мест…</string>
+    <string name="create_trip_description_label">Описание</string>
+    <string name="create_trip_description_hint">Добавить описание…</string>
+    <string name="create_trip_start_date">Дата начала</string>
+    <string name="create_trip_end_date">Дата окончания</string>
+    <string name="create_trip_date_select">Выбрать</string>
+    <string name="create_trip_button">Создать поездку</string>
+    <string name="close">Закрыть</string>
+    <string name="self_planned_trip_placeholder">Поездка: %1$s\nНаправление: %2$s\nНачало: %3$s\nКонец: %4$s</string>
     <string name="trip_detail_duration">ДЛИТЕЛЬНОСТЬ</string>
     <string name="trip_detail_distance">РАССТОЯНИЕ</string>
     <string name="trip_detail_transport">ТРАНСПОРТ</string>
@@ -658,4 +678,43 @@
     <string name="trip_t5_day1_title">Парковый маршрут</string>
     <string name="trip_t6_day1_title">Прогулка по мечетям</string>
     <string name="trip_t7_day1_title">День природы</string>
+
+    <!-- Self-Planned Trip detail screen -->
+    <string name="self_planned_journey">МАРШРУТ</string>
+    <string name="self_planned_expand_map">Развернуть карту</string>
+    <string name="self_planned_add_stop">+ Добавить остановку</string>
+    <string name="self_planned_add_note_hint">Добавить заметку или время…</string>
+    <string name="self_planned_note_prefix">Заметка:</string>
+    <string name="self_planned_budget_estimate">Смета расходов</string>
+    <string name="self_planned_add_expense">+ Добавить расход</string>
+    <string name="self_planned_accommodation">Проживание</string>
+    <string name="self_planned_transport">Транспорт</string>
+    <string name="self_planned_entry_tickets">Входные билеты</string>
+    <string name="self_planned_food_custom">Еда (своё)</string>
+    <string name="self_planned_total_estimated">Всего ориентировочно</string>
+    <string name="self_planned_save">Сохранить</string>
+    <string name="self_planned_trip_saved">Поездка сохранена</string>
+    <string name="self_planned_stop_medeu">Каток Медеу</string>
+    <string name="self_planned_stop_shymbulak">Горнолыжный курорт Шымбулак</string>
+    <string name="self_planned_stop_kok_tobe">Кок Тобе</string>
+    <string name="self_planned_note_tickets">Купить билеты онлайн</string>
+    <string name="self_planned_note_lunch">Обед на пике 3200 м</string>
+
+    <string name="add_location_title">Добавить место</string>
+    <string name="add_location_type_manually_hint">Введите название места вручную…</string>
+    <string name="add_location_or_by_hand">Или введите название места вручную</string>
+    <string name="add_location_search_hint">Поиск мест, достопримечательностей…</string>
+    <string name="add_location_suggested_places">Предложенные места</string>
+
+    <string name="add_expense_title">Добавить расход</string>
+    <string name="add_expense_category">Категория</string>
+    <string name="add_expense_amount">Сумма</string>
+    <string name="add_expense_note_optional">Заметка (необязательно)</string>
+    <string name="add_expense_note_hint">напр. Ужин в Navat</string>
+    <string name="add_expense_select_category">Выберите категорию</string>
+    <string name="add_expense_or">или</string>
+    <string name="add_expense_or_manual">Или введите название вручную</string>
+    <string name="add_expense_manual_hint">Введите название вручную</string>
+    <string name="cancel">Отмена</string>
+    <string name="add_expense_button">Добавить расход</string>
 </resources>

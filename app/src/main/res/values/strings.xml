@@ -546,6 +546,26 @@
     <string name="trips_guided_tours">Guided Tours</string>
     <string name="trips_self_planned">Self-Planned</string>
     <string name="trips_button_details">Details</string>
+    <string name="trips_self_planned_hint">Your saved trip plans. Tap a trip to open details or use the menu to edit.</string>
+    <string name="trips_no_trips_yet">No trips yet</string>
+    <string name="trips_no_trips_description">Start planning your journey in Almaty by creating your first custom trip.</string>
+    <string name="trips_create_new_trip">Create new trip</string>
+    <string name="trips_edit_trip">Edit trip</string>
+    <string name="trips_delete">Delete</string>
+    <string name="trips_self_planned_menu">Menu</string>
+    <string name="create_trip_dialog_title">Create new trip</string>
+    <string name="create_trip_name_label">Trip Name</string>
+    <string name="create_trip_name_hint">e.g., Summer in Almaty</string>
+    <string name="create_trip_destination_label">Destination</string>
+    <string name="create_trip_destination_hint">Search places…</string>
+    <string name="create_trip_description_label">Description</string>
+    <string name="create_trip_description_hint">Add description…</string>
+    <string name="create_trip_start_date">Start Date</string>
+    <string name="create_trip_end_date">End Date</string>
+    <string name="create_trip_date_select">Select</string>
+    <string name="create_trip_button">Create Trip</string>
+    <string name="close">Close</string>
+    <string name="self_planned_trip_placeholder">Trip: %1$s\nDestination: %2$s\nStart: %3$s\nEnd: %4$s</string>
     <string name="trip_detail_duration">DURATION</string>
     <string name="trip_detail_distance">DISTANCE</string>
     <string name="trip_detail_transport">TRANSPORT</string>
@@ -662,4 +682,50 @@
     <string name="trip_t5_reviews">134 Reviews</string>
     <string name="trip_t6_reviews">98 Reviews</string>
     <string name="trip_t7_reviews">210 Reviews</string>
+
+    <!-- Self-Planned Trip detail screen -->
+    <string name="self_planned_journey">JOURNEY</string>
+    <string name="self_planned_expand_map">Expand Map</string>
+    <string name="self_planned_add_stop">+ Add Location</string>
+    <string name="self_planned_add_note_hint">Add a note or time</string>
+    <string name="self_planned_note_prefix">Note:</string>
+    <string name="self_planned_budget_estimate">Budget Estimate</string>
+    <string name="self_planned_add_expense">+ Add Expense</string>
+    <string name="self_planned_accommodation">Accommodation</string>
+    <string name="self_planned_transport">Transport</string>
+    <string name="self_planned_entry_tickets">Entry Tickets</string>
+    <string name="self_planned_food_custom">Food (Custom)</string>
+    <string name="self_planned_total_estimated">Total Estimated</string>
+    <string name="self_planned_save">Save</string>
+    <string name="self_planned_trip_saved">Trip saved</string>
+    <string name="self_planned_stop_medeu">Medeu Rink</string>
+    <string name="self_planned_stop_shymbulak">Shymbulak Ski Resort</string>
+    <string name="self_planned_stop_kok_tobe">Kok Tobe</string>
+    <string name="self_planned_note_tickets">Book tickets online</string>
+    <string name="self_planned_note_lunch">Lunch at 3200m peak</string>
+
+    <!-- Add Location dialog -->
+    <string name="add_location_title">Add Location</string>
+    <string name="add_location_type_manually_hint">Type location name manually…</string>
+    <string name="add_location_or_by_hand">Or add location name by hand</string>
+    <string name="add_location_search_hint">Search places, landmarks…</string>
+    <string name="add_location_suggested_places">Suggested Places</string>
+
+    <!-- Add Expense dialog -->
+    <string name="add_expense_title">Add Expense</string>
+    <string name="add_expense_category">Category</string>
+    <string name="add_expense_amount">Amount</string>
+    <string name="add_expense_note_optional">Note (Optional)</string>
+    <string name="add_expense_note_hint">e.g. Dinner at Navat</string>
+    <string name="add_expense_select_category">Select category</string>
+    <string name="add_expense_or">or</string>
+    <string name="add_expense_or_manual">Or manually enter name</string>
+    <string name="add_expense_manual_hint">Write manually name</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_expense_button">Add Expense</string>
+    <string name="expense_category_food_custom">Food (Custom)</string>
+    <string name="expense_category_accommodation">Accommodation</string>
+    <string name="expense_category_transport">Transport</string>
+    <string name="expense_category_entry_tickets">Entry Tickets</string>
+    <string name="expense_category_other">Other</string>
 </resources>

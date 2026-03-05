@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutSelfPlannedEmpty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_trip_empty_state"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/baseline_map_24"
+        app:tint="@color/hotel_gold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/trips_no_trips_yet"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/trips_no_trips_description"
+        android:textColor="@color/cabinet_text_secondary"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonCreateNewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/hotel_gold"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/trips_create_new_trip"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

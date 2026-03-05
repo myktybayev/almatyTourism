@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="12dp"
+    android:paddingEnd="8dp">
+
+    <ImageButton
+        android:id="@+id/buttonReorder"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/trips_edit_trip"
+        android:src="@drawable/ic_reorder_6dots"
+        app:tint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/textStopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_dialog_input"
+            android:hint="@string/self_planned_add_note_hint"
+            android:inputType="text"
+            android:minHeight="44dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:textSize="14sp"
+            android:textColorHint="@color/cabinet_text_secondary" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonEditNote"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/trips_edit_trip"
+        android:src="@drawable/ic_edit_24"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/trips_delete"
+        android:src="@drawable/ic_delete_24"
+        app:tint="@color/cabinet_cancel_red" />
+</LinearLayout>

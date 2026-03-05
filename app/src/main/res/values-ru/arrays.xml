@@ -221,4 +221,11 @@
         <item>Личные расходы</item>
         <item>Доп. походы</item>
     </string-array>
+
+    <string-array name="expense_categories">
+        <item>Проживание</item>
+        <item>Транспорт</item>
+        <item>Входные билеты</item>
+        <item>Еда (своё)</item>
+    </string-array>
 </resources>
