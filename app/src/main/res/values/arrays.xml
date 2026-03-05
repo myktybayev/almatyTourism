@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tour t1: Golden Triangle -->
+    <string-array name="trip_t1_labels">
+        <item>BEST SELLER</item>
+        <item>GROUP TOUR</item>
+    </string-array>
+    <string name="trip_t1_day1_title">Day 1: Charyn &amp; Kolsai</string>
+    <string-array name="trip_t1_day1_items">
+        <item>07:00||Departure from Almaty||Meet at Abay Central Stadium. Briefing and boarding the comfortable mini-bus.</item>
+        <item>10:30||Charyn Canyon||Explore the famous Valley of Castles and take photos.</item>
+        <item>14:00||Lunch in Saty Village||Traditional lunch at a guest house.</item>
+        <item>16:00||Kolsai Lake 1||First lake visit and short hike.</item>
+    </string-array>
+    <string name="trip_t1_day2_title">Day 2: Kaindy Lake</string>
+    <string-array name="trip_t1_day2_items">
+        <item>08:00||Breakfast||Breakfast at the guest house.</item>
+        <item>09:30||Off-road to Kaindy||Jeep transfer to Kaindy Lake.</item>
+        <item>15:00||Return to Almaty||Drive back to the city.</item>
+    </string-array>
+    <string-array name="trip_t1_included">
+        <item>Round-trip transport (Comfort Minibus)</item>
+        <item>Professional English-speaking Guide</item>
+        <item>Accommodation at Saty village (Guest house)</item>
+        <item>Eco-fees &amp; National Park entrance tickets</item>
+        <item>Meals (1 Dinner, 1 Breakfast, 1 Lunch)</item>
+        <item>Off-road transfer to Kaindy lake</item>
+    </string-array>
+    <string-array name="trip_t1_not_included">
+        <item>Personal expenses &amp; additional snacks</item>
+        <item>Horseback riding or boat rentals at Kolsai</item>
+    </string-array>
+
+    <!-- Tour t8: Alma-Arasan -->
+    <string-array name="trip_t8_labels">
+        <item>NATURE</item>
+        <item>HOT SPRINGS</item>
+        <item>GROUP TOUR</item>
+    </string-array>
+    <string name="trip_t8_day1_title">Gorges Day</string>
+    <string-array name="trip_t8_day1_items">
+        <item>08:00||Hotel Pickup||Pick-up from major Almaty hotels (Ritz-Carlton, Ibis, etc.).</item>
+        <item>09:00||Alma-Arasan Gorge||Guided tour, sightseeing, 1.5h walk (45 min).</item>
+        <item>10:30||Hot Springs||Free time &amp; swimming at natural hot springs.</item>
+        <item>11:15||Ayusay Gorge||Lunch/shopping 1.5h (extra charge), 1h guided walk.</item>
+        <item>14:00||Falcon Sunkar||Predatory birds show visit (1h).</item>
+        <item>16:00||Return||Drop-off at Almaty hotels.</item>
+    </string-array>
+    <string-array name="trip_t8_included">
+        <item>Hotel pick-up/drop-off in Almaty</item>
+        <item>English/Russian speaking guide</item>
+        <item>Air-conditioned minivan transport</item>
+        <item>Bottled water</item>
+        <item>National park entrance tickets</item>
+        <item>Shower gel &amp; shampoo</item>
+        <item>Falcon show entrance ticket</item>
+    </string-array>
+    <string-array name="trip_t8_not_included">
+        <item>Meals &amp; drinks (available at local cafe)</item>
+        <item>Personal expenses</item>
+    </string-array>
+
+    <!-- Tour t9: Glacier -->
+    <string-array name="trip_t9_labels">
+        <item>HIKING</item>
+        <item>GLACIER</item>
+        <item>ADVENTURE</item>
+    </string-array>
+    <string name="trip_t9_day1_title">Glacier Day</string>
+    <string-array name="trip_t9_day1_items">
+        <item>08:00||Transfer to Medeu||Pick-up from Almaty hotels.</item>
+        <item>09:00||Shymbulak Cable Car||Ride to Shymbulak Ski Resort (3200m).</item>
+        <item>10:00||Bogdanovich Glacier||2km guided hike (1-1.5h one way).</item>
+        <item>12:00||Oktyabrskaya Cave||Explore ice cave with stunning formations.</item>
+        <item>13:00||Outdoor Lunch||Picnic with glacier views.</item>
+        <item>14:30||Return Hike||Back to Shymbulak and cable car down.</item>
+        <item>16:00||Almaty Drop-off||Return to hotels.</item>
+    </string-array>
+    <string-array name="trip_t9_included">
+        <item>Air-conditioned transport from Almaty</item>
+        <item>English speaking guide</item>
+        <item>Helmet, hiking poles, spikes for boots</item>
+        <item>Cable car to Shymbulak Ski Resort</item>
+    </string-array>
+    <string-array name="trip_t9_not_included">
+        <item>Meals and drinks (bring your own snacks)</item>
+        <item>Personal expenses</item>
+    </string-array>
+
+    <!-- Tour t3: Yurt -->
+    <string-array name="trip_t3_labels">
+        <item>NOMADIC</item>
+        <item>HORSEBACK</item>
+        <item>JEEP</item>
+        <item>BEST SELLER</item>
+    </string-array>
+    <string name="trip_t3_day1_title">Day 1: Yurt Traditions</string>
+    <string-array name="trip_t3_day1_items">
+        <item>08:00||Transfer to Yurt Camp||Pick-up from Almaty hotels to Zhylandy Valley.</item>
+        <item>10:00||Yurt Check-in||Welcome tea &amp; traditional treats.</item>
+        <item>12:00||Cooking Class||Make kurt &amp; zhent with locals.</item>
+        <item>14:00||Lunch||Traditional Kazakh dishes.</item>
+        <item>15:00||Horseback Riding||Guided ride across grasslands (all levels).</item>
+        <item>18:00||Camp Dinner||Group dinner &amp; campfire stories.</item>
+    </string-array>
+    <string name="trip_t3_day2_title">Day 2: Jeep to Zhasylkol</string>
+    <string-array name="trip_t3_day2_items">
+        <item>07:00||Breakfast||Hearty morning meal.</item>
+        <item>08:00||Jeep Adventure||Off-road through mountains &amp; meadows.</item>
+        <item>11:00||Zhasylkol Lake||Emerald lake picnic &amp; photo session.</item>
+        <item>14:00||Return Journey||Scenic drive back to camp.</item>
+        <item>17:00||Final Dinner||Farewell group dinner.</item>
+        <item>19:00||Almaty Return||Drop-off at hotels.</item>
+    </string-array>
+    <string-array name="trip_t3_included">
+        <item>Round-trip transport from/to Almaty</item>
+        <item>Traditional yurt accommodation (1 night)</item>
+        <item>English/Russian speaking guide</item>
+        <item>All meals (breakfast x2, lunch x2, dinner x2)</item>
+        <item>Horseback riding with helmets</item>
+        <item>Cooking class &amp; cultural activities</item>
+        <item>Jeep tour to Zhasylkol Lake</item>
+        <item>Entrance fees &amp; eco-post charges</item>
+        <item>Professional photo session</item>
+    </string-array>
+    <string-array name="trip_t3_not_included">
+        <item>Flights to/from Almaty</item>
+        <item>Travel insurance</item>
+        <item>Alcoholic drinks</item>
+        <item>Personal souvenirs &amp; expenses</item>
+    </string-array>
+
+    <!-- Tour t2: High Mountain -->
+    <string-array name="trip_t2_labels">
+        <item>GROUP TOUR</item>
+    </string-array>
+    <string name="trip_t2_day1_title">Single day</string>
+    <string-array name="trip_t2_day1_items">
+        <item>09:00||Medeu Gorge||Visit the high-mountain skating rink.</item>
+        <item>11:00||Shymbulak||Cable car and mountain views.</item>
+        <item>14:00||Kok Tobe||City view and leisure.</item>
+    </string-array>
+    <string-array name="trip_t2_included">
+        <item>Transport</item>
+        <item>Guide</item>
+        <item>Cable car ticket</item>
+    </string-array>
+    <string-array name="trip_t2_not_included">
+        <item>Lunch</item>
+        <item>Personal expenses</item>
+    </string-array>
+
+    <!-- Tour t4: Shopping -->
+    <string-array name="trip_t4_labels">
+        <item>SHOPPING</item>
+        <item>GROUP TOUR</item>
+    </string-array>
+    <string name="trip_t4_day1_title">Shopping Day</string>
+    <string-array name="trip_t4_day1_items">
+        <item>09:00||MEGA Alma-Ata||Largest mall with shops, food court and entertainment.</item>
+        <item>11:00||Esentai Mall||Luxury brands and premium shopping.</item>
+        <item>13:00||Lunch Break||Lunch at mall food court.</item>
+        <item>14:00||Aport East||Family shopping and hypermarket.</item>
+        <item>16:00||Dostyk Plaza||High-end boutiques and return.</item>
+    </string-array>
+    <string-array name="trip_t4_included">
+        <item>Transport</item>
+        <item>English-speaking Guide</item>
+        <item>Mall entry</item>
+    </string-array>
+    <string-array name="trip_t4_not_included">
+        <item>Meals</item>
+        <item>Personal shopping</item>
+    </string-array>
+
+    <!-- Tour t5: Parks -->
+    <string-array name="trip_t5_labels">
+        <item>NATURE WALK</item>
+    </string-array>
+    <string name="trip_t5_day1_title">Parks Trail</string>
+    <string-array name="trip_t5_day1_items">
+        <item>09:00||Panfilov Park||Zenkov Cathedral and memorials.</item>
+        <item>11:00||Kok Tobe Hill||Cable car and city views.</item>
+        <item>13:00||Lunch||Picnic in park.</item>
+        <item>14:00||First President Park||Dendropark and viewpoints.</item>
+        <item>16:00||Central Park||Relax and end tour.</item>
+    </string-array>
+    <string-array name="trip_t5_included">
+        <item>Transport</item>
+        <item>Guide</item>
+        <item>Park entries</item>
+    </string-array>
+    <string-array name="trip_t5_not_included">
+        <item>Meals</item>
+        <item>Cable car extra</item>
+    </string-array>
+
+    <!-- Tour t6: Mosques -->
+    <string-array name="trip_t6_labels">
+        <item>CULTURAL</item>
+        <item>WALKING</item>
+    </string-array>
+    <string name="trip_t6_day1_title">Mosques Walk</string>
+    <string-array name="trip_t6_day1_items">
+        <item>10:00||Central Mosque||Largest mosque in Almaty.</item>
+        <item>11:30||Aynalyn Mosque||Historic site visit.</item>
+        <item>12:30||Lunch||Halal meal nearby.</item>
+        <item>13:30||Beisenova Mosque||Cultural insights.</item>
+        <item>15:00||Amankul Ata Mosque||Modern mosque and return.</item>
+    </string-array>
+    <string-array name="trip_t6_included">
+        <item>Professional guide</item>
+        <item>Entrance fees</item>
+    </string-array>
+    <string-array name="trip_t6_not_included">
+        <item>Meals</item>
+        <item>Personal items</item>
+    </string-array>
+
+    <!-- Tour t7: Lakes -->
+    <string-array name="trip_t7_labels">
+        <item>NATURE</item>
+        <item>GROUP TOUR</item>
+    </string-array>
+    <string name="trip_t7_day1_title">Nature Day</string>
+    <string-array name="trip_t7_day1_items">
+        <item>07:00||Big Almaty Lake||Turquoise alpine lake hike.</item>
+        <item>10:00||Issyk Lake||Scenic lake and history.</item>
+        <item>13:00||Lunch||Picnic at Turgen Gorge.</item>
+        <item>14:00||Turgen Gorge Waterfalls||Bear waterfall short hike.</item>
+        <item>16:00||Tamgaly Tas||Petroglyphs viewing.</item>
+        <item>18:00||Return to Almaty||End of tour.</item>
+    </string-array>
+    <string-array name="trip_t7_included">
+        <item>Round-trip transport</item>
+        <item>Guide</item>
+        <item>Entrance tickets</item>
+        <item>Picnic lunch</item>
+    </string-array>
+    <string-array name="trip_t7_not_included">
+        <item>Personal expenses</item>
+        <item>Extra hikes</item>
+    </string-array>
+</resources>

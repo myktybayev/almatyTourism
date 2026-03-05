@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="8dp"
-            android:text="@string/profile_title"
+            android:text="@string/cabinet_title"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -58,7 +58,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/user_avatar"
+                android:src="@drawable/user"
                 app:civ_border_width="3dp"
                 app:civ_border_color="@color/hotel_gold" />
         </FrameLayout>
@@ -74,7 +74,7 @@
                 android:id="@+id/textUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alimkhan Yerlanov"
+                android:text="@string/cabinet_user_name"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="alim.yerlanov@gmail.com"
+                android:text="@string/cabinet_user_email"
                 android:textColor="@color/cabinet_text_secondary"
                 android:textSize="14sp" />
         </LinearLayout>

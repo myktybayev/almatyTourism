@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trip_t1_labels">
+        <item>ХИТ ПРОДАЖ</item>
+        <item>ГРУППОВОЙ ТУР</item>
+    </string-array>
+    <string-array name="trip_t1_day1_items">
+        <item>07:00||Выезд из Алматы||Сбор на стадионе Абая. Брифинг и посадка в минивэн.</item>
+        <item>10:30||Чарынский каньон||Осмотр Долины замков и фото.</item>
+        <item>14:00||Обед в селе Саты||Традиционный обед в гостевом доме.</item>
+        <item>16:00||Озеро Кольсай 1||Первое озеро и короткий поход.</item>
+    </string-array>
+    <string-array name="trip_t1_day2_items">
+        <item>08:00||Завтрак||Завтрак в гостевом доме.</item>
+        <item>09:30||Внедорожник до Каинды||Трансфер на джипе к озеру Каинды.</item>
+        <item>15:00||Возвращение в Алматы||Поездка обратно в город.</item>
+    </string-array>
+    <string-array name="trip_t1_included">
+        <item>Трансфер туда и обратно (комфортный минивэн)</item>
+        <item>Профессиональный гид (английский язык)</item>
+        <item>Размещение в селе Саты (гостевой дом)</item>
+        <item>Эко-сборы и входные билеты в нацпарк</item>
+        <item>Питание (1 ужин, 1 завтрак, 1 обед)</item>
+        <item>Внедорожный трансфер к озеру Каинды</item>
+    </string-array>
+    <string-array name="trip_t1_not_included">
+        <item>Личные расходы и перекусы</item>
+        <item>Конные прогулки или аренда лодки на Кольсае</item>
+    </string-array>
+
+    <string-array name="trip_t8_labels">
+        <item>ПРИРОДА</item>
+        <item>ГОРЯЧИЕ ИСТОЧНИКИ</item>
+        <item>ГРУППОВОЙ ТУР</item>
+    </string-array>
+    <string-array name="trip_t8_day1_items">
+        <item>08:00||Забор из отелей||Забор из отелей Алматы.</item>
+        <item>09:00||Ущелье Алма-Арасан||Экскурсия, 1,5 ч пешая прогулка.</item>
+        <item>10:30||Горячие источники||Свободное время и купание.</item>
+        <item>11:15||Ущелье Аюсай||Обед/шопинг, прогулка с гидом.</item>
+        <item>14:00||Сункар||Шоу хищных птиц.</item>
+        <item>16:00||Возвращение||Доставка в отели Алматы.</item>
+    </string-array>
+    <string-array name="trip_t8_included">
+        <item>Забор/доставка в отелях Алматы</item>
+        <item>Гид (английский/русский)</item>
+        <item>Микроавтобус с кондиционером</item>
+        <item>Бутилированная вода</item>
+        <item>Входные билеты в нацпарк</item>
+        <item>Гель для душа и шампунь</item>
+        <item>Билет на шоу соколов</item>
+    </string-array>
+    <string-array name="trip_t8_not_included">
+        <item>Питание и напитки</item>
+        <item>Личные расходы</item>
+    </string-array>
+
+    <string-array name="trip_t9_labels">
+        <item>ПЕШИЙ ПОХОД</item>
+        <item>ЛЕДНИК</item>
+        <item>ПРИКЛЮЧЕНИЕ</item>
+    </string-array>
+    <string-array name="trip_t9_day1_items">
+        <item>08:00||Трансфер в Медеу||Забор из отелей Алматы.</item>
+        <item>09:00||Канатная дорога Шымбулак||Подъём на курорт Шымбулак (3200 м).</item>
+        <item>10:00||Ледник Богдановича||Поход 2 км с гидом.</item>
+        <item>12:00||Пещера Октябрьская||Ледяная пещера.</item>
+        <item>13:00||Обед на природе||Пикник с видом на ледник.</item>
+        <item>14:30||Обратный поход||Спуск в Шымбулак.</item>
+        <item>16:00||Доставка в Алматы||Возвращение в отели.</item>
+    </string-array>
+    <string-array name="trip_t9_included">
+        <item>Трансфер из Алматы с кондиционером</item>
+        <item>Гид (английский)</item>
+        <item>Шлем, палки, кошки</item>
+        <item>Канатная дорога до Шымбулака</item>
+    </string-array>
+    <string-array name="trip_t9_not_included">
+        <item>Питание и напитки</item>
+        <item>Личные расходы</item>
+    </string-array>
+
+    <string-array name="trip_t3_labels">
+        <item>КОЧЕВНИКИ</item>
+        <item>КОННЫЕ ПРОГУЛКИ</item>
+        <item>ДЖИП</item>
+        <item>ХИТ ПРОДАЖ</item>
+    </string-array>
+    <string-array name="trip_t3_day1_items">
+        <item>08:00||Трансфер в юрточный лагерь||Забор из отелей, долина Жыланды.</item>
+        <item>10:00||Размещение в юртах||Приветственный чай и угощения.</item>
+        <item>12:00||Кулинарный мастер-класс||Курт и жент с местными.</item>
+        <item>14:00||Обед||Традиционные блюда.</item>
+        <item>15:00||Конная прогулка||Прогулка по степям с гидом.</item>
+        <item>18:00||Ужин у костра||Групповой ужин и истории.</item>
+    </string-array>
+    <string-array name="trip_t3_day2_items">
+        <item>07:00||Завтрак||Завтрак.</item>
+        <item>08:00||Джип-тур||Внедорожник по горам и лугам.</item>
+        <item>11:00||Озеро Жасылколь||Пикник у изумрудного озера.</item>
+        <item>14:00||Обратная дорога||Возвращение в лагерь.</item>
+        <item>17:00||Прощальный ужин||Групповой ужин.</item>
+        <item>19:00||Возвращение в Алматы||Доставка в отели.</item>
+    </string-array>
+    <string-array name="trip_t3_included">
+        <item>Трансфер Алматы — туда и обратно</item>
+        <item>Размещение в юртах (1 ночь)</item>
+        <item>Гид (английский/русский)</item>
+        <item>Все питание</item>
+        <item>Конные прогулки со шлемами</item>
+        <item>Кулинарный класс и активность</item>
+        <item>Джип-тур на Жасылколь</item>
+        <item>Входные и эко-сборы</item>
+        <item>Фотосессия</item>
+    </string-array>
+    <string-array name="trip_t3_not_included">
+        <item>Авиабилеты</item>
+        <item>Страховка</item>
+        <item>Алкоголь</item>
+        <item>Личные расходы</item>
+    </string-array>
+
+    <string-array name="trip_t2_labels">
+        <item>ГРУППОВОЙ ТУР</item>
+    </string-array>
+    <string-array name="trip_t2_day1_items">
+        <item>09:00||Медеу||Высокогорный каток.</item>
+        <item>11:00||Шымбулак||Канатная дорога и виды.</item>
+        <item>14:00||Кок Тобе||Вид на город.</item>
+    </string-array>
+    <string-array name="trip_t2_included">
+        <item>Трансфер</item>
+        <item>Гид</item>
+        <item>Билет на канатную дорогу</item>
+    </string-array>
+    <string-array name="trip_t2_not_included">
+        <item>Обед</item>
+        <item>Личные расходы</item>
+    </string-array>
+
+    <string-array name="trip_t4_labels">
+        <item>ШОППИНГ</item>
+        <item>ГРУППОВОЙ ТУР</item>
+    </string-array>
+    <string-array name="trip_t4_day1_items">
+        <item>09:00||MEGA Алма-Ата||Торговый центр, фуд-корт.</item>
+        <item>11:00||Esentai Mall||Люксовые бренды.</item>
+        <item>13:00||Обед||Фуд-корт.</item>
+        <item>14:00||Aport East||Семейный шоппинг.</item>
+        <item>16:00||Dostyk Plaza||Бутики.</item>
+    </string-array>
+    <string-array name="trip_t4_included">
+        <item>Трансфер</item>
+        <item>Гид (английский)</item>
+        <item>Вход в ТРЦ</item>
+    </string-array>
+    <string-array name="trip_t4_not_included">
+        <item>Питание</item>
+        <item>Личные покупки</item>
+    </string-array>
+
+    <string-array name="trip_t5_labels">
+        <item>ПЕШАЯ ПРОГУЛКА</item>
+    </string-array>
+    <string-array name="trip_t5_day1_items">
+        <item>09:00||Парк Панфилова||Собор Зенкова.</item>
+        <item>11:00||Кок Тобе||Канатная дорога.</item>
+        <item>13:00||Обед||Пикник в парке.</item>
+        <item>14:00||Парк Первого Президента||Дендропарк.</item>
+        <item>16:00||Центральный парк||Отдых.</item>
+    </string-array>
+    <string-array name="trip_t5_included">
+        <item>Трансфер</item>
+        <item>Гид</item>
+        <item>Вход в парки</item>
+    </string-array>
+    <string-array name="trip_t5_not_included">
+        <item>Питание</item>
+        <item>Канатная дорога (доп.)</item>
+    </string-array>
+
+    <string-array name="trip_t6_labels">
+        <item>КУЛЬТУРА</item>
+        <item>ПЕШКОМ</item>
+    </string-array>
+    <string-array name="trip_t6_day1_items">
+        <item>10:00||Центральная мечеть||Крупнейшая мечеть Алматы.</item>
+        <item>11:30||Мечеть Айналын||Исторический объект.</item>
+        <item>12:30||Обед||Халяльное питание.</item>
+        <item>13:30||Мечеть Бейсенова||Культура.</item>
+        <item>15:00||Мечеть Аманкул Ата||Возвращение.</item>
+    </string-array>
+    <string-array name="trip_t6_included">
+        <item>Профессиональный гид</item>
+        <item>Входные билеты</item>
+    </string-array>
+    <string-array name="trip_t6_not_included">
+        <item>Питание</item>
+        <item>Личные расходы</item>
+    </string-array>
+
+    <string-array name="trip_t7_labels">
+        <item>ПРИРОДА</item>
+        <item>ГРУППОВОЙ ТУР</item>
+    </string-array>
+    <string-array name="trip_t7_day1_items">
+        <item>07:00||Большое Алматинское озеро||Поход к озеру.</item>
+        <item>10:00||Озеро Иссык||Озеро и история.</item>
+        <item>13:00||Обед||Пикник в ущелье Тургень.</item>
+        <item>14:00||Водопады ущелья Тургень||Короткий поход.</item>
+        <item>16:00||Тамгалы Тас||Петроглифы.</item>
+        <item>18:00||Возвращение в Алматы||Конец тура.</item>
+    </string-array>
+    <string-array name="trip_t7_included">
+        <item>Трансфер туда и обратно</item>
+        <item>Гид</item>
+        <item>Входные билеты</item>
+        <item>Пикник-обед</item>
+    </string-array>
+    <string-array name="trip_t7_not_included">
+        <item>Личные расходы</item>
+        <item>Доп. походы</item>
+    </string-array>
+</resources>

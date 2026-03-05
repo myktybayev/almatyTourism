@@ -72,7 +72,7 @@ public class TripsFragment extends Fragment {
     }
 
     private void loadGuidedTours() {
-        List<GuidedTour> tours = TripsRepository.getInstance(requireContext()).getGuidedTours();
+        List<GuidedTour> tours = TripsRepository.getInstance(requireContext()).getGuidedTours(requireContext());
         GuidedToursAdapter adapter = new GuidedToursAdapter(this::onTourDetails);
         adapter.setItems(tours);
         recyclerTrips.setAdapter(adapter);

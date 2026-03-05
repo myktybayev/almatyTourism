@@ -1,5 +1,6 @@
 package kz.informatics.okulik.nalog_app.cabinet;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import kz.informatics.okulik.MainActivity;
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
 import kz.informatics.okulik.nalog_app.home.activities.PopularDestinationDetailActivity;
 import kz.informatics.okulik.nalog_app.home.adapters.BrowseDestinationAdapter;
@@ -42,6 +44,11 @@ public class MyCabinet extends AppCompatActivity {
     private View underlineFavorites, underlineBookings, underlineTrips;
     private RecyclerView recyclerContent;
     private String currentTab = TAB_BOOKINGS;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,11 +113,11 @@ public class MyCabinet extends AppCompatActivity {
             }
         }
         if (items.isEmpty()) {
-            items.add(new BookingItem("h1", "Rixos Almaty", "BK-7829", BookingItem.STATUS_CONFIRMED,
-                    "15 Oct 2023", "20 Oct 2023", "2 Adults", "425,000 〒", "Deluxe King with Mountain View",
+            items.add(new BookingItem("h1", getString(R.string.cabinet_demo_hotel_1), getString(R.string.cabinet_demo_ref_1), BookingItem.STATUS_CONFIRMED,
+                    getString(R.string.cabinet_demo_checkin_1), getString(R.string.cabinet_demo_checkout_1), getString(R.string.cabinet_demo_guests), getString(R.string.cabinet_demo_total_1), getString(R.string.cabinet_demo_room_type),
                     R.drawable.header_rixos_almaty, true));
-            items.add(new BookingItem("h2", "Hotel Kazakhstan", "BK-5521", BookingItem.STATUS_COMPLETED,
-                    "10 Aug 2023", "12 Aug 2023", null, "70,000 〒", null,
+            items.add(new BookingItem("h2", getString(R.string.cabinet_demo_hotel_2), getString(R.string.cabinet_demo_ref_2), BookingItem.STATUS_COMPLETED,
+                    getString(R.string.cabinet_demo_checkin_2), getString(R.string.cabinet_demo_checkout_2), null, getString(R.string.cabinet_demo_total_2), null,
                     R.drawable.header_hotel_kaz, false));
         }
         recyclerContent.setAdapter(new BookingAdapter(items, this::onBookingAction));
