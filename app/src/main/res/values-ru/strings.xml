@@ -720,6 +720,14 @@
     <string name="cancel">Отмена</string>
     <string name="add_expense_button">Добавить расход</string>
     <string name="share_trip">Поделиться поездкой</string>
+    <string name="exchange_title">Обмен валют</string>
+    <string name="exchange_subtitle">Курсы в реальном времени в Алматы</string>
+    <string name="exchange_you_pay">ВЫ ПЛАТИТЕ</string>
+    <string name="exchange_you_get">ВЫ ПОЛУЧАЕТЕ</string>
+    <string name="exchange_swap">Поменять валюты</string>
+    <string name="exchange_todays_rates">Курсы на сегодня</string>
+    <string name="exchange_error">Ошибка загрузки курсов:</string>
+    <string name="exchange_rates_unavailable">Курсы недоступны</string>
     <string name="booking_summary_title">Сводка бронирования</string>
     <string name="booking_summary_hotel">Отель</string>
     <string name="booking_save">Сохранить</string>

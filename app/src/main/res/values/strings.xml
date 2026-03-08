@@ -726,4 +726,14 @@
     <string name="cancel">Cancel</string>
     <string name="add_expense_button">Add Expense</string>
     <string name="share_trip">Share trip</string>
+
+    <!-- Exchange -->
+    <string name="exchange_title">Currency Exchange</string>
+    <string name="exchange_subtitle">Real-time rates in Almaty</string>
+    <string name="exchange_you_pay">YOU PAY</string>
+    <string name="exchange_you_get">YOU GET</string>
+    <string name="exchange_swap">Swap currencies</string>
+    <string name="exchange_todays_rates">Today\'s Rates</string>
+    <string name="exchange_error">Error loading rates:</string>
+    <string name="exchange_rates_unavailable">Rates unavailable</string>
 </resources>

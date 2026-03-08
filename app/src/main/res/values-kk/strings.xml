@@ -719,4 +719,12 @@
     <string name="cancel">Болдырмау</string>
     <string name="add_expense_button">Шығын қосу</string>
     <string name="share_trip">Сапарды бөлісу</string>
+    <string name="exchange_title">Валюта айырбасы</string>
+    <string name="exchange_subtitle">Алматыдағы өзекті бағамдар</string>
+    <string name="exchange_you_pay">ТӨЛЕЙСІЗ</string>
+    <string name="exchange_you_get">АЛАСЫЗ</string>
+    <string name="exchange_swap">Валюталарды ауыстыру</string>
+    <string name="exchange_todays_rates">Бүгінгі бағамдар</string>
+    <string name="exchange_error">Бағамдар жүктелмеді:</string>
+    <string name="exchange_rates_unavailable">Бағамдар қолжетімсіз</string>
 </resources>

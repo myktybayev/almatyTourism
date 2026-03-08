@@ -39,4 +39,6 @@
     <color name="cabinet_status_completed_bg">#E0E0E0</color>
     <color name="cabinet_status_completed_text">#808080</color>
     <color name="cabinet_cancel_red">#B71C1C</color>
+    <color name="exchange_positive">#4CAF50</color>
+    <color name="exchange_negative">#E57373</color>
 </resources>
