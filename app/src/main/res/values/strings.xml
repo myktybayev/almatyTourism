@@ -725,9 +725,5 @@
     <string name="add_expense_manual_hint">Write manually name</string>
     <string name="cancel">Cancel</string>
     <string name="add_expense_button">Add Expense</string>
-    <string name="expense_category_food_custom">Food (Custom)</string>
-    <string name="expense_category_accommodation">Accommodation</string>
-    <string name="expense_category_transport">Transport</string>
-    <string name="expense_category_entry_tickets">Entry Tickets</string>
-    <string name="expense_category_other">Other</string>
+    <string name="share_trip">Share trip</string>
 </resources>

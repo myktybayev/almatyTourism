@@ -247,6 +247,16 @@
         <item>Accommodation</item>
         <item>Transport</item>
         <item>Entry Tickets</item>
-        <item>Food (Custom)</item>
+        <item>Food</item>
+        <item>Snacks and Water</item>
+        <item>Equipment Rental</item>
+        <item>Hiking Gear</item>
+        <item>Parking</item>
+        <item>Cable Car / Lift</item>
+        <item>Guide Service</item>
+        <item>Camping Fee</item>
+        <item>Emergency / First Aid</item>
+        <item>Souvenirs</item>
+        <item>Other Expenses</item>
     </string-array>
 </resources>

@@ -46,5 +46,15 @@
             android:background="@drawable/bg_status_completed" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textStopNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/cabinet_text_secondary"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
 </LinearLayout>
 

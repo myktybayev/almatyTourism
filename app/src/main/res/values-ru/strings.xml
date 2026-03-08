@@ -719,4 +719,9 @@
     <string name="add_expense_manual_hint">Введите название вручную</string>
     <string name="cancel">Отмена</string>
     <string name="add_expense_button">Добавить расход</string>
+    <string name="share_trip">Поделиться поездкой</string>
+    <string name="booking_summary_title">Сводка бронирования</string>
+    <string name="booking_summary_hotel">Отель</string>
+    <string name="booking_save">Сохранить</string>
+    <string name="trip_detail_adults">Взрослые</string>
 </resources>

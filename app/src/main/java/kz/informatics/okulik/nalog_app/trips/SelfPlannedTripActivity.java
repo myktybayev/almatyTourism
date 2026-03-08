@@ -37,6 +37,7 @@ import java.util.Locale;
 import kz.informatics.okulik.R;
 import kz.informatics.okulik.nalog_app.home.module.DestinationsRepository;
 import kz.informatics.okulik.nalog_app.home.module.PopularPlace;
+import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 
 /**
  * Self-planned trip detail: empty by default. Add Location opens dialog with
@@ -66,7 +67,17 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
             R.drawable.ic_hotel_room, // 0 Accommodation
             R.drawable.ic_car, // 1 Transport
             R.drawable.ic_confirmation_number_24, // 2 Entry Tickets
-            R.drawable.ic_dining // 3 Food (Custom)
+            R.drawable.ic_dining, // 3 Food (Custom)
+            R.drawable.baseline_fastfood_24,
+            R.drawable.baseline_bedroom_parent_24,
+            R.drawable.baseline_downhill_skiing_24,
+            R.drawable.baseline_local_parking_24,
+            R.drawable.ic_cable_car,
+            R.drawable.baseline_tour_24,
+            R.drawable.baseline_landscape_24,
+            R.drawable.baseline_emergency_24,
+            R.drawable.baseline_support_24,
+            R.drawable.baseline_shopping_bag_24,
     };
 
     public static void open(Context context, String tripName, String description, String startDate, String endDate) {
@@ -83,6 +94,11 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
         Intent i = new Intent(context, SelfPlannedTripActivity.class);
         i.putExtra(EXTRA_EDIT_TRIP_ID, trip.id);
         context.startActivity(i);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase));
     }
 
     @Override
@@ -143,13 +159,14 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
 
         layoutItineraryStops.removeAllViews();
         itineraryStopCount = 0;
-        for (String stopName : trip.stopNames) {
-            if (stopName == null || stopName.isEmpty()) continue;
+        for (TripLocation loc : trip.locations) {
+            if (loc == null || (loc.locationName == null || loc.locationName.isEmpty())) continue;
             itineraryStopCount++;
             View stopView = LayoutInflater.from(this).inflate(R.layout.item_self_planned_stop, layoutItineraryStops, false);
             TextView textStopTitle = stopView.findViewById(R.id.textStopTitle);
             EditText editNote = stopView.findViewById(R.id.editNote);
-            textStopTitle.setText(itineraryStopCount + ". " + stopName);
+            textStopTitle.setText(itineraryStopCount + ". " + loc.locationName);
+            editNote.setText(loc.locationNote != null ? loc.locationNote : "");
             editNote.setHint(R.string.self_planned_add_note_hint);
             stopView.findViewById(R.id.buttonReorder).setOnClickListener(v -> {});
             stopView.findViewById(R.id.buttonEditNote).setOnClickListener(v -> editNote.requestFocus());
@@ -257,15 +274,20 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
             totalCost += (int) e.amountKzt;
         }
 
-        List<String> stopNames = new ArrayList<>();
+        List<TripLocation> locations = new ArrayList<>();
         for (int i = 0; i < layoutItineraryStops.getChildCount(); i++) {
             View child = layoutItineraryStops.getChildAt(i);
             TextView titleView = child.findViewById(R.id.textStopTitle);
+            EditText editNote = child.findViewById(R.id.editNote);
             if (titleView != null && titleView.getText() != null) {
                 String t = titleView.getText().toString().trim();
                 if (t.isEmpty()) continue;
                 String name = t.replaceFirst("^\\d+\\.\\s*", "").trim();
-                if (!name.isEmpty()) stopNames.add(name);
+                if (!name.isEmpty()) {
+                    String note = editNote != null && editNote.getText() != null
+                            ? editNote.getText().toString().trim() : "";
+                    locations.add(new TripLocation(name, note));
+                }
             }
         }
         List<SelfPlannedTrip.SavedExpense> expenses = new ArrayList<>();
@@ -281,7 +303,7 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
                 dates,
                 null,
                 totalCost,
-                stopNames,
+                locations,
                 expenses
         );
         SelfPlannedTripsRepository repo = SelfPlannedTripsRepository.getInstance(this);

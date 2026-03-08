@@ -718,4 +718,5 @@
     <string name="add_expense_manual_hint">Атауды қолмен жазыңыз</string>
     <string name="cancel">Болдырмау</string>
     <string name="add_expense_button">Шығын қосу</string>
+    <string name="share_trip">Сапарды бөлісу</string>
 </resources>

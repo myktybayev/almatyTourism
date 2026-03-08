@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Locale;
 
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 
 /**
  * Read-only detail screen for a self-planned trip.
@@ -44,17 +45,31 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
     private TextView textDetailTotal;
 
     private static final int[] EXPENSE_ICONS = {
-            R.drawable.baseline_category_24, // 0 Accommodation
             R.drawable.ic_hotel_room, // 0 Accommodation
             R.drawable.ic_car, // 1 Transport
             R.drawable.ic_confirmation_number_24, // 2 Entry Tickets
-            R.drawable.ic_dining // 3 Food (Custom)
+            R.drawable.ic_dining, // 3 Food (Custom)
+            R.drawable.baseline_fastfood_24,
+            R.drawable.baseline_bedroom_parent_24,
+            R.drawable.baseline_downhill_skiing_24,
+            R.drawable.baseline_local_parking_24,
+            R.drawable.ic_cable_car,
+            R.drawable.baseline_tour_24,
+            R.drawable.baseline_landscape_24,
+            R.drawable.baseline_emergency_24,
+            R.drawable.baseline_support_24,
+            R.drawable.baseline_shopping_bag_24,
     };
 
     public static void open(Context context, String tripId) {
         Intent i = new Intent(context, SelfPlannedTripDetailActivity.class);
         i.putExtra(EXTRA_TRIP_ID, tripId);
         context.startActivity(i);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.applyLocale(newBase));
     }
 
     @Override
@@ -79,6 +94,9 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
         ImageButton back = findViewById(R.id.buttonBack);
         back.setOnClickListener(v -> finish());
 
+        ImageButton buttonShare = findViewById(R.id.buttonShare);
+        buttonShare.setOnClickListener(v -> shareTrip());
+
         textTitle.setText(trip.title);
         textDates.setText(trip.dates);
         textDescription.setText(trip.locationTheme);
@@ -97,9 +115,9 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
 
     private void bindStops() {
         layoutStops.removeAllViews();
-        List<String> stops = trip.stopNames != null && !trip.stopNames.isEmpty()
-                ? trip.stopNames
-                : buildFallbackStopsFromTitle();
+        List<TripLocation> stops = trip.locations != null && !trip.locations.isEmpty()
+                ? trip.locations
+                : buildFallbackLocationsFromTitle();
 
         // Ensure visitedFlags size matches stops
         if (visitedFlags == null) visitedFlags = new ArrayList<>();
@@ -108,14 +126,25 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
         LayoutInflater inflater = LayoutInflater.from(this);
         for (int i = 0; i < stops.size(); i++) {
             final int index = i;
+            TripLocation loc = stops.get(i);
             View row = inflater.inflate(R.layout.item_self_planned_detail_stop, layoutStops, false);
             TextView textNumber = row.findViewById(R.id.textStopNumber);
             TextView textName = row.findViewById(R.id.textStopName);
+            TextView textNote = row.findViewById(R.id.textStopNote);
             TextView textStatus = row.findViewById(R.id.textStatus);
             View viewRadio = row.findViewById(R.id.viewRadio);
 
             textNumber.setText(String.format(Locale.US, "%d.", i + 1));
-            textName.setText(stops.get(i));
+            textName.setText(loc != null ? loc.locationName : "");
+            if (textNote != null) {
+                String note = loc != null && loc.locationNote != null ? loc.locationNote.trim() : "";
+                if (!note.isEmpty()) {
+                    textNote.setText(note);
+                    textNote.setVisibility(View.VISIBLE);
+                } else {
+                    textNote.setVisibility(View.GONE);
+                }
+            }
 
             View.OnClickListener toggle = v -> {
                 boolean newVal = !visitedFlags.get(index);
@@ -151,6 +180,7 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
         layoutBudget.removeAllViews();
         long total = 0;
         LayoutInflater inflater = LayoutInflater.from(this);
+        String[] categories = getResources().getStringArray(R.array.expense_categories);
         if (trip.expenses != null) {
             for (SelfPlannedTrip.SavedExpense e : trip.expenses) {
                 View row = inflater.inflate(R.layout.item_self_planned_expense, layoutBudget, false);
@@ -159,10 +189,10 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
                 TextView amount = row.findViewById(R.id.textExpenseAmount);
 
                 int iconIndex = 0;
-                if(e.category.contains("Accommodation")) iconIndex = 1;
-                if(e.category.contains("Transport")) iconIndex = 2;
-                if(e.category.contains("Entry Tickets")) iconIndex = 3;
-                if(e.category.contains("Food (Custom)")) iconIndex = 4;
+                for (int i = 0; i < categories.length; i++) {
+                    if(e.category.contains(categories[i])) iconIndex = i;
+                }
+
                 iconExpense.setImageResource(EXPENSE_ICONS[iconIndex]);
 
                 label.setText(e.category);
@@ -182,9 +212,9 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
     }
 
     private List<Boolean> loadVisitedFlags(SelfPlannedTrip trip) {
-        List<String> stops = trip.stopNames != null && !trip.stopNames.isEmpty()
-                ? trip.stopNames
-                : buildFallbackStopsFromTitle();
+        List<TripLocation> stops = trip.locations != null && !trip.locations.isEmpty()
+                ? trip.locations
+                : buildFallbackLocationsFromTitle();
         SharedPreferences prefs = getSharedPreferences(PREFS_VISITED, MODE_PRIVATE);
         String json = prefs.getString(trip.id, null);
         if (json == null) return buildDefaultFlags(stops.size());
@@ -208,11 +238,60 @@ public class SelfPlannedTripDetailActivity extends AppCompatActivity {
         prefs.edit().putString(trip.id, arr.toString()).apply();
     }
 
-    // Fallback: if no explicit stops saved, treat title as single stop
-    private List<String> buildFallbackStopsFromTitle() {
-        List<String> list = new ArrayList<>();
-        if (trip.title != null && !trip.title.isEmpty()) list.add(trip.title);
+    // Fallback: if no explicit stops saved, treat title as single location
+    private List<TripLocation> buildFallbackLocationsFromTitle() {
+        List<TripLocation> list = new ArrayList<>();
+        if (trip.title != null && !trip.title.isEmpty()) {
+            list.add(new TripLocation(trip.title, ""));
+        }
         return list;
+    }
+
+    private void shareTrip() {
+        if (trip == null) return;
+        StringBuilder sb = new StringBuilder();
+        sb.append(trip.title).append("\n\n");
+        if (trip.dates != null && !trip.dates.isEmpty()) {
+            sb.append(trip.dates).append("\n");
+        }
+        if (trip.locationTheme != null && !trip.locationTheme.isEmpty()) {
+            sb.append(trip.locationTheme).append("\n\n");
+        }
+        List<TripLocation> locs = trip.locations != null && !trip.locations.isEmpty()
+                ? trip.locations
+                : buildFallbackLocationsFromTitle();
+        if (!locs.isEmpty()) {
+            sb.append(getString(R.string.trip_detail_itinerary)).append("\n");
+            for (int i = 0; i < locs.size(); i++) {
+                TripLocation loc = locs.get(i);
+                String name = loc != null ? loc.locationName : "";
+                String note = loc != null && loc.locationNote != null ? loc.locationNote.trim() : "";
+                sb.append((i + 1)).append(". ").append(name);
+                if (!note.isEmpty()) sb.append(" — ").append(note);
+                sb.append("\n");
+            }
+            sb.append("\n");
+        }
+        long total = 0;
+        sb.append(getString(R.string.self_planned_budget_estimate)+"\n");
+
+        if (trip.expenses != null) {
+            for (SelfPlannedTrip.SavedExpense e : trip.expenses){
+                total += e.amountKzt;
+
+                sb.append(e.category+" - "+e.amountKzt+" ₸");
+                sb.append("\n");
+            }
+        }
+        sb.append("\n");
+        sb.append(getString(R.string.self_planned_total_estimated)).append(" ")
+                .append(String.format(Locale.US, "%,d ₸", total));
+
+        Intent share = new Intent(Intent.ACTION_SEND);
+        share.setType("text/plain");
+        share.putExtra(Intent.EXTRA_TEXT, sb.toString());
+        share.putExtra(Intent.EXTRA_SUBJECT, trip.title);
+        startActivity(Intent.createChooser(share, getString(R.string.share_trip)));
     }
 }
 

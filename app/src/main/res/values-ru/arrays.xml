@@ -226,6 +226,16 @@
         <item>Проживание</item>
         <item>Транспорт</item>
         <item>Входные билеты</item>
-        <item>Еда (своё)</item>
+        <item>Еда</item>
+        <item>Перекусы и вода</item>
+        <item>Аренда снаряжения</item>
+        <item>Трекинговое снаряжение</item>
+        <item>Парковка</item>
+        <item>Канатная дорога / Подъемник</item>
+        <item>Услуги гида</item>
+        <item>Плата за кемпинг</item>
+        <item>Экстренная помощь / Аптечка</item>
+        <item>Сувениры</item>
+        <item>Другие расходы</item>
     </string-array>
 </resources>
