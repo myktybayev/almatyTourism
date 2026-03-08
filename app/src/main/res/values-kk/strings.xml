@@ -693,6 +693,8 @@
     <string name="self_planned_total_estimated">Жалпы шамамен</string>
     <string name="self_planned_save">Сақтау</string>
     <string name="self_planned_trip_saved">Сапар сақталды</string>
+    <string name="self_planned_status_visited">Барып келді</string>
+    <string name="self_planned_status_not_visited">Әлі бармады</string>
     <string name="self_planned_stop_medeu">Медеу мәйданшасы</string>
     <string name="self_planned_stop_shymbulak">Шымбұлақ шаңғы курорты</string>
     <string name="self_planned_stop_kok_tobe">Көк Төбе</string>

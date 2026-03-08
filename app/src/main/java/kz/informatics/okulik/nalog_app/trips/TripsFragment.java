@@ -120,12 +120,12 @@ public class TripsFragment extends Fragment {
         recyclerTrips.setAdapter(new SelfPlannedTripsAdapter(new SelfPlannedTripsAdapter.OnSelfPlannedTripListener() {
             @Override
             public void onOpenDetails(SelfPlannedTrip trip) {
-                Toast.makeText(requireContext(), trip.title, Toast.LENGTH_SHORT).show();
+                SelfPlannedTripDetailActivity.open(requireContext(), trip.id);
             }
 
             @Override
             public void onEditTrip(SelfPlannedTrip trip) {
-                Toast.makeText(requireContext(), getString(R.string.trips_edit_trip) + ": " + trip.title, Toast.LENGTH_SHORT).show();
+                SelfPlannedTripActivity.openForEdit(requireContext(), trip);
             }
 
             @Override

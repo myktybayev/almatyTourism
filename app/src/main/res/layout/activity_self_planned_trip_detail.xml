@@ -3,12 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingHorizontal="15dp"
-    android:layout_marginBottom="10dp"
-    android:paddingTop="16dp">
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp">
 
-    <!-- Header: back, title, date, share, menu -->
+    <!-- Header -->
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -28,7 +27,7 @@
             app:tint="@color/black" />
 
         <LinearLayout
-            android:id="@+id/layoutTitleBlock"
+            android:id="@+id/linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -44,15 +43,11 @@
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:id="@+id/layoutDateRange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="18dp"
@@ -61,7 +56,7 @@
                     app:tint="@color/cabinet_text_secondary" />
 
                 <TextView
-                    android:id="@+id/textDateRange"
+                    android:id="@+id/textDates"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
@@ -71,37 +66,34 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/buttonSave"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@id/buttonMenu"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/self_planned_save"
-            android:src="@drawable/ic_save_24"
-            app:tint="@color/black" />
-
-        <ImageButton
-            android:id="@+id/buttonMenu"
-            android:layout_width="30dp"
-            android:layout_height="44dp"
+            android:id="@+id/buttonShare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/trips_self_planned_menu"
-            android:src="@drawable/ic_more_vert_24"
+            android:contentDescription="@string/booking_save"
+            android:src="@drawable/ic_share_24"
             app:tint="@color/black" />
     </RelativeLayout>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/cabinet_text_secondary"
+        android:textSize="14sp" />
 
     <!-- Map card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_below="@id/relativeLayout"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/map_route_preview"
+        android:layout_below="@id/textDescription"
+        android:layout_marginTop="16dp"
         app:cardBackgroundColor="#F5F5F5"
         app:cardCornerRadius="12dp"
         app:cardElevation="2dp">
@@ -110,113 +102,74 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/map_route_preview" />
+
     </androidx.cardview.widget.CardView>
 
-    <!-- Itinerary section -->
+    <!-- Itinerary -->
     <LinearLayout
-        android:id="@+id/linear2"
+        android:id="@+id/layoutItinerary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardView"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:text="@string/trip_detail_itinerary"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/trip_detail_itinerary"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/buttonAddStop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="4dp"
-                android:paddingVertical="8dp"
-                android:text="@string/self_planned_add_stop"
-                android:textColor="@color/hotel_gold"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!-- Empty state: no stops by default; items added via Add Location -->
-
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:fillViewport="true">
+            android:layout_height="200dp"
+            android:background="@android:color/white">
 
             <LinearLayout
-                android:id="@+id/layoutItineraryStops"
+                android:id="@+id/layoutDetailStops"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:minHeight="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:orientation="vertical" />
-        </androidx.core.widget.NestedScrollView>
+        </ScrollView>
     </LinearLayout>
 
-    <!-- Budget Estimate section -->
-
+    <!-- Budget -->
     <LinearLayout
-        android:id="@+id/linear4"
+        android:id="@+id/budgetLayout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_above="@id/linear3"
-        android:layout_below="@id/linear2"
+        android:layout_below="@id/layoutItinerary"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:text="@string/self_planned_budget_estimate"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/self_planned_budget_estimate"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/buttonAddExpense"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="4dp"
-                android:paddingVertical="8dp"
-                android:text="@string/self_planned_add_expense"
-                android:textColor="@color/hotel_gold"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!-- Empty state: no expenses by default -->
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/budgetScroll"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fillViewport="true">
+            android:background="@android:color/white">
 
             <LinearLayout
-                android:id="@+id/layoutBudgetItems"
+                android:id="@+id/layoutDetailBudget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_card_border"
-                android:orientation="vertical" />
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_trip_info_card"
+                android:orientation="vertical"
+                android:padding="14dp" />
+        </ScrollView>
 
-        </androidx.core.widget.NestedScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -240,7 +193,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textTotalEstimated"
+            android:id="@+id/textDetailTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0 ₸"
@@ -249,3 +202,5 @@
             android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>
+
+

@@ -44,6 +44,14 @@ public class SelfPlannedTripsRepository {
         return list;
     }
 
+    public SelfPlannedTrip getById(String id) {
+        if (id == null) return null;
+        for (SelfPlannedTrip t : getAll()) {
+            if (id.equals(t.id)) return t;
+        }
+        return null;
+    }
+
     public void add(SelfPlannedTrip trip) {
         List<SelfPlannedTrip> list = new ArrayList<>(getAll());
         list.add(0, trip);

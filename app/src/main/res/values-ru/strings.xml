@@ -694,6 +694,8 @@
     <string name="self_planned_total_estimated">Всего ориентировочно</string>
     <string name="self_planned_save">Сохранить</string>
     <string name="self_planned_trip_saved">Поездка сохранена</string>
+    <string name="self_planned_status_visited">Посещено</string>
+    <string name="self_planned_status_not_visited">Не посещено</string>
     <string name="self_planned_stop_medeu">Каток Медеу</string>
     <string name="self_planned_stop_shymbulak">Горнолыжный курорт Шымбулак</string>
     <string name="self_planned_stop_kok_tobe">Кок Тобе</string>

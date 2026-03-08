@@ -698,6 +698,8 @@
     <string name="self_planned_total_estimated">Total Estimated</string>
     <string name="self_planned_save">Save</string>
     <string name="self_planned_trip_saved">Trip saved</string>
+    <string name="self_planned_status_visited">Visited</string>
+    <string name="self_planned_status_not_visited">Not visited</string>
     <string name="self_planned_stop_medeu">Medeu Rink</string>
     <string name="self_planned_stop_shymbulak">Shymbulak Ski Resort</string>
     <string name="self_planned_stop_kok_tobe">Kok Tobe</string>

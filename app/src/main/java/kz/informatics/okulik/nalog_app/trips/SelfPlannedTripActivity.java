@@ -9,6 +9,7 @@ import android.text.Spanned;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.app.DatePickerDialog;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -20,6 +21,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,6 +49,7 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
     public static final String EXTRA_DESCRIPTION = "description";
     public static final String EXTRA_START_DATE = "start_date";
     public static final String EXTRA_END_DATE = "end_date";
+    public static final String EXTRA_EDIT_TRIP_ID = "edit_trip_id";
 
     private LinearLayout layoutItineraryStops;
     private LinearLayout layoutBudgetItems;
@@ -54,6 +59,9 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
     private int itineraryStopCount = 0;
     private final List<BudgetExpense> budgetExpenses = new ArrayList<>();
     private String tripDescription = "";
+    private String editingTripId = null;
+    private Calendar startCal = Calendar.getInstance();
+    private Calendar endCal = Calendar.getInstance();
     private static final int[] EXPENSE_ICONS = {
             R.drawable.ic_hotel_room, // 0 Accommodation
             R.drawable.ic_car, // 1 Transport
@@ -70,6 +78,13 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
         context.startActivity(i);
     }
 
+    public static void openForEdit(Context context, SelfPlannedTrip trip) {
+        if (trip == null) return;
+        Intent i = new Intent(context, SelfPlannedTripActivity.class);
+        i.putExtra(EXTRA_EDIT_TRIP_ID, trip.id);
+        context.startActivity(i);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +98,14 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
         textTitle = findViewById(R.id.textTitle);
         textDateRange = findViewById(R.id.textDateRange);
         textTitle.setText(name != null && !name.isEmpty() ? name : getString(R.string.create_trip_name_hint));
-        textDateRange.setText(formatDateRange(start, end));
+
+        initDatesFromIntent(start, end);
+        textDateRange.setText(formatCalendarRange());
+
+        View layoutDateRange = findViewById(R.id.layoutDateRange);
+        if (layoutDateRange != null) {
+            layoutDateRange.setOnClickListener(v -> showDateRangePicker());
+        }
 
         ImageButton buttonBack = findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(v -> finish());
@@ -100,11 +122,120 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
         textTotalEstimated = findViewById(R.id.textTotalEstimated);
         textTotalEstimated.setText("0 ₸");
 
+        editingTripId = getIntent().getStringExtra(EXTRA_EDIT_TRIP_ID);
+        if (editingTripId != null) {
+            SelfPlannedTrip trip = SelfPlannedTripsRepository.getInstance(this).getById(editingTripId);
+            if (trip != null) loadTripData(trip);
+        }
+
         TextView buttonAddStop = findViewById(R.id.buttonAddStop);
         buttonAddStop.setOnClickListener(v -> showAddLocationDialog());
 
         TextView buttonAddExpense = findViewById(R.id.buttonAddExpense);
         buttonAddExpense.setOnClickListener(v -> showAddExpenseDialog());
+    }
+
+    private void loadTripData(SelfPlannedTrip trip) {
+        textTitle.setText(trip.title);
+        parseDatesFromDisplay(trip.dates);
+        textDateRange.setText(formatCalendarRange());
+        tripDescription = trip.locationTheme != null ? trip.locationTheme : "";
+
+        layoutItineraryStops.removeAllViews();
+        itineraryStopCount = 0;
+        for (String stopName : trip.stopNames) {
+            if (stopName == null || stopName.isEmpty()) continue;
+            itineraryStopCount++;
+            View stopView = LayoutInflater.from(this).inflate(R.layout.item_self_planned_stop, layoutItineraryStops, false);
+            TextView textStopTitle = stopView.findViewById(R.id.textStopTitle);
+            EditText editNote = stopView.findViewById(R.id.editNote);
+            textStopTitle.setText(itineraryStopCount + ". " + stopName);
+            editNote.setHint(R.string.self_planned_add_note_hint);
+            stopView.findViewById(R.id.buttonReorder).setOnClickListener(v -> {});
+            stopView.findViewById(R.id.buttonEditNote).setOnClickListener(v -> editNote.requestFocus());
+            stopView.findViewById(R.id.buttonDelete).setOnClickListener(v -> {
+                layoutItineraryStops.removeView(stopView);
+                itineraryStopCount--;
+            });
+            layoutItineraryStops.addView(stopView);
+        }
+
+        budgetExpenses.clear();
+        layoutBudgetItems.removeAllViews();
+        for (SelfPlannedTrip.SavedExpense e : trip.expenses) {
+            BudgetExpense entry = new BudgetExpense(e.category, e.amountKzt, e.note);
+            budgetExpenses.add(entry);
+            View row = LayoutInflater.from(this).inflate(R.layout.item_self_planned_expense, layoutBudgetItems, false);
+            ImageView icon = row.findViewById(R.id.iconExpense);
+            TextView label = row.findViewById(R.id.textExpenseLabel);
+            TextView amountView = row.findViewById(R.id.textExpenseAmount);
+            int iconIndex = getExpenseIconIndex(e.category);
+            icon.setImageResource(EXPENSE_ICONS[iconIndex]);
+            label.setText(e.category);
+            amountView.setText(formatAmount(e.amountKzt));
+            row.setTag(entry);
+            row.setOnLongClickListener(v -> {
+                budgetExpenses.remove(entry);
+                layoutBudgetItems.removeView(row);
+                updateTotalEstimated();
+                return true;
+            });
+            layoutBudgetItems.addView(row);
+        }
+        updateTotalEstimated();
+    }
+
+    private void initDatesFromIntent(String start, String end) {
+        if (start != null && !start.isEmpty() && end != null && !end.isEmpty()) {
+            if (parseDateToCalendar(start, startCal) && parseDateToCalendar(end, endCal)) {
+                if (endCal.before(startCal)) endCal.setTimeInMillis(startCal.getTimeInMillis());
+                return;
+            }
+        }
+        startCal = Calendar.getInstance();
+        endCal = Calendar.getInstance();
+        endCal.add(Calendar.DAY_OF_MONTH, 3);
+    }
+
+    private boolean parseDateToCalendar(String dateStr, Calendar out) {
+        if (dateStr == null || dateStr.isEmpty()) return false;
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("d MMM", Locale.US);
+            out.setTime(sdf.parse(dateStr.trim()));
+            if (out.get(Calendar.YEAR) < 2000) out.set(Calendar.YEAR, Calendar.getInstance().get(Calendar.YEAR));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private void parseDatesFromDisplay(String datesStr) {
+        if (datesStr == null || datesStr.isEmpty()) return;
+        String[] parts = datesStr.split("\\s*-\\s*", 2);
+        if (parts.length >= 2) {
+            parseDateToCalendar(parts[0].trim(), startCal);
+            parseDateToCalendar(parts[1].trim(), endCal);
+        }
+    }
+
+    private String formatCalendarRange() {
+        SimpleDateFormat sdf = new SimpleDateFormat("d MMM", Locale.US);
+        return sdf.format(startCal.getTime()) + " - " + sdf.format(endCal.getTime());
+    }
+
+    private void showDateRangePicker() {
+        new DatePickerDialog(this, (v, year, month, dayOfMonth) -> {
+            startCal.set(Calendar.YEAR, year);
+            startCal.set(Calendar.MONTH, month);
+            startCal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            new DatePickerDialog(this, (v2, year2, month2, dayOfMonth2) -> {
+                endCal.set(Calendar.YEAR, year2);
+                endCal.set(Calendar.MONTH, month2);
+                endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth2);
+                if (endCal.before(startCal)) endCal.setTimeInMillis(startCal.getTimeInMillis());
+                textDateRange.setText(formatCalendarRange());
+            }, endCal.get(Calendar.YEAR), endCal.get(Calendar.MONTH), endCal.get(Calendar.DAY_OF_MONTH)).show();
+        }, startCal.get(Calendar.YEAR), startCal.get(Calendar.MONTH), startCal.get(Calendar.DAY_OF_MONTH)).show();
     }
 
     private String formatDateRange(String start, String end) {
@@ -120,21 +251,45 @@ public class SelfPlannedTripActivity extends AppCompatActivity {
         if (title.isEmpty()) {
             title = getString(R.string.create_trip_name_hint);
         }
-        String dates = textDateRange.getText() != null ? textDateRange.getText().toString() : "";
+        String dates = formatCalendarRange();
         int totalCost = 0;
         for (BudgetExpense e : budgetExpenses) {
             totalCost += (int) e.amountKzt;
         }
-        String id = "trip_" + System.currentTimeMillis();
+
+        List<String> stopNames = new ArrayList<>();
+        for (int i = 0; i < layoutItineraryStops.getChildCount(); i++) {
+            View child = layoutItineraryStops.getChildAt(i);
+            TextView titleView = child.findViewById(R.id.textStopTitle);
+            if (titleView != null && titleView.getText() != null) {
+                String t = titleView.getText().toString().trim();
+                if (t.isEmpty()) continue;
+                String name = t.replaceFirst("^\\d+\\.\\s*", "").trim();
+                if (!name.isEmpty()) stopNames.add(name);
+            }
+        }
+        List<SelfPlannedTrip.SavedExpense> expenses = new ArrayList<>();
+        for (BudgetExpense e : budgetExpenses) {
+            expenses.add(new SelfPlannedTrip.SavedExpense(e.category, e.amountKzt, e.note));
+        }
+
+        String id = editingTripId != null ? editingTripId : "trip_" + System.currentTimeMillis();
         SelfPlannedTrip trip = new SelfPlannedTrip(
                 id,
                 title,
                 tripDescription != null ? tripDescription : "",
                 dates,
                 null,
-                totalCost
+                totalCost,
+                stopNames,
+                expenses
         );
-        SelfPlannedTripsRepository.getInstance(this).add(trip);
+        SelfPlannedTripsRepository repo = SelfPlannedTripsRepository.getInstance(this);
+        if (editingTripId != null) {
+            repo.update(trip);
+        } else {
+            repo.add(trip);
+        }
         Toast.makeText(this, getString(R.string.self_planned_trip_saved), Toast.LENGTH_SHORT).show();
         finish();
     }
