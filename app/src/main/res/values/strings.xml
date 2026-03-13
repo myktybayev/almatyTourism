@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Турагентство</string>
+    <string name="app_name">AlmaTau</string>
 
     <string name="menu1">Explore</string>
     <string name="menu2">Hotels</string>
@@ -736,4 +736,40 @@
     <string name="exchange_todays_rates">Today\'s Rates</string>
     <string name="exchange_error">Error loading rates:</string>
     <string name="exchange_rates_unavailable">Rates unavailable</string>
+
+    <!-- Login -->
+    <string name="login_brand_title">Almaty</string>
+    <string name="login_brand_subtitle">Your journey begins here</string>
+    <string name="login_welcome_back">Welcome Back</string>
+    <string name="login_welcome_subtitle">Sign in to manage your bookings and trips</string>
+    <string name="login_email_label">Email Address</string>
+    <string name="login_email_hint">Enter your email</string>
+    <string name="login_phone_hint">Enter your phone correct</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">Enter your password</string>
+    <string name="login_toggle_password">Show/hide password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_button">Log In</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_create_account">Create an Account</string>
+
+    <!-- Registration -->
+    <string name="reg_title">Create Account</string>
+    <string name="reg_subtitle">Sign up to start planning your perfect trip</string>
+    <string name="reg_full_name_label">Full Name</string>
+    <string name="reg_full_name_hint">Enter your full name</string>
+    <string name="reg_phone_label">Phone Number</string>
+    <string name="reg_phone_prefix">+7 </string>
+    <string name="reg_phone_hint">(__) ___-___</string>
+    <string name="reg_password_hint">Create a password</string>
+    <string name="reg_sign_up">Sign Up</string>
+    <string name="auth_email_exists">This email is already registered</string>
+    <string name="auth_invalid_credentials">Invalid email or password</string>
+
+    <!-- Edit Profile -->
+    <string name="edit_profile_save">Save</string>
+    <string name="edit_profile_change_photo">Change photo from Gallery</string>
+    <string name="edit_profile_saved">Profile saved</string>
+    <string name="edit_profile_save_error">Failed to save profile</string>
+    <string name="edit_profile_photo_error">Could not save photo</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Турагенттік</string>
+    <string name="app_name">AlmaTau</string>
 
     <string name="menu1">Зерттеу</string>
     <string name="menu2">Қонақ үйлер</string>
@@ -727,4 +727,35 @@
     <string name="exchange_todays_rates">Бүгінгі бағамдар</string>
     <string name="exchange_error">Бағамдар жүктелмеді:</string>
     <string name="exchange_rates_unavailable">Бағамдар қолжетімсіз</string>
+    <string name="login_brand_title">Алматы</string>
+    <string name="login_brand_subtitle">Сапарыңыз осыдан басталады</string>
+    <string name="login_welcome_back">Қайта қош келдіңіз</string>
+    <string name="login_welcome_subtitle">Брондаулар мен сапарларды басқару үшін кіріңіз</string>
+    <string name="login_email_label">Электрондық пошта</string>
+    <string name="login_email_hint">Электрондық поштанызды енгізіңіз</string>
+    <string name="login_password_label">Құпия сөз</string>
+    <string name="login_password_hint">Құпия сөзіңізді енгізіңіз</string>
+    <string name="login_toggle_password">Құпия сөзді көрсету/жасыру</string>
+    <string name="login_forgot_password">Құпия сөзді ұмыттыңыз ба?</string>
+    <string name="login_button">Кіру</string>
+    <string name="login_no_account">Аккаунтыңыз жоқ па?</string>
+    <string name="login_create_account">Аккаунт жасау</string>
+    <string name="reg_title">Аккаунт жасау</string>
+    <string name="reg_subtitle">Тамаша сапарды жоспарлау үшін тіркеліңіз</string>
+    <string name="reg_full_name_label">Толық аты-жөні</string>
+    <string name="reg_full_name_hint">Толық аты-жөніңізді енгізіңіз</string>
+    <string name="reg_phone_label">Телефон нөмірі</string>
+    <string name="reg_phone_prefix">+7 </string>
+    <string name="reg_phone_hint">(__) ___-___</string>
+    <string name="reg_password_hint">Құпия сөз жасаңыз</string>
+    <string name="reg_sign_up">Тіркелу</string>
+    <string name="auth_email_exists">Бұл email тіркелген</string>
+    <string name="auth_invalid_credentials">Email немесе құпия сөз қате</string>
+
+    <!-- Edit Profile -->
+    <string name="edit_profile_save">Сақтау</string>
+    <string name="edit_profile_change_photo">Галереядан сурет таңдау</string>
+    <string name="edit_profile_saved">Профиль сақталды</string>
+    <string name="edit_profile_save_error">Профильді сақтау сәтсіз</string>
+    <string name="edit_profile_photo_error">Суретті сақтау мүмкін болмады</string>
 </resources>

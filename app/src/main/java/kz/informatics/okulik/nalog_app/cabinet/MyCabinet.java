@@ -2,6 +2,8 @@ package kz.informatics.okulik.nalog_app.cabinet;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import kz.informatics.okulik.MainActivity;
+import kz.informatics.okulik.nalog_app.profile.AuthRepository;
+import kz.informatics.okulik.nalog_app.profile.User;
 import kz.informatics.okulik.R;
 import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 import kz.informatics.okulik.nalog_app.cabinet.SavedBookingsRepository;
@@ -76,6 +82,38 @@ public class MyCabinet extends AppCompatActivity {
             switchTab(TAB_TRIPS);
         } else {
             switchTab(TAB_BOOKINGS);
+        }
+        bindUserInfo();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bindUserInfo();
+    }
+
+    private void bindUserInfo() {
+        AuthRepository auth = new AuthRepository(this);
+        User user = auth.getCurrentUser();
+        TextView nameView = findViewById(R.id.textUserName);
+        TextView emailView = findViewById(R.id.textUserEmail);
+        CircleImageView avatarView = findViewById(R.id.imageProfileAvatar);
+        if (user != null) {
+            if (nameView != null) {
+                nameView.setText(user.fullName != null && !user.fullName.isEmpty() ? user.fullName : getString(R.string.cabinet_user_name));
+            }
+            if (emailView != null) {
+                emailView.setText(user.email != null ? user.email : getString(R.string.cabinet_user_email));
+            }
+            if (avatarView != null) {
+                String path = auth.getAvatarPath(user.email);
+                if (path != null && new File(path).exists()) {
+                    try {
+                        Bitmap bmp = BitmapFactory.decodeFile(path);
+                        if (bmp != null) avatarView.setImageBitmap(bmp);
+                    } catch (Exception ignored) { }
+                }
+            }
         }
     }
 

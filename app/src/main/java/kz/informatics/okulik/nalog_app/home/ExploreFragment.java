@@ -9,6 +9,8 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +21,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.profile.AuthRepository;
+import kz.informatics.okulik.nalog_app.profile.User;
 import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
 import kz.informatics.okulik.nalog_app.home.api.WeatherApi;
 import kz.informatics.okulik.nalog_app.home.activities.BrowseActivityByCategories;
@@ -70,8 +76,31 @@ public class ExploreFragment extends Fragment {
         setupPopularRecycler();
         setupListeners();
         loadLiveWeather();
+        bindUserAvatar();
 
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        bindUserAvatar();
+    }
+
+    private void bindUserAvatar() {
+        if (root == null) return;
+        CircleImageView avatar = root.findViewById(R.id.my_cabinet);
+        if (avatar == null) return;
+        AuthRepository auth = new AuthRepository(requireContext());
+        User user = auth.getCurrentUser();
+        if (user == null) return;
+        String path = auth.getAvatarPath(user.email);
+        if (path != null && new File(path).exists()) {
+            try {
+                Bitmap bmp = BitmapFactory.decodeFile(path);
+                if (bmp != null) avatar.setImageBitmap(bmp);
+            } catch (Exception ignored) { }
+        }
     }
 
     private void initViews() {

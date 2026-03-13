@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Турагентство</string>
+    <string name="app_name">AlmaTau</string>
     <string name="menu1">Исследовать</string>
     <string name="menu2">Отели</string>
     <string name="menu3">Туры</string>
@@ -728,8 +728,39 @@
     <string name="exchange_todays_rates">Курсы на сегодня</string>
     <string name="exchange_error">Ошибка загрузки курсов:</string>
     <string name="exchange_rates_unavailable">Курсы недоступны</string>
+    <string name="login_brand_title">Алматы</string>
+    <string name="login_brand_subtitle">Ваше путешествие начинается здесь</string>
+    <string name="login_welcome_back">С возвращением</string>
+    <string name="login_welcome_subtitle">Войдите, чтобы управлять бронированиями и поездками</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_hint">Введите email</string>
+    <string name="login_password_label">Пароль</string>
+    <string name="login_password_hint">Введите пароль</string>
+    <string name="login_toggle_password">Показать/скрыть пароль</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
+    <string name="login_button">Войти</string>
+    <string name="login_no_account">Нет аккаунта?</string>
+    <string name="login_create_account">Создать аккаунт</string>
+    <string name="reg_title">Создать аккаунт</string>
+    <string name="reg_subtitle">Зарегистрируйтесь, чтобы спланировать поездку</string>
+    <string name="reg_full_name_label">Полное имя</string>
+    <string name="reg_full_name_hint">Введите полное имя</string>
+    <string name="reg_phone_label">Номер телефона</string>
+    <string name="reg_phone_prefix">+7 </string>
+    <string name="reg_phone_hint">(__) ___-___</string>
+    <string name="reg_password_hint">Придумайте пароль</string>
+    <string name="reg_sign_up">Зарегистрироваться</string>
+    <string name="auth_email_exists">Этот email уже зарегистрирован</string>
+    <string name="auth_invalid_credentials">Неверный email или пароль</string>
     <string name="booking_summary_title">Сводка бронирования</string>
     <string name="booking_summary_hotel">Отель</string>
     <string name="booking_save">Сохранить</string>
     <string name="trip_detail_adults">Взрослые</string>
+
+    <!-- Edit Profile -->
+    <string name="edit_profile_save">Сохранить</string>
+    <string name="edit_profile_change_photo">Выбрать фото из галереи</string>
+    <string name="edit_profile_saved">Профиль сохранён</string>
+    <string name="edit_profile_save_error">Не удалось сохранить профиль</string>
+    <string name="edit_profile_photo_error">Не удалось сохранить фото</string>
 </resources>

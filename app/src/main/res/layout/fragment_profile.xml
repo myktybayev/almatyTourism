@@ -178,7 +178,7 @@
                         android:layout_height="1dp"
                         android:layout_marginStart="56dp"
                         android:background="@color/light_grey" />
-
+                    <!--
                     <LinearLayout
                         android:id="@+id/rowPaymentMethods"
                         android:layout_width="match_parent"
@@ -223,6 +223,7 @@
                             android:src="@drawable/baseline_keyboard_arrow_right_24"
                             app:tint="@android:color/darker_gray" />
                     </LinearLayout>
+                    -->
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

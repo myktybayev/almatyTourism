@@ -1,6 +1,7 @@
 package kz.informatics.okulik;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import kz.informatics.okulik.nalog_app.profile.AuthRepository;
+import kz.informatics.okulik.nalog_app.profile.LoginActivity;
 import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
 import androidx.navigation.NavArgument;
 import androidx.navigation.NavController;
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (!new AuthRepository(this).isLoggedIn()) {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);

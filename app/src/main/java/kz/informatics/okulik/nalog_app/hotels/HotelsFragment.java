@@ -2,6 +2,8 @@ package kz.informatics.okulik.nalog_app.hotels;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.io.File;
 import java.util.List;
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import kz.informatics.okulik.R;
+import kz.informatics.okulik.nalog_app.profile.AuthRepository;
+import kz.informatics.okulik.nalog_app.profile.User;
 import kz.informatics.okulik.nalog_app.cabinet.MyCabinet;
 import kz.informatics.okulik.nalog_app.hotels.activities.HotelDetailActivity;
 import kz.informatics.okulik.nalog_app.hotels.adapters.HotelListAdapter;
@@ -58,6 +64,30 @@ public class HotelsFragment extends Fragment {
         setupRecycler();
         setupListeners();
         loadHotels();
+        bindUserAvatar();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        bindUserAvatar();
+    }
+
+    private void bindUserAvatar() {
+        View v = getView();
+        if (v == null) return;
+        CircleImageView avatar = v.findViewById(R.id.my_cabinet);
+        if (avatar == null) return;
+        AuthRepository auth = new AuthRepository(requireContext());
+        User user = auth.getCurrentUser();
+        if (user == null) return;
+        String path = auth.getAvatarPath(user.email);
+        if (path != null && new File(path).exists()) {
+            try {
+                Bitmap bmp = BitmapFactory.decodeFile(path);
+                if (bmp != null) avatar.setImageBitmap(bmp);
+            } catch (Exception ignored) { }
+        }
     }
 
     private void initViews(View view) {

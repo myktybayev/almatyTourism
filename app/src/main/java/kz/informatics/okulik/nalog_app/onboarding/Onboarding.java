@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import kz.informatics.okulik.MainActivity;
 import kz.informatics.okulik.R;
 import kz.informatics.okulik.nalog_app.profile.LocaleHelper;
+import kz.informatics.okulik.nalog_app.profile.LoginActivity;
 
 public class Onboarding extends AppCompatActivity {
 

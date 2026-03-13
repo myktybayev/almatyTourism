@@ -1,6 +1,12 @@
 package kz.informatics.okulik.nalog_app.profile;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +20,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.io.File;
+import java.net.URLEncoder;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 import kz.informatics.okulik.R;
 
 public class ProfileFragment extends Fragment {
+
+    private static final int REQUEST_EDIT_PROFILE = 2001;
 
     private TextView textCurrentLanguage;
     private LocaleHelper localeHelper;
@@ -34,7 +46,33 @@ public class ProfileFragment extends Fragment {
         localeHelper = new LocaleHelper(requireContext());
         textCurrentLanguage = view.findViewById(R.id.textCurrentLanguage);
         updateLanguageDisplay();
+        bindLoggedInUser(view);
         setupListeners(view);
+    }
+
+    private void bindLoggedInUser(View root) {
+        AuthRepository auth = new AuthRepository(requireContext());
+        User user = auth.getCurrentUser();
+        if (user == null) return;
+        TextView name = root.findViewById(R.id.textUserName);
+        TextView email = root.findViewById(R.id.textEmail);
+        TextView phone = root.findViewById(R.id.textPhone);
+        if (name != null) name.setText(user.fullName != null && !user.fullName.isEmpty() ? user.fullName : getString(R.string.profile_title));
+        if (email != null) email.setText(user.email != null ? user.email : "");
+        if (phone != null) {
+            String p = user.phone != null ? user.phone.trim() : "";
+            phone.setText(p.startsWith("+") ? p : (p.isEmpty() ? "" : "+7 " + p));
+        }
+        CircleImageView imageAvatar = root.findViewById(R.id.imageAvatar);
+        if (imageAvatar != null) {
+            String path = auth.getAvatarPath(user.email);
+            if (path != null && new File(path).exists()) {
+                try {
+                    Bitmap bmp = BitmapFactory.decodeFile(path);
+                    if (bmp != null) imageAvatar.setImageBitmap(bmp);
+                } catch (Exception ignored) { }
+            }
+        }
     }
 
     private void updateLanguageDisplay() {
@@ -44,22 +82,45 @@ public class ProfileFragment extends Fragment {
     }
 
     private void setupListeners(View root) {
-        root.findViewById(R.id.buttonEditAvatar).setOnClickListener(v ->
-                Toast.makeText(getContext(), "Edit avatar", Toast.LENGTH_SHORT).show());
+        root.findViewById(R.id.buttonEditAvatar).setOnClickListener(v -> openEditProfile());
 
-        root.findViewById(R.id.rowEditProfile).setOnClickListener(v ->
-                Toast.makeText(getContext(), getString(R.string.edit_profile), Toast.LENGTH_SHORT).show());
+        root.findViewById(R.id.rowEditProfile).setOnClickListener(v -> openEditProfile());
 
+        /*
         root.findViewById(R.id.rowPaymentMethods).setOnClickListener(v ->
                 Toast.makeText(getContext(), getString(R.string.payment_methods), Toast.LENGTH_SHORT).show());
-
+        */
         root.findViewById(R.id.rowLanguage).setOnClickListener(v -> showLanguageDialog());
 
-        root.findViewById(R.id.rowHelpSupport).setOnClickListener(v ->
-                Toast.makeText(getContext(), getString(R.string.help_support), Toast.LENGTH_SHORT).show());
+        root.findViewById(R.id.rowHelpSupport).setOnClickListener(v -> {
+            sendWhatsAppMessage(getActivity(), "7714201162", "Помощь и поддержка");
+        });
 
-        root.findViewById(R.id.rowLogOut).setOnClickListener(v ->
-                Toast.makeText(getContext(), getString(R.string.log_out), Toast.LENGTH_SHORT).show());
+        root.findViewById(R.id.rowLogOut).setOnClickListener(v -> {
+            new AuthRepository(requireContext()).clearSession();
+            Intent i = new Intent(requireContext(), LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+            if (getActivity() != null) getActivity().finish();
+        });
+    }
+    public void sendWhatsAppMessage(Context context, String phoneNumber, String message) {
+        try {
+            String url = "https://api.whatsapp.com/send?phone="
+                    + phoneNumber
+                    + "&text="
+                    + URLEncoder.encode(message, "UTF-8");
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            intent.setPackage("com.whatsapp");
+
+            context.startActivity(intent);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "WhatsApp not installed", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void showLanguageDialog() {
@@ -80,6 +141,18 @@ public class ProfileFragment extends Fragment {
         dialog.dismiss();
         if (getActivity() != null) {
             getActivity().recreate();
+        }
+    }
+
+    private void openEditProfile() {
+        startActivityForResult(new Intent(requireContext(), EditProfileActivity.class), REQUEST_EDIT_PROFILE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_EDIT_PROFILE && resultCode == Activity.RESULT_OK && getView() != null) {
+            bindLoggedInUser(getView());
         }
     }
 }
